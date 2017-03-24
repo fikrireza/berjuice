@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Berri Juice',
 
     /*
     |--------------------------------------------------------------------------
@@ -25,7 +25,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +38,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'id',
 
     /*
     |--------------------------------------------------------------------------
@@ -90,7 +90,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'id',
 
     /*
     |--------------------------------------------------------------------------
@@ -176,6 +176,18 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+		// Tag HTML providers
+        Collective\Html\HtmlServiceProvider::class,
+        // Manipulate Images
+        Intervention\Image\ImageServiceProvider::class,
+        // Report export to documents
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        // DOM PDF
+        Barryvdh\DomPDF\ServiceProvider::class,
+        // Yajra Datatables
+        Yajra\Datatables\DatatablesServiceProvider::class,
+		// Spatie Analytics
+		Spatie\Analytics\AnalyticsServiceProvider::class,
 
     ],
 
@@ -225,6 +237,13 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+		'Form' => Collective\Html\FormFacade::class,
+		'HTML' => Collective\Html\HtmlFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Str' => Illuminate\Support\Str::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
+		'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
 
     ],
 
