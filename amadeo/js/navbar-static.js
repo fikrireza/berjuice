@@ -4,10 +4,10 @@ $(document).ready(function() {
     var CountLogoChange = 0;
     setInterval(function() {
         if(CountLogoChange % 2 == 0){
-            document.getElementById("icon-berri").setAttribute("src", "image/base/logo-juice-united.png");
+            document.getElementById("icon-berri").setAttribute("src", "amadeo/image/base/logo-juice-united.png");
         }
         else{
-            document.getElementById("icon-berri").setAttribute("src", "image/base/logo-beri.png");
+            document.getElementById("icon-berri").setAttribute("src", "amadeo/image/base/logo-beri.png");
         }
         CountLogoChange = CountLogoChange + 1;
     }, 2500);
@@ -21,7 +21,7 @@ $(document).ready(function() {
         	$("#bar-mobile-animate-hide").css({"display": "block"});
         	$(".navbar-statick").css({"height": "100%"});
     });
-    
+
     $("#bar-mobile-animate-hide").click(
         function(){
         	$(".list-item-nav").css({"display": "none"});
@@ -39,16 +39,16 @@ $(document).ready(function() {
         win.scroll(function () {
             if (win.scrollTop() >= initNavbar) {
                $(".navbar-statick").css({
-                    "position":"fixed", 
-                    "z-index":"5", 
-                    "top":"0px", 
+                    "position":"fixed",
+                    "z-index":"5",
+                    "top":"0px",
                     "width":"100%",
                     "background":"rgba(242,185,65,.98)"
                 });
                $(".icon-berri").css({
-                    "position":"absolute", 
-                    "top":"30px", 
-                    "left":"60px", 
+                    "position":"absolute",
+                    "top":"30px",
+                    "left":"60px",
                     "width":"180px"
                 });
 
@@ -56,22 +56,22 @@ $(document).ready(function() {
             }
             else if (win.scrollTop() <= initNavbar) {
                $(".navbar-statick").css({
-                    "position":"relative", 
-                    "top":"0px", 
+                    "position":"relative",
+                    "top":"0px",
                     "width":"100%",
                     "background":"rgba(242,165,45,0)"
                 });
                $(".icon-berri").css({
-                    "position":"static", 
-                    "top":"0px", 
-                    "left":"0px", 
+                    "position":"static",
+                    "top":"0px",
+                    "left":"0px",
                     "width":"80px"
                 });
             }
         });
     }
     // end for dekstop
-    
+
     // for mobile
     // else if( win.width() < 720 ){
     //     var initNavbar = 60;

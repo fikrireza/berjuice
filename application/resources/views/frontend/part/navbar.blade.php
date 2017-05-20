@@ -2,7 +2,7 @@
 	<div class="wrapper-nav">
 		<div class="list-item-nav resposive-mobile">
 			<div class="valign-midle logo">
-				<img id="icon-berri" class="icon-berri" src="{{ asset('image/base/logo-juice-united.png') }}"  onclick="location.href='{{ route('home') }}'">
+				<img id="icon-berri" class="icon-berri" src="{{ asset('amadeo/image/base/logo-juice-united.png') }}"  onclick="location.href='{{ route('home') }}'">
 			</div>
 			<div id="bar-mobile-animate" class="valign-midle">
 				<i id="bar-mobile-animate-show" class="fa fa-bars" aria-hidden="true"></i>
