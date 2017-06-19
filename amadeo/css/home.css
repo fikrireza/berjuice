@@ -1,0 +1,340 @@
+.navbar-statick{
+	z-index: 1;
+	background:rgba(0,0,0,0);
+	position: relative;
+	transition: all .51s;
+}
+.navbar-statick .wrapper-nav{
+	margin: 0 auto;
+	text-align: center;
+}
+.navbar-statick .wrapper-nav .list-item-nav{
+	display: inline-block;
+	cursor: pointer;
+	transition: all .51s;
+}
+.navbar-statick .wrapper-nav .list-item-nav:hover{
+	border-bottom: 2px solid gray; 
+}
+.navbar-statick .wrapper-nav .list-item-nav:hover .valign-midle a,
+.navbar-statick .wrapper-nav .list-item-nav:hover .valign-midle i{
+	color: rgb(205,205,205);
+}
+.navbar-statick .wrapper-nav .list-item-nav .valign-midle{
+	display: table-cell;
+	vertical-align: middle;
+}
+.navbar-statick .wrapper-nav .list-item-nav .valign-midle a{
+	color: rgb(255,255,255);
+	text-decoration: none;
+	text-shadow: 1px 1px 1px rgb(0,0,0);
+	font-size: 16px;
+	font-family: 'OptimaLTStd';
+	font-weight: bold;
+	cursor: pointer;
+	transition: all .51s;
+}
+.navbar-statick .wrapper-nav .list-item-nav .valign-midle .icon-berri{
+	/* in responsive */
+	cursor: pointer;
+}
+.navbar-statick .wrapper-nav .list-item-nav .valign-midle i{
+	color: rgb(255,255,255);
+	text-decoration: none;
+	text-shadow: 1px 1px 1px rgb(0,0,0);
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.owl-slide-one-image-fluid{
+	/* in responsive */
+}
+.owl-slide-one-image-fluid .wrapper-image-background{
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.owl-slide-one-image-fluid .owl-pagination{
+	position: relative;
+}
+.owl-slide-one-image-fluid .owl-controls .owl-pagination .owl-page span{
+	background: rgb(255,255,255);
+}
+.owl-slide-one-image-fluid .owl-controls .owl-pagination .active span{
+	background: rgb(246,182,68);
+}
+
+.home-content-berri{
+	position: relative;
+}
+.home-content-berri .wrapper-background{
+	position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.home-content-berri .background{
+	background-repeat: repeat-x;
+	background-size: cover;
+}
+.home-content-berri .background-1st{
+	/* in responsive */
+}
+.home-content-berri .background-2sd{
+	/* in responsive */
+}
+.home-content-berri .background-3th{
+	/* in responsive */
+}
+.home-content-berri .wrapper-content-berri{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	background: rgba(0,0,0,0);
+}
+
+.home-content-berri .wrapper-content-berri .who-we-are{
+	margin: 0 auto; 
+}
+.home-content-berri .wrapper-content-berri .who-we-are .title{
+	text-align: center;
+	font-family: 'OptimaLTStd-Black';
+	color: rgb(246,174,57);
+}
+.home-content-berri .wrapper-content-berri .who-we-are .description{
+	/* in responsive */
+}
+.home-content-berri .wrapper-content-berri .who-we-are .description p{
+	font-family: 'OptimaLTStd-Medium';
+}
+.home-content-berri .wrapper-content-berri .who-we-are .description .for-btn-more{
+	text-align:center;
+}
+.home-content-berri .wrapper-content-berri .who-we-are .img-who-we-are{
+	height: auto;
+	box-shadow: -5px 20px 15px -10px rgba(132, 124, 124,.8);
+}
+
+.home-content-berri .wrapper-content-berri .where-to-find-us{
+	margin: 0 auto; 
+}
+.home-content-berri .wrapper-content-berri .where-to-find-us .title{
+	text-align: center;
+	color: rgb(255,255,255);
+    font-family: 'Black-Crayon';
+}
+.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us{
+    margin: 0 auto;
+}
+.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us{
+	background-color: rgb(242,165,45);
+	display: table;
+	transition: all .51s;
+}
+.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us:hover{
+	padding: 5px;
+}
+.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us .bg-pict{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	background-size: cover;
+	background-position: center top;
+	transition: all 1.51s;
+}
+.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us:hover .bg-pict{
+	height: 270px;
+	background-position: center bottom;
+}
+.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us .bg-pict .logo-find-us{
+	height: auto;
+}
+.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us:hover .bg-pict .logo-find-us{
+	width: 20%;
+	transition: all 1.51s;
+}
+
+.home-content-berri .wrapper-content-berri .recipe{
+	margin: 0 auto; 
+	width: 100%;
+}
+
+.home-content-berri .wrapper-content-berri .recipe .title{
+	text-align: center;
+    font-family: 'OptimaLTStd-Black';
+	color: rgb(246,174,57);
+}
+.home-content-berri .wrapper-content-berri .recipe .recipe-list{
+    /* in responsive */
+}
+.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item{
+	text-align:center;
+}
+.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item h3,
+.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item h3 a{
+    font-family: 'OptimaLTStd';
+    font-weight: bold;
+	cursor: pointer;
+	color: rgb(246,174,57);
+	text-decoration: none;
+	transition: all .51s;
+}
+.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item .recipe-pic{
+	border-radius: 100%;
+	margin: 0 auto;
+	background-position: center top;
+	background-size: cover;
+	transition: all 1.5s;
+}
+.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item .recipe-pic:hover{
+	top: 0px;
+	left: 0px;
+	border-radius: 0px;
+	border: 5px solid rgb(242,165,45);
+	width: 100%;
+	background-position: center bottom;
+}
+
+.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item .recipe-pic:hover + h3{
+	font-size: 28px;
+	-webkit-transform: translateZ(0) scale(1.0, 1.0);
+	text-shadow: 0px 10px 20px rgb(134, 97, 36);
+}
+.home-content-berri .wrapper-content-berri .recipe .for-btn-more{
+	position: relative;
+    width: 80%;
+    margin: 50px auto 0px;
+    text-align: center;
+}
+
+.product{
+	 background-size: cover; 
+	 background-position: 100% 100%;
+	 position: relative; 
+}
+.product .title{
+    font-family: 'OptimaLTStd-Black';
+	text-align: center; 
+	color: rgb(255,255,255);
+	position: relative;
+	z-index: 1;
+}
+.product .product-item-list-wrapper{
+	position: relative; 
+}
+
+.product .product-item-list-wrapper .product-name{
+    font-family: 'OptimaLTStd-Black';
+	text-shadow: 10px 10px 10px rgba(105,105,105,.8);
+	position: relative;
+	z-index: 1;
+}
+.product .product-item-list-wrapper .description{
+    font-family: 'OptimaLTStd-Medium';
+    position: relative;
+	z-index: 1;
+}
+
+.product .product-item-list-1st .picture{
+	position: absolute; 
+}
+.product .product-item-list-1st .description{
+	float: right; 
+	color: rgb(255,255,255)
+}
+.product .product-item-list-1st .product-name{
+	text-align: center; 
+	float: right; 
+	color: rgb(255,255,255); 
+}
+
+.product .product-item-list-2nd .description{
+	float: left; 
+	color: rgb(255,255,255);
+}
+.product .product-item-list-2nd .picture{
+	position: absolute; 
+}
+.product .product-item-list-2nd .product-name{
+	text-align: center; 
+	float: left; 
+	color: rgb(255,255,255); 
+}
+
+.product .product-item-list-3th .picture{
+	position: absolute; 
+}
+.product .product-item-list-3th .description{
+	float: right; 
+	color: rgb(255,255,255);
+}
+.product .product-item-list-3th .product-name{
+	text-align: center; 
+	float: left; 
+	color: rgb(255,255,255); 
+}
+
+.product .for-btn-all-product{
+	text-align: center;
+}
+
+.contact-us .title{
+	text-align: center; 
+	color: rgb(255,255,255); 
+    font-family: 'Black-Crayon';
+}
+.contact-us .row{
+	margin: 0 auto;
+}
+.contact-us .row .description{
+	color: white;
+}
+.contact-us .row .description p{
+    font-family: 'OptimaLTStd-Medium';
+}
+.contact-us .row .description img{
+	/* in responsive */
+}
+.contact-us .row .form-contact .form-control{
+	/* in responsive */
+}
+.contact-us .row .form-contact .btn-submit{
+	border: none; 
+	border-radius: 0px; 
+	background-color: white; 
+	color: rgb(246,174,57); 
+	font-weight: bold;
+	transition: all .51s;
+}
+.contact-us .row .form-contact .btn-submit:hover{
+	background-color: rgb(255, 210, 0);
+}
+
+.for-web-devlop{
+	text-align: center; 
+	color: white;
+}
+.for-web-devlop p{
+    font-family: 'OptimaLTStd-Medium';
+}
+.for-web-devlop img{
+	cursor: pointer;
+}
+
+.footer{
+	margin: 0 auto; 
+	color: red; 
+}
+.footer .wrapper-footer{
+	display: table-cell; 
+	vertical-align: middle;
+}
+.footer .wrapper-footer label{
+    font-family: 'OptimaLTStd-Medium';
+}
+.footer .wrapper-footer label b{
+    font-family: 'OptimaLTStd-ExtraBlack';
+}
+.footer .wrapper-footer .logo-contact-us-footer{
+	cursor: pointer;
+}

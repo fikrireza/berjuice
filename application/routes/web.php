@@ -11,19 +11,34 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('main.home');
+// })->name('home');
+
+// Route::get('/recipe', function () {
+//     return view('main.recipe');
+// })->name('recipe');
+
+// Route::get('/product', function () {
+//     return view('main.product');
+// })->name('product');
+
+// Route::get('/product-in', function () {
+//     return view('main.product-in');
+// })->name('product-in');
+
 Route::get('/', function () {
-    return view('main.home');
+    return view('frontend.home');
 })->name('home');
 
 Route::get('/recipe', function () {
-    return view('main.recipe');
+    return view('frontend.recipe');
 })->name('recipe');
 
 Route::get('/product', function () {
-    return view('main.product');
+    return view('frontend.product');
 })->name('product');
 
 Route::get('/product-in', function () {
-    return view('main.product-in');
+    return view('frontend.product-in');
 })->name('product-in');
-

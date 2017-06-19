@@ -13,6 +13,11 @@
         "laravel/framework": "5.4.*",
         "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
+<<<<<<< HEAD
+=======
+		    "guzzlehttp/guzzle": "~5.3|~6.0",
+        "intervention/image": "^2.3.8",
+>>>>>>> a90b00b49e55dbbb7b9a47351ca5fc23fa9b34d9
         "maatwebsite/excel": "~2.1.8",
         "yajra/laravel-datatables-oracle": "6.*"
     },
