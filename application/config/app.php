@@ -188,6 +188,8 @@ return [
         Yajra\Datatables\DatatablesServiceProvider::class,
 		// Spatie Analytics
 		Spatie\Analytics\AnalyticsServiceProvider::class,
+        // Socialite
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
 
@@ -244,7 +246,7 @@ return [
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
 		'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
-
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

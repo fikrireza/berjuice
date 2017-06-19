@@ -2,18 +2,25 @@
 	z-index: 1;
 	background:rgba(0,0,0,0);
 	position: relative;
+	transition: all .51s;
 }
 .navbar-statick .wrapper-nav{
 	margin: 0 auto;
 	text-align: center;
 }
 .navbar-statick .wrapper-nav .list-item-nav{
-	height: 60px;
-	padding: 0px 20px;
 	display: inline-block;
+	cursor: pointer;
+	transition: all .51s;
+}
+.navbar-statick .wrapper-nav .list-item-nav:hover{
+	border-bottom: 2px solid gray; 
+}
+.navbar-statick .wrapper-nav .list-item-nav:hover .valign-midle a,
+.navbar-statick .wrapper-nav .list-item-nav:hover .valign-midle i{
+	color: rgb(205,205,205);
 }
 .navbar-statick .wrapper-nav .list-item-nav .valign-midle{
-	height: 60px;
 	display: table-cell;
 	vertical-align: middle;
 }
@@ -25,9 +32,11 @@
 	font-family: 'OptimaLTStd';
 	font-weight: bold;
 	cursor: pointer;
+	transition: all .51s;
 }
 .navbar-statick .wrapper-nav .list-item-nav .valign-midle .icon-berri{
-	width: 80px;
+	/* in responsive */
+	cursor: pointer;
 }
 .navbar-statick .wrapper-nav .list-item-nav .valign-midle i{
 	color: rgb(255,255,255);
@@ -38,17 +47,14 @@
 }
 
 .owl-slide-one-image-fluid{
-	margin-top: -65px;
+	/* in responsive */
 }
 .owl-slide-one-image-fluid .wrapper-image-background{
-	height: 680px;
-	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 .owl-slide-one-image-fluid .owl-pagination{
 	position: relative;
-	margin-top: -50px;
 }
 .owl-slide-one-image-fluid .owl-controls .owl-pagination .owl-page span{
 	background: rgb(255,255,255);
@@ -63,7 +69,6 @@
 .home-content-berri .wrapper-background{
 	position: absolute;
     top: 0;
-    height: 1800px;
     width: 100%;
     z-index: -1;
 }
@@ -72,86 +77,81 @@
 	background-size: cover;
 }
 .home-content-berri .background-1st{
-	height: 365px;
+	/* in responsive */
 }
 .home-content-berri .background-2sd{
-	height: 500px;
-	margin-left: -10px;
+	/* in responsive */
 }
 .home-content-berri .background-3th{
-	height: 365px;
-	
+	/* in responsive */
 }
 .home-content-berri .wrapper-content-berri{
 	position: relative;
-	padding-top: 45px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
 	background: rgba(0,0,0,0);
-	height: 500px;
 }
 
 .home-content-berri .wrapper-content-berri .who-we-are{
 	margin: 0 auto; 
-	width: 75%;
 }
 .home-content-berri .wrapper-content-berri .who-we-are .title{
 	text-align: center;
-	margin: 0px auto 115px;
 	font-family: 'OptimaLTStd-Black';
-	font-size: 45px;
 	color: rgb(246,174,57);
 }
 .home-content-berri .wrapper-content-berri .who-we-are .description{
-	padding: 0px 20px;
+	/* in responsive */
 }
 .home-content-berri .wrapper-content-berri .who-we-are .description p{
-	text-indent: 50px; 
-	line-height: 1.6;
 	font-family: 'OptimaLTStd-Medium';
 }
 .home-content-berri .wrapper-content-berri .who-we-are .description .for-btn-more{
 	text-align:center;
-	margin: 65px auto 0px;
 }
 .home-content-berri .wrapper-content-berri .who-we-are .img-who-we-are{
-	width: 80%;
 	height: auto;
 	box-shadow: -5px 20px 15px -10px rgba(132, 124, 124,.8);
 }
 
 .home-content-berri .wrapper-content-berri .where-to-find-us{
 	margin: 0 auto; 
-	width: 75%;
 }
 .home-content-berri .wrapper-content-berri .where-to-find-us .title{
 	text-align: center;
-	margin: 160px auto 60px;
 	color: rgb(255,255,255);
     font-family: 'Black-Crayon';
-    font-size: 45px;
 }
 .home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us{
-	width: 100%;
     margin: 0 auto;
 }
 .home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us{
 	background-color: rgb(242,165,45);
-	width: 100%;
-	padding: 15px;
 	display: table;
+	transition: all .51s;
+}
+.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us:hover{
+	padding: 5px;
 }
 .home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us .bg-pict{
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
-	width: 100%;
-	height: 250px;
+	background-size: cover;
+	background-position: center top;
+	transition: all 1.51s;
+}
+.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us:hover .bg-pict{
+	height: 270px;
+	background-position: center bottom;
 }
 .home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us .bg-pict .logo-find-us{
-	width: 50%;
 	height: auto;
+}
+.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us:hover .bg-pict .logo-find-us{
+	width: 20%;
+	transition: all 1.51s;
 }
 
 .home-content-berri .wrapper-content-berri .recipe{
@@ -162,54 +162,65 @@
 .home-content-berri .wrapper-content-berri .recipe .title{
 	text-align: center;
     font-family: 'OptimaLTStd-Black';
-    font-size: 45px;
 	color: rgb(246,174,57);
-	margin: 45px auto 40px;
 }
 .home-content-berri .wrapper-content-berri .recipe .recipe-list{
-	/*background-color: green;*/
-    width: 100%;
-    left: 0;
-    height: 340px;
+    /* in responsive */
 }
 .home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item{
 	text-align:center;
 }
-.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item h3{
+.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item h3,
+.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item h3 a{
     font-family: 'OptimaLTStd';
     font-weight: bold;
 	cursor: pointer;
 	color: rgb(246,174,57);
+	text-decoration: none;
+	transition: all .51s;
 }
 .home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item .recipe-pic{
-	width: 280px;
-	height: 280px;
 	border-radius: 100%;
 	margin: 0 auto;
-	background-position: center;
+	background-position: center top;
 	background-size: cover;
+	transition: all 1.5s;
+}
+.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item .recipe-pic:hover{
+	top: 0px;
+	left: 0px;
+	border-radius: 0px;
+	border: 5px solid rgb(242,165,45);
+	width: 100%;
+	background-position: center bottom;
+}
+
+.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item .recipe-pic:hover + h3{
+	font-size: 28px;
+	-webkit-transform: translateZ(0) scale(1.0, 1.0);
+	text-shadow: 0px 10px 20px rgb(134, 97, 36);
+}
+.home-content-berri .wrapper-content-berri .recipe .for-btn-more{
+	position: relative;
+    width: 80%;
+    margin: 50px auto 0px;
+    text-align: center;
 }
 
 .product{
 	 background-size: cover; 
 	 background-position: 100% 100%;
-	 margin-top: 50px; 
 	 position: relative; 
-	 padding-top: 150px;
 }
 .product .title{
     font-family: 'OptimaLTStd-Black';
-    font-size: 45px;
 	text-align: center; 
-	margin: 60px auto 0px; 
 	color: rgb(255,255,255);
 	position: relative;
 	z-index: 1;
 }
 .product .product-item-list-wrapper{
-	width: 100%; 
 	position: relative; 
-	margin-top: 200px;
 }
 
 .product .product-item-list-wrapper .product-name{
@@ -226,81 +237,53 @@
 
 .product .product-item-list-1st .picture{
 	position: absolute; 
-	width: 50%; 
-	top:-300px;
 }
 .product .product-item-list-1st .description{
 	float: right; 
-	width: 45%; 
-	margin-bottom: 30px; 
-	margin-right: 8%; 
 	color: rgb(255,255,255)
 }
 .product .product-item-list-1st .product-name{
 	text-align: center; 
 	float: right; 
-	margin-right: 10%; 
 	color: rgb(255,255,255); 
-	font-size: 80px; 
-	margin-top: 75px;
 }
 
 .product .product-item-list-2nd .description{
-	float: left; width: 30%; 
-	margin-top: -25px; 
-	margin-left: 15%; 
+	float: left; 
 	color: rgb(255,255,255);
 }
 .product .product-item-list-2nd .picture{
 	position: absolute; 
-	width: 50%; 
-	top:-300px;
 }
 .product .product-item-list-2nd .product-name{
 	text-align: center; 
 	float: left; 
-	margin-left: 15%; 
 	color: rgb(255,255,255); 
-	font-size: 69px; 
-	margin-top: 30px;
 }
 
 .product .product-item-list-3th .picture{
 	position: absolute; 
-	width: 50%; 
-	left:-20px; 
-	top:-315px;
 }
 .product .product-item-list-3th .description{
 	float: right; 
-	width: 45%; 
-	margin-top: 30px; 
-	margin-right: 8%; 
 	color: rgb(255,255,255);
 }
 .product .product-item-list-3th .product-name{
 	text-align: center; 
 	float: left; 
-	margin-left: 38%; 
 	color: rgb(255,255,255); 
-	font-size: 80px; 
-	margin-top: 75px;
 }
 
 .product .for-btn-all-product{
-	margin: 40px auto 80px; 
 	text-align: center;
 }
 
 .contact-us .title{
 	text-align: center; 
-	margin: 60px auto 50px; 
 	color: rgb(255,255,255); 
     font-family: 'Black-Crayon';
-	font-size: 46px;
 }
 .contact-us .row{
-	width: 80%; 
 	margin: 0 auto;
 }
 .contact-us .row .description{
@@ -308,84 +291,50 @@
 }
 .contact-us .row .description p{
     font-family: 'OptimaLTStd-Medium';
-	font-size: 16px;
-	margin-bottom: 15px;
 }
 .contact-us .row .description img{
-	width: 35px;
-	margin-right: 15px;
+	/* in responsive */
 }
 .contact-us .row .form-contact .form-control{
-	margin: 10px 0px;
+	/* in responsive */
 }
 .contact-us .row .form-contact .btn-submit{
 	border: none; 
 	border-radius: 0px; 
 	background-color: white; 
-	padding: 5px 20px; 
 	color: rgb(246,174,57); 
-	font-size: 20px;
 	font-weight: bold;
+	transition: all .51s;
+}
+.contact-us .row .form-contact .btn-submit:hover{
+	background-color: rgb(255, 210, 0);
 }
 
 .for-web-devlop{
 	text-align: center; 
-	margin-top: 40px; 
-	padding-bottom: 60px; 
 	color: white;
 }
 .for-web-devlop p{
     font-family: 'OptimaLTStd-Medium';
-	margin: 0px 0px 5px;
 }
 .for-web-devlop img{
-	height: 15px;
 	cursor: pointer;
 }
 
 .footer{
-	width: 95%; 
 	margin: 0 auto; 
 	color: red; 
-	height: 60px; 
-	padding:10px 0px;
 }
 .footer .wrapper-footer{
-	height: 40px; 
 	display: table-cell; 
 	vertical-align: middle;
 }
 .footer .wrapper-footer label{
     font-family: 'OptimaLTStd-Medium';
-	margin: 0 10px;
 }
 .footer .wrapper-footer label b{
     font-family: 'OptimaLTStd-ExtraBlack';
 }
 .footer .wrapper-footer .logo-contact-us-footer{
-	width: 30px;
 	cursor: pointer;
-}
-
-.float-right{
-	float: right;
-}
-
-.float-left{
-	float: left;
-}
-
-.border-gradian-right {
-    border-right-width: 1.9px;
-    border-right-style: solid;
-    -webkit-border-image: 
-      -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
-    -webkit-border-image: 
-      -webkit-linear-gradient(rgba(0, 0, 0, 0), rgb(202, 34, 41), rgba(0, 0, 0, 0)) 1 100%;
-    -moz-border-image:
-      -moz-linear-gradient(rgba(0, 0, 0, 0), rgb(202, 34, 41), rgba(0, 0, 0, 0)) 1 100%;    
-    -o-border-image:
-      -o-linear-gradient(rgba(0, 0, 0, 0), rgb(202, 34, 41), rgba(0, 0, 0, 0)) 1 100%;
-    border-image:
-      linear-gradient(to bottom, rgba(0, 0, 0, 0),  rgb(202, 34, 41), rgba(0, 0, 0, 0)) 1 100%;
 }

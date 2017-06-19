@@ -13,5 +13,17 @@
 
 Route::get('/', function () {
     return view('main.home');
-});
+})->name('home');
+
+Route::get('/recipe', function () {
+    return view('main.recipe');
+})->name('recipe');
+
+Route::get('/product', function () {
+    return view('main.product');
+})->name('product');
+
+Route::get('/product-in', function () {
+    return view('main.product-in');
+})->name('product-in');
 
