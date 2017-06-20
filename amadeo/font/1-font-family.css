@@ -1,8 +1,27 @@
 @font-face {
+    font-family: 'LibreBaskerville';
+    src: url('../font/LibreBaskerville-Regular.ttf');
+}
+@font-face {
+    font-family: 'LibreBaskerville';
+    src: url('../font/LibreBaskerville-Bold.ttf');
+    font-weight: 'bold';
+}
+@font-face {
+    font-family: 'LibreBaskerville';
+    src: url('../font/LibreBaskerville-Italic.ttf');
+    font-style: 'italic';
+}
+
+@font-face {
+    font-family: 'PermanentMarker';
+    src: url('../font/PermanentMarker.ttf');
+}
+
+@font-face {
     font-family: 'Black-Crayon';
     src: url('../font/Black-Crayon.ttf');
 }
-
 
 @font-face {
     font-family: 'OptimaLTStd';

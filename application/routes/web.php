@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.home');
-})->name('home');
+
+// Frontend
+Route::get('/', 'Frontend\HomeController@index')
+	->name('frontend.home');
 
 Route::get('/recipe', function () {
     return view('frontend.recipe');
