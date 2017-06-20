@@ -30,7 +30,7 @@ Route::get('/product-in', function () {
 
 
 Route::get('admin/dashboard', function(){
-  return view('backend.dashboard.index');
+  return view('backend.dashboard.dashboard');
 })->name('admin.dashboard');
 // START BACKEND ROUTE
 Route::group(['middleware' => ['isAdministrator']], function () {

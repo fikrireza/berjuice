@@ -1,38 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex,nofollow">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-@yield('title')
-@include('backend.includes.head')
-
+    @yield('title')
+    @include('backend.includes.head')
+    @yield('headscript')
   </head>
+  <body class="hold-transition skin-red sidebar-mini">
+    <div class="wrapper">
 
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-
-        @include('backend.includes.sidebar')
-
+      <header class="main-header">
         @include('backend.includes.header')
+      </header>
+      <aside class="main-sidebar">
+        @include('backend.includes.sidebar')
+      </aside>
 
-        <!-- page content -->
-        <div class="right_col" role="main">
-        @yield('content')
-        </div>
+      <div class="content-wrapper">
+        <section class="content-header">
+          @yield('breadcrumb')
+        </section>
 
-        <footer>
-          @include('backend.includes.footer')
-        </footer>
+        <section class="content">
+          @yield('content')
+        </section>
       </div>
+
+      <footer class="main-footer">
+        @include('backend.includes.footer')
+      </footer>
+
     </div>
-
-
     @include('backend.includes.bottomscript')
     @yield('script')
   </body>

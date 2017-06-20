@@ -1,4 +1,4 @@
-<div class="pull-right">
-  <a href="#">Amadeo</a> - <a href="#">Aquasolve</a>
+<div class="pull-right hidden-xs">
+  <b>Version</b> 1.0
 </div>
-<div class="clearfix"></div>
+<strong>Copyright &copy; <?php echo date('Y'); ?> <a href="http://hurricanesgrill.co.id"> Hurricanesgrill.co.id</a>.</strong> All rights reserved.

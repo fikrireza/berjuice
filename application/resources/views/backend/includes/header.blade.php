@@ -1,59 +1,41 @@
-<!-- top navigation -->
-<div class="top_nav">
-  <div class="nav_menu">
-    <nav class="" role="navigation">
-      <div class="nav toggle">
-        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-      </div>
+<a href="{{ url('')}}" class="logo">
+  <span class="logo-mini"><b>JU I</b></span>
+  <span class="logo-lg" style="font-size:18px;"><b>Juice United</b> Indonesia</span>
+</a>
+<nav class="navbar navbar-static-top" role="navigation">
+  <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+    <span class="sr-only">Toggle navigation</span>
+  </a>
+  <div class="navbar-custom-menu">
+    <ul class="nav navbar-nav">
+      <li class="dropdown user user-menu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <img src="{{ asset('backend/dist/img/avatar.png') }}" class="user-image" alt="User Image">
+          <span class="hidden-xs">
+            Nama
+          </span>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="user-header">
+            <img src="{{ asset('backend/dist/img/avatar.png') }}" class="img-circle" alt="User Image">
+            <p>
+              Nama
+              <small>
+                Admin
+              </small>
+            </p>
+          </li>
 
-      <ul class="nav navbar-nav navbar-right">
-        <li class="">
-          <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <img src="" alt="">
-            <span class=" fa fa-angle-down"></span>
-          </a>
-          <ul class="dropdown-menu dropdown-usermenu pull-right">
-            <li><a href=""> Profile</a></li>
-            <li><a href=""><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-          </ul>
-        </li>
-
-        {{-- @if ($getNotifInbox)
-        <li role="presentation" class="dropdown">
-          <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-            <i class="fa fa-envelope-o"></i>
-            <span class="badge bg-green">{{ $getNotifInbox->count() }}</span>
-          </a>
-          <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-            @foreach ($getNotifInbox as $key)
-            <li>
-              <a>
-                <span>
-                  <span>{{ $key->nama }}</span>
-                  @php
-                  Carbon\Carbon::setLocale('id');
-                  @endphp
-                  <span class="time">{{ $key->created_at->diffForHumans() }}</span>
-                </span>
-                <span class="message">
-                  {{ $key->pesan }}
-                </span>
-              </a>
-            </li>
-            @endforeach
-            <li>
-              <div class="text-center">
-                <a href="{{ route('inbox.index') }}">
-                  <strong>Lihat Semua</strong>
-                  <i class="fa fa-angle-right"></i>
-                </a>
-              </div>
-            </li>
-          </ul>
-        </li>
-        @endif --}}
-      </ul>
-    </nav>
+          <li class="user-footer">
+            <div class="pull-left">
+              <a href="" class="btn btn-default btn-flat">Profile</a>
+            </div>
+            <div class="pull-right">
+              <a href="" class="btn btn-default btn-flat">Sign out</a>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
-</div>
-<!-- /top navigation -->
+</nav>
