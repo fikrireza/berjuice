@@ -13,6 +13,7 @@
 
 
 // Frontend
+
 Route::get('/', 'Frontend\HomeController@index')
 	->name('frontend.home');
 
@@ -27,3 +28,18 @@ Route::get('/product', function () {
 Route::get('/product-in', function () {
     return view('frontend.product-in');
 })->name('product-in');
+
+// end Frontend
+
+
+
+// START BACKEND ROUTE
+Route::get('admin/dashboard', function(){
+  return view('backend.dashboard.dashboard');
+})->name('admin.dashboard');
+
+Route::group(['middleware' => ['isAdministrator']], function () {
+
+
+});
+// END BACKEND ROUTE
