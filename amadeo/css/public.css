@@ -31,7 +31,12 @@
 .setup-wrapper .setup-content.lar-wd{
   width: 90%;
 }
-
+.setup-wrapper .setup-content h1.title{
+  text-align: center;
+  color: rgb(242,176,56);
+  font-family: 'PermanentMarker';
+  font-size: 53px;
+}
 /* for navbar */
 .navbar-statick{
   position: fixed;

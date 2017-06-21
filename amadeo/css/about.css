@@ -1,0 +1,65 @@
+#about{
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#about h1.title{
+	margin: 0;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+#about .descrip{
+	width: 50%;
+}
+#about .descrip p{
+	color: rgb(255,255,255);
+	font-family: 'LibreBaskerville';
+	line-height: 2;
+}
+
+#director{
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#director h1.title{
+	margin: 0;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	text-align: right;
+}
+#director .descrip{
+	width: 50%;
+	float: right;
+}
+#director .descrip p{
+	color: rgb(99,99,99);
+	font-family: 'LibreBaskerville';
+	line-height: 2;
+	text-align: right;
+}
+
+#milestones{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#milestones:before{
+	content: "";
+    background-image: url('../image/base/leaves-up.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 290px;
+    z-index: 0;	
+}
+#milestones h1.title{
+	margin: 0;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}

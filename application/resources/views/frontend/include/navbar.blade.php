@@ -21,7 +21,7 @@
 		</div>
 		<div class="list-item-nav">
 			<div class="valign-midle">
-				<a href="">
+				<a href="{{ route('frontend.about') }}">
 					About Us
 				</a>
 			</div>
