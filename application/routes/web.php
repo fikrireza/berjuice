@@ -28,13 +28,14 @@ Route::get('/product-in', function () {
 })->name('product-in');
 
 
+Route::get('admin/login', function(){
+  return view('backend.auth.login');
+})->name('login.pages');
 
-Route::get('admin/dashboard', function(){
-  return view('backend.dashboard.dashboard');
-})->name('admin.dashboard');
 // START BACKEND ROUTE
 Route::group(['middleware' => ['isAdministrator']], function () {
 
+  Route::get('admin/dashboard', 'Backend\DashboardController@index')->name('admin.dashboard');
 
 });
 // END BACKEND ROUTE

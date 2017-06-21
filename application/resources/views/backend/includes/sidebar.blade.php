@@ -30,5 +30,6 @@
         <li><a href=""><i class="fa fa-circle-o"></i> Reservation Report</a></li>
       </ul>
     </li>
+    <li class="header">SETTING NAVIGATION</li>
   </ul>
 </section>
