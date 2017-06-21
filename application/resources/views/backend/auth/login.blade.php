@@ -1,84 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>Aquasolve | Login</title>
-
-    <!-- Bootstrap -->
-    <link href="{{ asset('backend/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="{{ asset('backend/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <!-- Animate.css -->
-    <link href="https://colorlib.com/polygon/gentelella/css/animate.min.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="{{ asset('backend/css/custom.min.css') }}" rel="stylesheet">
+    <title>Juice United Indonesia</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="{{asset('backend/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{{asset('backend/dist/css/AdminLTE.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/bootstrap/css/custom2.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/plugins/iCheck/square/blue.css')}}">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
-
-  <body class="login">
-    <div>
-    @if(Session::has('filedLogin'))
-      <script>
-      window.setTimeout(function() {
-        $(".alert-danger").fadeTo(700, 0).slideUp(700, function(){
-          $(this).remove();
-        });
-      }, 5000);
-      </script>
-      <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-12 col-md-offset-4">
-          <div class="alert alert-danger alert-dismissible fade in" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
-            </button>
-            <strong>{{ Session::get('filedLogin') }}</strong>
-          </div>
-        </div>
-      </div>
+  <body class="skin-blue-light hold-transition login-page">
+    @if(Session::has('messageactivationfailed'))
+    <div class="alert alert-success panjang">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <h4><i class="icon fa fa-check"></i> Berhasil!</h4>
+      <p>{{ Session::get('messageactivationfailed') }}</p>
+    </div>
     @endif
-
-      <div class="login_wrapper">
-        <div class="animate form login_form">
-          <section class="login_content">
-            <form action="{{ route('login') }}" method="POST">
-              <h1>Login Form</h1>
-              {{ csrf_field() }}
-              <div class="form-group has-feedback {{ $errors->has('email') ? 'has-error' : '' }}">
-                <input name="email" type="text" class="form-control" placeholder="Email" value="{{ old('email') }}">
-                @if ($errors->has('email'))
-                  <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                @endif
-              </div>
-              <div class="form-group has-feedback {{ $errors->has('password') ? 'has-error' : '' }}">
-                <input name="password" type="password" class="form-control" placeholder="Password" value="{{ old('password') }}">
-                @if ($errors->has('password'))
-                  <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                @endif
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <button type="submit" class="btn btn-primary btn-block btn-flat">Log In</button>
-                </div>
-              </div>
-
-              <div class="clearfix"></div>
-
-              <div class="separator">
-                <div>
-                  <h1>Aquasolve - Gofress | <a href="http://amadeo.id"></a>Amadeo.id</h1>
-                  <p>©2017 All Rights Reserved.</p>
-                </div>
-              </div>
-            </form>
-          </section>
-        </div>
+    <div class="login-box">
+      <div class="login-logo">
+        <img src="{{asset('amadeo/image/base/logo-juice-united.png')}}" alt="Juice United" width="95px"/>
+        &nbsp;&nbsp;<b>Juice United Indonesia</b>
+      </div>
+      <div class="login-box-body">
+        <p class="login-box-msg">Please Login With Your Account.</p>
+        <form action="{{ route('login') }}" method="post">
+          {!! csrf_field() !!}
+          <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
+            <input type="email" name="email" class="form-control" placeholder="Email" value="{{ old('email')}}" />
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            @if($errors->has('email'))
+              <span class="help-block">
+                <i>* {{ $errors->first('email') }}</i>
+              </span>
+            @endif
+          </div>
+          <div class="form-group {{$errors->has('password') ? 'has-error' : ''}}">
+            <input name="password" type="password" class="form-control" placeholder="Password">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            @if($errors->has('password'))
+              <span class="help-block">
+                <i>* {{ $errors->first('password') }}</i>
+              </span>
+            @endif
+          </div>
+          <div class="form-group {{ Session::has('error') ? 'has-error' : ''}}">
+            @if(Session::has('error'))
+              <span class="help-block">
+                <i>* {{ Session::get('error') }}</i>
+              </span>
+            @endif
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <a href="#">Forgot Password</a>
+            </div>
+            <div class="col-sm-4 pull-right">
+              <button type="submit" class="btn btn-success btn-block btn-flat">Login</button>
+            </div>
+          </div>
+        </form>
 
       </div>
     </div>
+
+    <script src="{{asset('backend/plugins/jQuery/jQuery-2.1.4.min.js')}}"></script>
+    <script src="{{asset('backend/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('backend/plugins/iCheck/icheck.min.js')}}"></script>
+    <script>
+      $(function () {
+        $('input').iCheck({
+          checkboxClass: 'icheckbox_square-blue',
+          radioClass: 'iradio_square-blue',
+          increaseArea: '20%'
+        });
+      });
+    </script>
   </body>
 </html>

@@ -33,15 +33,20 @@ Route::get('/product-in', function () {
 
 // end Frontend
 
+// Auth::routes();
+Route::post('login-process', 'Auth\LoginController@loginProcess')->name('login');
+Route::get('admin/logout-process', 'Auth\LoginController@logoutProcess')->name('logout');
+// END Auth::routes()
 
+
+Route::get('admin/login', function(){
+  return view('backend.auth.login');
+})->name('login.pages');
 
 // START BACKEND ROUTE
-Route::get('admin/dashboard', function(){
-  return view('backend.dashboard.dashboard');
-})->name('admin.dashboard');
-
 Route::group(['middleware' => ['isAdministrator']], function () {
 
+  Route::get('admin/dashboard', 'Backend\DashboardController@index')->name('admin.dashboard');
 
 });
 // END BACKEND ROUTE

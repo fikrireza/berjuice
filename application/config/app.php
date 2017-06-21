@@ -120,7 +120,7 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'single'),
+    'log' => env('APP_LOG', 'daily'),
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
@@ -176,7 +176,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-		// Tag HTML providers
+		    // Tag HTML providers
         Collective\Html\HtmlServiceProvider::class,
         // Manipulate Images
         Intervention\Image\ImageServiceProvider::class,
@@ -186,8 +186,8 @@ return [
         Barryvdh\DomPDF\ServiceProvider::class,
         // Yajra Datatables
         Yajra\Datatables\DatatablesServiceProvider::class,
-		// Spatie Analytics
-		Spatie\Analytics\AnalyticsServiceProvider::class,
+    		// Spatie Analytics
+    		Spatie\Analytics\AnalyticsServiceProvider::class,
         // Socialite
         Laravel\Socialite\SocialiteServiceProvider::class,
 
@@ -239,13 +239,13 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-		'Form' => Collective\Html\FormFacade::class,
-		'HTML' => Collective\Html\HtmlFacade::class,
+    		'Form' => Collective\Html\FormFacade::class,
+    		'HTML' => Collective\Html\HtmlFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Str' => Illuminate\Support\Str::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
-		'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
+		    'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 

@@ -4,9 +4,9 @@
       <img src="{{ asset('backend/dist/img/avatar.png') }}" class="img-circle" alt="User Image">
     </div>
     <div class="pull-left info">
-      <p>Halo Admin</p>
+      <p>Halo, {{ Auth::user()->name }}</p>
       <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-      <small>Admin</small>
+      <small>{{ Auth::user()->role->title }}</small>
     </div>
   </div>
   <ul class="sidebar-menu">
@@ -19,16 +19,14 @@
     <li class="treeview">
       <a href="#">
         <i class="fa fa-edit"></i>
-        <span>Reservation Management</span>
+        <span>Recipe</span>
         <i class="fa fa-angle-left pull-right"></i>
       </a>
       <ul class="treeview-menu">
-        <li class=""><a href=""><i class="fa fa-circle-o"></i> Reservation List</a></li>
-        <li class=""><a href=""><i class="fa fa-circle-o"></i> Reservation Cancelled</a></li>
-        <li class=""><a href=""><i class="fa fa-circle-o"></i> Reservation Block</a></li>
-        <li class=""><a href=""><i class="fa fa-circle-o"></i> Group Booking Payment</a></li>
-        <li><a href=""><i class="fa fa-circle-o"></i> Reservation Report</a></li>
+        <li class=""><a href=""><i class="fa fa-circle-o"></i> Recipe List</a></li>
+        <li class=""><a href=""><i class="fa fa-circle-o"></i> Recipe Categories</a></li>
       </ul>
     </li>
+    <li class="header">SETTING NAVIGATION</li>
   </ul>
 </section>

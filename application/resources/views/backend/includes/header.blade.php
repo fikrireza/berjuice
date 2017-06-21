@@ -1,4 +1,4 @@
-<a href="{{ url('')}}" class="logo">
+<a href="{{ route('admin.dashboard') }}" class="logo">
   <span class="logo-mini"><b>JU I</b></span>
   <span class="logo-lg" style="font-size:18px;"><b>Juice United</b> Indonesia</span>
 </a>
@@ -12,16 +12,16 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <img src="{{ asset('backend/dist/img/avatar.png') }}" class="user-image" alt="User Image">
           <span class="hidden-xs">
-            Nama
+            {{ Auth::user()->name }}
           </span>
         </a>
         <ul class="dropdown-menu">
           <li class="user-header">
             <img src="{{ asset('backend/dist/img/avatar.png') }}" class="img-circle" alt="User Image">
             <p>
-              Nama
+              {{ Auth::user()->name }}
               <small>
-                Admin
+                {{ Auth::user()->role->title }}
               </small>
             </p>
           </li>
@@ -31,7 +31,7 @@
               <a href="" class="btn btn-default btn-flat">Profile</a>
             </div>
             <div class="pull-right">
-              <a href="" class="btn btn-default btn-flat">Sign out</a>
+              <a href="{{ route('logout') }}" class="btn btn-default btn-flat">Sign out</a>
             </div>
           </li>
         </ul>
