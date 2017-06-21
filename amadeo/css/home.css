@@ -1,60 +1,16 @@
-.navbar-statick{
-	z-index: 1;
-	background:rgba(0,0,0,0);
-	position: relative;
-	transition: all .51s;
-}
-.navbar-statick .wrapper-nav{
-	margin: 0 auto;
-	text-align: center;
-}
-.navbar-statick .wrapper-nav .list-item-nav{
-	display: inline-block;
-	cursor: pointer;
-	transition: all .51s;
-}
-.navbar-statick .wrapper-nav .list-item-nav:hover{
-	border-bottom: 2px solid gray; 
-}
-.navbar-statick .wrapper-nav .list-item-nav:hover .valign-midle a,
-.navbar-statick .wrapper-nav .list-item-nav:hover .valign-midle i{
-	color: rgb(205,205,205);
-}
-.navbar-statick .wrapper-nav .list-item-nav .valign-midle{
-	display: table-cell;
-	vertical-align: middle;
-}
-.navbar-statick .wrapper-nav .list-item-nav .valign-midle a{
-	color: rgb(255,255,255);
-	text-decoration: none;
-	text-shadow: 1px 1px 1px rgb(0,0,0);
-	font-size: 16px;
-	font-family: 'OptimaLTStd';
-	font-weight: bold;
-	cursor: pointer;
-	transition: all .51s;
-}
-.navbar-statick .wrapper-nav .list-item-nav .valign-midle .icon-berri{
-	/* in responsive */
-	cursor: pointer;
-}
-.navbar-statick .wrapper-nav .list-item-nav .valign-midle i{
-	color: rgb(255,255,255);
-	text-decoration: none;
-	text-shadow: 1px 1px 1px rgb(0,0,0);
-	font-size: 25px;
-	cursor: pointer;
-}
-
+/* for owl slider */
 .owl-slide-one-image-fluid{
-	/* in responsive */
+	height: 100vh;
 }
 .owl-slide-one-image-fluid .wrapper-image-background{
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 100vh;
+	width: 100%;
 }
 .owl-slide-one-image-fluid .owl-pagination{
 	position: relative;
+	margin-top: -50px;
 }
 .owl-slide-one-image-fluid .owl-controls .owl-pagination .owl-page span{
 	background: rgb(255,255,255);
@@ -62,279 +18,250 @@
 .owl-slide-one-image-fluid .owl-controls .owl-pagination .active span{
 	background: rgb(246,182,68);
 }
+/* end for owl slider */
 
-.home-content-berri{
-	position: relative;
-}
-.home-content-berri .wrapper-background{
-	position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-}
-.home-content-berri .background{
-	background-repeat: repeat-x;
+/* for about */
+#about{
+	height: 102vh;
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
-.home-content-berri .background-1st{
-	/* in responsive */
+#about h1.title{
+	text-align: center;
+	color: rgb(242,176,56);
+	margin: 0;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	font-family: 'PermanentMarker';
+	font-size: 53px;
 }
-.home-content-berri .background-2sd{
-	/* in responsive */
+#about .content{
+	width: 50%;
 }
-.home-content-berri .background-3th{
-	/* in responsive */
+#about .content p{
+	font-family: 'LibreBaskerville';
+	color: rgb(255,255,255);
+	line-height: 2;
 }
-.home-content-berri .wrapper-content-berri{
-	position: relative;
+#about .content .for-btn{
+	text-align: center;
+}
+/* end for about */
+
+/* for where to find us and recipe */
+#wtfuar{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-bottom: 60px;
+}
+#wtfuar:before{
+	content: "";
+    background-image: url('../image/base/leaves-up.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 290px;
+    z-index: 0;	
+}
+#wtfuar:after{
+    content: "";
+    background-image: url('../image/base/leaves-bottom.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0px;
+    height: 390px;
+    width: 100%;
+    /*z-index: ;*/
+}
+#wtfuar .setup-content{
+	z-index: 10;
+}
+#wtfuar h1.title{
+	text-align: center;
+	color: rgb(242,176,56);
+	margin: 0;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	font-family: 'PermanentMarker';
+	font-size: 53px;
+}
+#wtfuar .for-wrapper{
+	text-align: center;
+	margin-bottom: 30px;
+	display: inline-block;
+}
+#wtfuar .centered{
 	margin-left: auto;
 	margin-right: auto;
-	width: 100%;
-	background: rgba(0,0,0,0);
-}
-
-.home-content-berri .wrapper-content-berri .who-we-are{
-	margin: 0 auto; 
-}
-.home-content-berri .wrapper-content-berri .who-we-are .title{
 	text-align: center;
-	font-family: 'OptimaLTStd-Black';
-	color: rgb(246,174,57);
 }
-.home-content-berri .wrapper-content-berri .who-we-are .description{
-	/* in responsive */
+#wtfuar .circle{
+	border-radius: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
 }
-.home-content-berri .wrapper-content-berri .who-we-are .description p{
-	font-family: 'OptimaLTStd-Medium';
+#wtfuar .for-wtfu{
+	width: 33%;
 }
-.home-content-berri .wrapper-content-berri .who-we-are .description .for-btn-more{
-	text-align:center;
+#wtfuar .for-wtfu .circle{
+	width: 250px;
+	height: 250px;
 }
-.home-content-berri .wrapper-content-berri .who-we-are .img-who-we-are{
-	height: auto;
-	box-shadow: -5px 20px 15px -10px rgba(132, 124, 124,.8);
-}
-
-.home-content-berri .wrapper-content-berri .where-to-find-us{
-	margin: 0 auto; 
-}
-.home-content-berri .wrapper-content-berri .where-to-find-us .title{
-	text-align: center;
-	color: rgb(255,255,255);
-    font-family: 'Black-Crayon';
-}
-.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us{
-    margin: 0 auto;
-}
-.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us{
-	background-color: rgb(242,165,45);
-	display: table;
-	transition: all .51s;
-}
-.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us:hover{
-	padding: 5px;
-}
-.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us .bg-pict{
+#wtfuar .for-wtfu .circle .vertical-midle{
+	width: 250px;
+	height: 250px;
 	display: table-cell;
 	vertical-align: middle;
+}
+#wtfuar .for-wtfu .circle .vertical-midle i{
+	font-size: 146px;
+	color: rgb(255,255,255);
+}
+#wtfuar .for-wtfu h2{
 	text-align: center;
+	color: rgb(255,255,255);
+    font-family: 'LibreBaskerville';
+}
+#wtfuar .for-recipe{
+	width: 24%;
+	text-align: center;
+}
+#wtfuar .for-recipe .circle{
+	width: 180px;
+	height: 180px;
+}
+#wtfuar .for-recipe .wrapper-title-name{
+	width: 180px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#wtfuar .for-recipe .wrapper-title-name .title-name{
+	display: table-cell;
+	vertical-align: middle;
+	width: 180px;
+}
+#wtfuar .for-recipe .wrapper-title-name .title-name h2{
+	color: rgb(87,87,87);
+	text-align: center;
+	width: 180px;
+	margin: 10px auto;
+    font-family: 'LibreBaskerville';
+}
+/* end for where to find us and recipe */
+
+/* for product */
+#product{
 	background-size: cover;
-	background-position: center top;
-	transition: all 1.51s;
+	background-repeat: no-repeat;
+	background-position: center;
 }
-.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us:hover .bg-pict{
-	height: 270px;
-	background-position: center bottom;
+#product:before{
+	content: "";
+    background-image: url('../image/base/gradien.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 290px;
+    z-index: 1;	
 }
-.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us .bg-pict .logo-find-us{
-	height: auto;
-}
-.home-content-berri .wrapper-content-berri .where-to-find-us .row-find-us .wrapper-find-us:hover .bg-pict .logo-find-us{
-	width: 20%;
-	transition: all 1.51s;
-}
-
-.home-content-berri .wrapper-content-berri .recipe{
-	margin: 0 auto; 
-	width: 100%;
-}
-
-.home-content-berri .wrapper-content-berri .recipe .title{
+#product h1.title{
 	text-align: center;
-    font-family: 'OptimaLTStd-Black';
-	color: rgb(246,174,57);
+	color: rgb(242,176,56);
+	margin: 0;
+	padding-top: 180px;
+	padding-bottom: 0px;
+	font-family: 'PermanentMarker';
+	font-size: 53px;
+	text-shadow: 
+		0px 0px 25px rgb(255,255,255),
+		0px 10px 25px rgb(255,255,255),
+		0px -10px 25px rgb(255,255,255),
+		0px 20px 25px rgb(255,255,255),
+		0px -20px 25px rgb(255,255,255),
+		10px 0px 25px rgb(255,255,255),
+		-10px 0px 25px rgb(255,255,255),
+		20px 0px 25px rgb(255,255,255),
+		-20px 0px 25px rgb(255,255,255);
 }
-.home-content-berri .wrapper-content-berri .recipe .recipe-list{
-    /* in responsive */
-}
-.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item{
-	text-align:center;
-}
-.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item h3,
-.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item h3 a{
-    font-family: 'OptimaLTStd';
-    font-weight: bold;
-	cursor: pointer;
-	color: rgb(246,174,57);
-	text-decoration: none;
-	transition: all .51s;
-}
-.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item .recipe-pic{
-	border-radius: 100%;
-	margin: 0 auto;
-	background-position: center top;
+#product .product-wrapper{
+	position: relative;
+	width: 100%;
 	background-size: cover;
-	transition: all 1.5s;
+	background-repeat: no-repeat;
+	background-position: center;
 }
-.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item .recipe-pic:hover{
-	top: 0px;
-	left: 0px;
-	border-radius: 0px;
-	border: 5px solid rgb(242,165,45);
+#product .product-wrapper .product-content{
+	position: relative;
+	width: 80%;
+	height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+}
+#product .product-wrapper .product-content .product-show{
+	position: absolute;
 	width: 100%;
-	background-position: center bottom;
+	height: 80vh;
+	bottom: 10vh;
 }
-
-.home-content-berri .wrapper-content-berri .recipe .recipe-list .recipe-item .recipe-pic:hover + h3{
-	font-size: 28px;
-	-webkit-transform: translateZ(0) scale(1.0, 1.0);
-	text-shadow: 0px 10px 20px rgb(134, 97, 36);
-}
-.home-content-berri .wrapper-content-berri .recipe .for-btn-more{
+#product .product-wrapper .for-descrip{
 	position: relative;
-    width: 80%;
-    margin: 50px auto 0px;
-    text-align: center;
 }
-
-.product{
-	 background-size: cover; 
-	 background-position: 100% 100%;
-	 position: relative; 
+#product .product-wrapper:nth-child(odd) .for-descrip{
+	float: right;
 }
-.product .title{
-    font-family: 'OptimaLTStd-Black';
-	text-align: center; 
-	color: rgb(255,255,255);
-	position: relative;
-	z-index: 1;
+#product .product-wrapper:nth-child(even) .for-descrip{
+	float: left;
 }
-.product .product-item-list-wrapper{
-	position: relative; 
-}
-
-.product .product-item-list-wrapper .product-name{
-    font-family: 'OptimaLTStd-Black';
-	text-shadow: 10px 10px 10px rgba(105,105,105,.8);
-	position: relative;
-	z-index: 1;
-}
-.product .product-item-list-wrapper .description{
-    font-family: 'OptimaLTStd-Medium';
-    position: relative;
-	z-index: 1;
-}
-
-.product .product-item-list-1st .picture{
-	position: absolute; 
-}
-.product .product-item-list-1st .description{
-	float: right; 
-	color: rgb(255,255,255)
-}
-.product .product-item-list-1st .product-name{
-	text-align: center; 
-	float: right; 
-	color: rgb(255,255,255); 
-}
-
-.product .product-item-list-2nd .description{
-	float: left; 
-	color: rgb(255,255,255);
-}
-.product .product-item-list-2nd .picture{
-	position: absolute; 
-}
-.product .product-item-list-2nd .product-name{
-	text-align: center; 
-	float: left; 
-	color: rgb(255,255,255); 
-}
-
-.product .product-item-list-3th .picture{
-	position: absolute; 
-}
-.product .product-item-list-3th .description{
-	float: right; 
-	color: rgb(255,255,255);
-}
-.product .product-item-list-3th .product-name{
-	text-align: center; 
-	float: left; 
-	color: rgb(255,255,255); 
-}
-
-.product .for-btn-all-product{
-	text-align: center;
-}
-
-.contact-us .title{
-	text-align: center; 
-	color: rgb(255,255,255); 
-    font-family: 'Black-Crayon';
-}
-.contact-us .row{
-	margin: 0 auto;
-}
-.contact-us .row .description{
-	color: white;
-}
-.contact-us .row .description p{
-    font-family: 'OptimaLTStd-Medium';
-}
-.contact-us .row .description img{
-	/* in responsive */
-}
-.contact-us .row .form-contact .form-control{
-	/* in responsive */
-}
-.contact-us .row .form-contact .btn-submit{
-	border: none; 
-	border-radius: 0px; 
-	background-color: white; 
-	color: rgb(246,174,57); 
-	font-weight: bold;
-	transition: all .51s;
-}
-.contact-us .row .form-contact .btn-submit:hover{
-	background-color: rgb(255, 210, 0);
-}
-
-.for-web-devlop{
-	text-align: center; 
-	color: white;
-}
-.for-web-devlop p{
-    font-family: 'OptimaLTStd-Medium';
-}
-.for-web-devlop img{
-	cursor: pointer;
-}
-
-.footer{
-	margin: 0 auto; 
-	color: red; 
-}
-.footer .wrapper-footer{
-	display: table-cell; 
+#product .product-wrapper .product-description{
+	width: 45vw;
+	height: 50vh;
+	display: table-cell;
 	vertical-align: middle;
 }
-.footer .wrapper-footer label{
-    font-family: 'OptimaLTStd-Medium';
+#product .product-wrapper .product-description p{
+	color: rgb(255,255,255);
+    font-family: 'LibreBaskerville';
+    font-size: 16px;
 }
-.footer .wrapper-footer label b{
-    font-family: 'OptimaLTStd-ExtraBlack';
+#product .product-wrapper .product-content .product-name{
+	color: rgb(246,184,70);
+	font-family: 'PermanentMarker';
+	font-size: 60px;
+	text-shadow: 
+		3px 0px rgb(255,255,255),
+		-3px 0px rgb(255,255,255),
+		0px 3px rgb(255,255,255),
+		0px -3px rgb(255,255,255);
 }
-.footer .wrapper-footer .logo-contact-us-footer{
-	cursor: pointer;
+#product .product-wrapper:nth-child(odd) .product-name{
 }
+#product .product-wrapper:nth-child(even) .product-name{
+	text-align: right;
+}
+#product .product-wrapper .product-img{
+	position: absolute;
+	bottom: 0;
+	height: auto;
+	width: 460px;
+}
+#product .product-wrapper:nth-child(odd) .product-img{
+	float: left;
+}
+#product .product-wrapper:nth-child(even) .product-img{
+	float: right;
+}
+/* end for product */

@@ -660,6 +660,8 @@
                 "parser"
             ],
             "time": "2017-03-29 16:04:15"
+<<<<<<< HEAD
+=======
         },
         {
             "name": "facebook/graph-sdk",
@@ -761,6 +763,7 @@
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
             "time": "2016-07-18 04:51:16"
+>>>>>>> b4e006559226f52c00b466a94a0a26cf59084397
         },
         {
             "name": "google/apiclient",
@@ -1419,6 +1422,8 @@
                 "laravel"
             ],
             "time": "2017-06-15 19:08:25"
+<<<<<<< HEAD
+=======
         },
         {
             "name": "laravel/socialite",
@@ -1473,6 +1478,7 @@
                 "oauth"
             ],
             "time": "2017-05-05 14:17:11"
+>>>>>>> b4e006559226f52c00b466a94a0a26cf59084397
         },
         {
             "name": "laravel/tinker",
@@ -1737,6 +1743,8 @@
                 "rest"
             ],
             "time": "2017-03-12 01:28:43"
+<<<<<<< HEAD
+=======
         },
         {
             "name": "league/oauth1-client",
@@ -1800,6 +1808,7 @@
                 "twitter"
             ],
             "time": "2016-08-17 00:36:58"
+>>>>>>> b4e006559226f52c00b466a94a0a26cf59084397
         },
         {
             "name": "maatwebsite/excel",
@@ -1868,6 +1877,8 @@
                 "laravel"
             ],
             "time": "2017-04-04 18:28:12"
+<<<<<<< HEAD
+=======
         },
         {
             "name": "madewithlove/illuminate-psr-cache-bridge",
@@ -1916,6 +1927,7 @@
                 "psr-6"
             ],
             "time": "2016-07-02 12:18:40"
+>>>>>>> b4e006559226f52c00b466a94a0a26cf59084397
         },
         {
             "name": "monolog/monolog",

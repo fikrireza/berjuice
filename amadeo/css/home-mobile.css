@@ -1,43 +1,5 @@
 @media (max-width: 480px) {
 	/* Make this fixed*/
-	.navbar-statick{
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 60px;
-		background-color: rgba(242,165,45,.6);
-		z-index: 2;
-		transition: all .51s;
-	}
-	.navbar-statick .wrapper-nav .list-item-nav{
-		height: 60px;
-		width: 80%;
-		margin: 0 auto;
-	}
-	.navbar-statick .wrapper-nav .list-item-nav .valign-midle{
-		height: 60px;
-	}
-	.navbar-statick .wrapper-nav .list-item-nav .valign-midle .icon-berri{
-		width: 80px;
-	}
-	.navbar-statick .wrapper-nav .list-item-nav #bar-mobile-animate{
-		width: 250px;
-    	text-align: right;
-	}
-
-	/* hide navbar */
-	.navbar-statick .wrapper-nav .list-item-nav{
-		display: none;
-	}
-	/* show icon bar */
-	.navbar-statick .wrapper-nav .resposive-mobile{
-		display: block;
-	}
-	
-	/* click function for show navbar run in jquery navbar-static.js*/
-	
-
 	.owl-slide-one-image-fluid{
 		margin-top: -65px;
 	}
