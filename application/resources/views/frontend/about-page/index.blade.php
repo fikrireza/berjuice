@@ -39,9 +39,24 @@
 	</div>
 </div>
 
-<div id="milestones" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/director.png') }}');">
+<div id="milestones" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/sky.png') }}');">
 	<div class="setup-content nor-wd">
 		<h1 class="title">Milestones</h1>
+
+		@for($a=0; $a<=5; $a++)
+		<div class="mil-block {{ $a==0 ? 'size-st' : 'size-nd'}}">
+			<h3>2010</h3>
+			<p>
+				For more than 22 years, PT Berri Indosari has been the pioneer in Indonesia's juice industry with vast experience in making and delivering the finest juice
+			</p>
+		</div>
+		@if($a==0)
+		<div class="root-wrapper">
+			<div class="root" style="background-image: url('{{ asset('amadeo/image/base/root.png') }}')"></div>
+		</div>
+		@endif
+		@endfor
+		<div class="clearfix"></div>
 	</div>
 </div>
 @endsection

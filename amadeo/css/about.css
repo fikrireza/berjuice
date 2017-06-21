@@ -45,6 +45,8 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 #milestones:before{
 	content: "";
@@ -62,4 +64,88 @@
 	margin: 0;
 	padding-top: 60px;
 	padding-bottom: 60px;
+}
+#milestones .mil-block{
+	background-color: rgba(255,255,255,.85);
+	position: relative;
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px;
+}
+#milestones .mil-block.size-st{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 80px;
+}
+#milestones .mil-block.size-nd{
+	width: 40%;
+}
+#milestones .mil-block.size-nd:nth-child(odd){
+	float: left;
+	margin-top: 100px;
+}
+#milestones .mil-block.size-nd:nth-child(even){
+	float: right;
+	margin-bottom: 100px;
+}
+#milestones .mil-block.size-nd:before,
+#milestones .mil-block.size-nd:after{
+	content: "";
+	position: absolute;
+	top: 45%;
+	height: 10px;
+	width: 103px;
+	background-color: rgb(102,204,51);
+}
+#milestones .mil-block.size-nd:before{
+	left: -102px;
+	-ms-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+#milestones .mil-block.size-nd:after{
+	right: -102px;
+	-ms-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+#milestones .mil-block.size-nd:nth-child(odd):before,
+#milestones .mil-block.size-nd:nth-child(even):after{
+	visibility: hidden;
+	opacity: 0;
+}
+
+#milestones .mil-block h3{
+	font-family: 'PermanentMarker';
+	color: rgb(242,176,56);
+	text-shadow: 
+		0px 0px 25px rgb(255,255,255),
+		0px 10px 25px rgb(255,255,255),
+		0px -10px 25px rgb(255,255,255),
+		0px 20px 25px rgb(255,255,255),
+		0px -20px 25px rgb(255,255,255),
+		10px 0px 25px rgb(255,255,255),
+		-10px 0px 25px rgb(255,255,255),
+		20px 0px 25px rgb(255,255,255),
+		-20px 0px 25px rgb(255,255,255);
+}
+#milestones .mil-block p{
+	font-family: 'LibreBaskerville';
+	color: rgb(99,99,99);
+}
+#milestones .root-wrapper{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	top: -80px;
+}
+#milestones .root-wrapper .root{
+	position: absolute;
+	width: 200px;
+	height: 160vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
