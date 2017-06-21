@@ -9,13 +9,15 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $table = 'amd_users';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+      'name','avatar','email','password','confirmed','confirmation_code','login_count','role_id'
     ];
 
     /**
@@ -26,4 +28,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function role()
+  	{
+  		return $this->belongsTo('App\Models\Role', 'role_id');
+  	}
 }

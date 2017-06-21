@@ -33,7 +33,7 @@
       </div>
       <div class="login-box-body">
         <p class="login-box-msg">Please Login With Your Account.</p>
-        <form action="#" method="post">
+        <form action="{{ route('login') }}" method="post">
           {!! csrf_field() !!}
           <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
             <input type="email" name="email" class="form-control" placeholder="Email" value="{{ old('email')}}" />

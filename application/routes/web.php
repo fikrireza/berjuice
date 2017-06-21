@@ -31,6 +31,11 @@ Route::get('/product-in', function () {
 
 // end Frontend
 
+// Auth::routes();
+Route::post('login-process', 'Auth\LoginController@loginProcess')->name('login');
+Route::get('admin/logout-process', 'Auth\LoginController@logoutProcess')->name('logout');
+// END Auth::routes()
+
 
 Route::get('admin/login', function(){
   return view('backend.auth.login');

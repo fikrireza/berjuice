@@ -17,9 +17,11 @@ class CreateHomeSliderTables extends Migration
           $table->increments('id');
           $table->string('img_slider');
           $table->string('img_alt')->nullable();
+          $table->integer('position')->unsigned();
           $table->date('publish_date');
           $table->integer('flag_publish')->unsigned();
           $table->integer('actor_id')->unsigned();
+          $table->timestamps();
         });
     }
 
