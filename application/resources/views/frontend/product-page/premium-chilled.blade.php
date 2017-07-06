@@ -21,6 +21,7 @@
 	padding-top: 60px;
 	margin: 0 auto;
 	width: 80%;
+	height: 200px;
 	text-align: center;
 	line-height: 2;
 	font-family: 'LibreBaskerville';

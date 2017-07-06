@@ -44,9 +44,6 @@
 }
 #product-index #outters .column{
 	width: 100%;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
 	display: block;
 }
 #product-index #outters .column .wrapper-display{
@@ -54,6 +51,9 @@
 	text-align: center;
 	height: 280px;
 	width: 33%;
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
 }
 #product-index #outters .column .wrapper-display:first-child{
 	margin-bottom: 5px;
