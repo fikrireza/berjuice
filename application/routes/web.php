@@ -19,17 +19,22 @@ Route::get('/', 'Frontend\HomeController@index')
 Route::get('/about-us', 'Frontend\AboutController@index')
 	->name('frontend.about');
 
+Route::get('/contact-us', function () {
+    return view('frontend.contact-page.index');
+})->name('frontend.contact');
+
+Route::get('/product', function () {
+    return view('frontend.product-page.index');
+})->name('frontend.product.index');
+
+Route::get('/premium-chilled', function () {
+    return view('frontend.product-page.premium-chilled');
+})->name('frontend.product.view.premium-chilled');
+
 Route::get('/recipe', function () {
     return view('frontend.recipe');
 })->name('recipe');
 
-Route::get('/product', function () {
-    return view('frontend.product');
-})->name('product');
-
-Route::get('/product-in', function () {
-    return view('frontend.product-in');
-})->name('product-in');
 
 // end Frontend
 

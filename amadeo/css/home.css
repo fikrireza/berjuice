@@ -172,6 +172,10 @@
 }
 #product h1.title{
 	margin: 0;
+	text-align: center;
+	color: rgb(242,176,56);
+	font-family: 'PermanentMarker';
+	font-size: 53px;
 	padding-top: 180px;
 	padding-bottom: 0px;
 	text-shadow: 

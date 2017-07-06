@@ -28,23 +28,23 @@
 		</div>
 		<div class="list-item-nav dropdown">
 			<div class="valign-midle">
-				<a href="{{ route('product') }}">
+				<a href="{{ route('frontend.product.index') }}">
 					Product
 				</a>
 			</div>
 			<div class="dropdown-content">
 				<div>
-					<a href="{{ route('product-in') }}">
+					<a href="{{ route('frontend.product.view.premium-chilled') }}">
 						Freshly Squeezed
 					</a>
 				</div>
 				<div>
-					<a href="{{ route('product-in') }}">
+					<a href="{{ route('frontend.product.view.premium-chilled') }}">
 						Premium Chilled
 					</a>
 				</div>
 				<div>
-					<a href="{{ route('product-in') }}">
+					<a href="{{ route('frontend.product.view.premium-chilled') }}">
 						Long Life
 					</a>
 				</div>
@@ -60,7 +60,7 @@
 		</div>
 		<div class="list-item-nav">
 			<div class="valign-midle">
-				<a href="">
+				<a href="{{ route('frontend.contact') }}">
 					Contact Us
 				</a>
 			</div>
