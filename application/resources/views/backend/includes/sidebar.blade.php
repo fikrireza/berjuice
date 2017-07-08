@@ -16,14 +16,14 @@
         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
       </a>
     </li>
-    <li class="treeview">
+    <li class="treeview {{ Route::is('recipe*') ? 'active' : '' }}">
       <a href="#">
         <i class="fa fa-edit"></i>
         <span>Recipe</span>
         <i class="fa fa-angle-left pull-right"></i>
       </a>
       <ul class="treeview-menu">
-        <li class=""><a href=""><i class="fa fa-circle-o"></i> Recipe List</a></li>
+        <li class="{{ Route::is('recipe*') ? 'active' : '' }}"><a href="{{ route('recipe.index') }}"><i class="fa fa-circle-o"></i> Recipe List</a></li>
         <li class=""><a href=""><i class="fa fa-circle-o"></i> Recipe Categories</a></li>
       </ul>
     </li>

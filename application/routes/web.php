@@ -46,5 +46,12 @@ Route::group(['middleware' => ['isAdministrator']], function () {
 
   Route::get('admin/dashboard', 'Backend\DashboardController@index')->name('admin.dashboard');
 
+	// Recipe Controller
+	Route::get('admin/recipe', 'Backend\RecipeController@index')->name('recipe.index');
+	Route::get('admin/recipe/add', 'Backend\RecipeController@add')->name('recipe.add');
+	Route::post('admin/recipe/add', 'Backend\RecipeController@store')->name('recipe.store');
+	Route::get('admin/recipe/edit/{id}', 'Backend\RecipeController@see')->name('recipe.see');
+	Route::post('admin/recipe/edit', 'Backend\RecipeController@edit')->name('recipe.edit');
+	Route::get('admin/recipe/publish', 'Backend\RecipeController@publish')->name('recipe.publish');
 });
 // END BACKEND ROUTE
