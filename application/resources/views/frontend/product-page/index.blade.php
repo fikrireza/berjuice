@@ -96,18 +96,22 @@
 
 @section('content')
 <div id="space-top"></div>
-<div id="product-index" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/product-index-wood.png') }}');">
+<div id="product-index" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/product-index-wood.jpg') }}');">
 	<h1 class="page-name">Our Products</h1>
 	<div id="outters">
+		@php ( $arr = ['FRESHLY SQUEEZED', 'PREMIUM CHILLED', 'DAILY JUICE', 'VITTORIA COFFE',
+		'SPARKLING WATER' , 'PRIVATE LABEL'])
+	@php ( $arrUrl = ['premium-chilled', 'premium-chilled', 'daily-juice', 'victtoria-coffe', 'sparkling-water', 'private-label'])
 		@for($q=0; $q<=1; $q++)
 		<div class="column">
 			@for($a=0; $a<=2; $a++)
+			@php ( $que = ($q*3)+$a)
 			<div class="wrapper-display">
 				<div class="vertical">
 					<div class="vertical-align">
-						<a href="{{ route('frontend.product.view.premium-chilled') }}">
-							<img class="product-img" src="{{ asset('amadeo/image/base/product-3.png') }}">
-							<h1 class="title">Name Product</h1>
+						<a href="{{ route('frontend.product.view.'.$arrUrl[$que]) }}">
+							<img class="product-img" src="{{ asset('amadeo/image/base/prod-idx-'.$que.'.png') }}">
+							<h1 class="title">{{ $arr[$que] }}</h1>
 						</a>
 					</div>
 				</div>

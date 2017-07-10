@@ -123,7 +123,7 @@
 @endsection
 
 @section('content')
-<div id="product-show" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/product-bg.png') }}');">
+<div id="product-show" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/product-bg-2.jpg') }}');">
 	<div class="setup-content nor-wd">
 		<p>Premium Chilled Juice is our top of the line product. Within it we ensure that every sip retains the savory taste of the fresh fruit. We produce Premium Chilled Juice without heating process, and kept under 4 degree Celsius from raw material to finished goods. Products are delivered with refrigerated trucks, stored in extra cool chillers. With the shelf life of 8 weeks (the shortest shelf life in the industry, to ensure freshness of the juice), Premium Chilled Juice retains vitamins and nutrients highly beneficial for healthy, just like consuming fresh fruits.</p>
 		<img id="show-product" src="{{ asset('amadeo/image/base/premium-chilled-product.png') }}">
@@ -137,21 +137,26 @@
 				<td>
 					<p>AvaiLABLE</p>
 				</td>
+				@php ( $arr = ['<p>275ml</p><p>PET Bottle</p>', '<p>500ml</p><p>PET Bottle</p>', '<p>1l</p><p>PET Bottle</p>', '<p>2l</p><p>PET Bottle</p>', '<p>5l</p><p>Gallon</p>'])
 				@for($a=0; $a<=4; $a++)
 				<td>
-					<p>275ml</p>
-					<p>PET Bottle</p>
+					{!! $arr[$a] !!}
 				</td>
 				@endfor
 			</tr>
-			@for($r=0; $r<=13; $r++)
+			@php
+				$arrName = ['orange', 'orange unsweet', 'orange ace', 'apple', 'mango', 'pink guava', 'lemon' ,'soursop', 'pineapple', 'red veggie', 'green veggie', 'banana mix', 'orange mandarin', 'mangosteen', 'cranberry'];
+				$arrAvail = [1,1,1,1,1, 0,0,1,1,0, 0,1,1,0,0, 1,1,1,1,1, 1,1,1,1,1, 1,1,1,1,1, 0,0,1,0,0, 0,1,1,0,1, 0,0,0,0,1, 0,0,1,0,0, 1,1,1,1,0, 1,1,1,1,0, 1,0,1,0,0, 1,0,1,0,0, 1,0,1,1,1]
+			@endphp
+			@for($r=0; $r<=14; $r++)
 			<tr>
 				<td>
-					<p>Juice Name</p>
+					<p>{{ $arrName[$r] }}</p>
 				</td>
 				@for($a=0; $a<=4; $a++)
+				@php ( $que =  ($r*5)+$a )
 				<td>
-					<p><i class="fa fa-check" aria-hidden="true"></i></p>
+					<p style="opacity: {{ $arrAvail[$que] }}"><i class="fa fa-check" aria-hidden="true"></i></p>
 				</td>
 				@endfor
 			</tr>

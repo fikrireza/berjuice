@@ -5,6 +5,7 @@
 				<a href="{{ route('frontend.home') }}">
 					<img class="icon juice icon-scroller-nav" src="{{ asset('amadeo/image/base/logo-juice-united.png') }}">
 					<img class="icon berri icon-scroller-nav" src="{{ asset('amadeo/image/base/logo-beri.png') }}">
+					<img class="icon vittoria icon-scroller-nav" src="{{ asset('amadeo/image/base/logo-vittoria.png') }}">
 				</a>
 			</div>
 			<div id="bar-mobile-animate" class="valign-midle">
@@ -44,8 +45,8 @@
 					</a>
 				</div>
 				<div>
-					<a href="{{ route('frontend.product.view.premium-chilled') }}">
-						Long Life
+					<a href="{{ route('frontend.product.view.victtoria-coffe') }}">
+						Vittoria Coffe
 					</a>
 				</div>
 
@@ -53,7 +54,7 @@
 		</div>
 		<div class="list-item-nav">
 			<div class="valign-midle">
-				<a href="{{ route('recipe') }}">
+				<a href="{{ route('frontend.recipe') }}">
 					Recipe
 				</a>
 			</div>

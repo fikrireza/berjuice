@@ -64,11 +64,11 @@
   border-bottom: 2px solid rgba(0,0,0,0) !important; 
 }
 .navbar-statick .wrapper-nav .list-item-nav:hover{
-  border-bottom: 2px solid gray; 
+  border-bottom: 2px solid rgb(246,184,70); 
 }
 .navbar-statick .wrapper-nav .list-item-nav:hover .valign-midle a,
 .navbar-statick .wrapper-nav .list-item-nav:hover .valign-midle i{
-  color: rgb(205,205,205);
+  color: rgb(246,184,70);
 }
 .navbar-statick .wrapper-nav .list-item-nav .valign-midle{
   display: table-cell;
@@ -97,85 +97,145 @@
   width : 180px;
 }
 .navbar-statick .wrapper-nav .list-item-nav .valign-midle .icon.berri{
-  -webkit-animation: iconBerri 5s infinite;
-  -moz-animation: iconBerri 5s infinite;
-  animation: iconBerri 5s infinite;
-}
-.navbar-statick .wrapper-nav .list-item-nav .valign-midle .icon.berri.scroller{
-  -webkit-animation: iconBerriScroller 5s infinite;
-  -moz-animation: iconBerriScroller 5s infinite;
-  animation: iconBerriScroller 5s infinite;
-}
-.navbar-statick .wrapper-nav .list-item-nav .valign-midle .icon.juice{
-  -webkit-animation: iconJuice 5s infinite;
-  -moz-animation: iconJuice 5s infinite;
-  animation: iconJuice 5s infinite;
-}
-.navbar-statick .wrapper-nav .list-item-nav .valign-midle .icon.juice.scroller{
-  -webkit-animation: iconJuiceScroller 5s infinite;
-  -moz-animation: iconJuiceScroller 5s infinite;
-  animation: iconJuiceScroller 5s infinite;
+  -webkit-animation: iconBerri 25s infinite;
+  -moz-animation: iconBerri 25s infinite;
+  animation: iconBerri 25s infinite;
 }
 @-webkit-keyframes iconBerri {
     0% {width: 0px; opacity: 0;}
-    50% {width: 80px; opacity: 1;}
+    33% {width: 80px; opacity: 1;}
+    66% {width: 0px; opacity: 0;}
     100% {width: 0px; opacity: 0;}
 }
 @-moz-keyframes iconBerri {
     0% {width: 0px; opacity: 0;}
-    50% {width: 80px; opacity: 1;}
+    33% {width: 80px; opacity: 1;}
+    66% {width: 0px; opacity: 0;}
     100% {width: 0px; opacity: 0;}
 }
 @keyframes iconBerri {
     0% {width: 0px; opacity: 0;}
-    50% {width: 80px; opacity: 1;}
+    33% {width: 80px; opacity: 1;}
+    66% {width: 0px; opacity: 0;}
     100% {width: 0px; opacity: 0;}
+}
+.navbar-statick .wrapper-nav .list-item-nav .valign-midle .icon.berri.scroller{
+  -webkit-animation: iconBerriScroller 25s infinite;
+  -moz-animation: iconBerriScroller 25s infinite;
+  animation: iconBerriScroller 25s infinite;
 }
 @-webkit-keyframes iconBerriScroller {
     0% {width: 0px; opacity: 0;}
-    50% {width: 180px; opacity: 1;}
+    33% {width: 180px; opacity: 1;}
+    66% {width: 0px; opacity: 0;}
     100% {width: 0px; opacity: 0;}
 }
 @-moz-keyframes iconBerriScroller {
     0% {width: 0px; opacity: 0;}
-    50% {width: 180px; opacity: 1;}
+    33% {width: 180px; opacity: 1;}
+    66% {width: 0px; opacity: 0;}
     100% {width: 0px; opacity: 0;}
 }
 @keyframes iconBerriScroller {
     0% {width: 0px; opacity: 0;}
-    50% {width: 180px; opacity: 1;}
+    33% {width: 180px; opacity: 1;}
+    66% {width: 0px; opacity: 0;}
     100% {width: 0px; opacity: 0;}
+}
+.navbar-statick .wrapper-nav .list-item-nav .valign-midle .icon.vittoria{
+  -webkit-animation: iconVittoria 25s infinite;
+  -moz-animation: iconVittoria 25s infinite;
+  animation: iconVittoria 25s infinite;
+}
+@-webkit-keyframes iconVittoria {
+    0% {width: 0px; opacity: 0;}
+    33% {width: 0px; opacity: 0;}
+    66% {width: 80px; opacity: 1;}
+    100% {width: 0px; opacity: 0;}
+}
+@-moz-keyframes iconVittoria {
+    0% {width: 0px; opacity: 0;}
+    33% {width: 0px; opacity: 0;}
+    66% {width: 80px; opacity: 1;}
+    100% {width: 0px; opacity: 0;}
+}
+@keyframes iconVittoria {
+    0% {width: 0px; opacity: 0;}
+    33% {width: 0px; opacity: 0;}
+    66% {width: 80px; opacity: 1;}
+    100% {width: 0px; opacity: 0;}
+}
+.navbar-statick .wrapper-nav .list-item-nav .valign-midle .icon.vittoria.scroller{
+  -webkit-animation: iconVittoriaScroller 25s infinite;
+  -moz-animation: iconVittoriaScroller 25s infinite;
+  animation: iconVittoriaScroller 25s infinite;
+}
+@-webkit-keyframes iconVittoriaScroller {
+    0% {width: 0px; opacity: 0;}
+    33% {width: 0px; opacity: 0;}
+    66% {width: 180px; opacity: 1;}
+    100% {width: 0px; opacity: 0;}
+}
+@-moz-keyframes iconVittoriaScroller {
+    0% {width: 0px; opacity: 0;}
+    33% {width: 0px; opacity: 0;}
+    66% {width: 180px; opacity: 1;}
+    100% {width: 0px; opacity: 0;}
+}
+@keyframes iconVittoriaScroller {
+    0% {width: 0px; opacity: 0;}
+    33% {width: 0px; opacity: 0;}
+    66% {width: 180px; opacity: 1;}
+    100% {width: 0px; opacity: 0;}
+}
+
+.navbar-statick .wrapper-nav .list-item-nav .valign-midle .icon.juice{
+  -webkit-animation: iconJuice 25s infinite;
+  -moz-animation: iconJuice 25s infinite;
+  animation: iconJuice 25s infinite;
 }
 @-webkit-keyframes iconJuice {
     0% {width: 80px; opacity: 1;}
-    50% {width: 0px; opacity: 0;}
-    100% {width: 80px; opacity: 1;}
+    33% {width: 0px; opacity: 0;}
+    66% {width: 0px; opacity: 0;}
+    100% {width: 0px; opacity: 0;}
 }
 @-moz-keyframes iconJuice {
     0% {width: 80px; opacity: 1;}
-    50% {width: 0px; opacity: 0;}
-    100% {width: 80px; opacity: 1;}
+    33% {width: 0px; opacity: 0;}
+    66% {width: 0px; opacity: 0;}
+    100% {width: 0px; opacity: 0;}
 }
 @keyframes iconJuice {
     0% {width: 80px; opacity: 1;}
-    50% {width: 0px; opacity: 0;}
+    33% {width: 0px; opacity: 0;}
+    66% {width: 0px; opacity: 0;}
     100% {width: 80px; opacity: 1;}
+}
+.navbar-statick .wrapper-nav .list-item-nav .valign-midle .icon.juice.scroller{
+  -webkit-animation: iconJuiceScroller 25s infinite;
+  -moz-animation: iconJuiceScroller 25s infinite;
+  animation: iconJuiceScroller 25s infinite;
 }
 @-webkit-keyframes iconJuiceScroller {
     0% {width: 180px; opacity: 1;}
-    50% {width: 0px; opacity: 0;}
-    100% {width: 180px; opacity: 1;}
+    33% {width: 0px; opacity: 0;}
+    66% {width: 0px; opacity: 0;}
+    100% {width: 0px; opacity: 0;}
 }
 @-moz-keyframes iconJuiceScroller {
     0% {width: 180px; opacity: 1;}
-    50% {width: 0px; opacity: 0;}
-    100% {width: 180px; opacity: 1;}
+    33% {width: 0px; opacity: 0;}
+    66% {width: 0px; opacity: 0;}
+    100% {width: 0px; opacity: 0;}
 }
 @keyframes iconJuiceScroller {
     0% {width: 180px; opacity: 1;}
-    50% {width: 0px; opacity: 0;}
+    33% {width: 0px; opacity: 0;}
+    66% {width: 0px; opacity: 0;}
     100% {width: 180px; opacity: 1;}
 }
+
 .navbar-statick .wrapper-nav .list-item-nav .valign-midle i{
   color: rgb(255,255,255);
   text-decoration: none;
@@ -193,7 +253,7 @@
 .dropdown .dropdown-content{
     position: absolute;
     display: none;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgb(245,183,69);
     z-index: 1;
     transition: all .52s;
     width: 185px;
@@ -206,6 +266,7 @@
 }
 .dropdown .dropdown-content a{
   /*text-decoration: none !important;*/
+  font-family: 'PermanentMarker';
   color: white;
   margin: 5px 0px;
 }
@@ -251,6 +312,72 @@
 }
 /* end for navbar */
 
+/* for contact */
+#contact-us{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#contact-us h1.title{
+  text-align: center;
+  color: rgb(99,99,99);
+  margin: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: 'PermanentMarker';
+  font-size: 53px;
+}
+#contact-us .row{
+  margin: 0 auto;
+}
+#contact-us .row .description{
+  color: white;
+}
+#contact-us .row .description p,
+#contact-us .row .description a{
+    font-family: 'LibreBaskerville';
+    font-size: 16px;
+  margin-bottom: 15px;
+  color: rgb(99,99,99);
+  text-decoration: none;
+}
+#contact-us .row .description img{
+  width: 35px;
+  margin-right: 15px;
+}
+#contact-us .row .form-contact .form-control{
+  margin: 10px 0px;
+}
+#contact-us .row .form-contact .btn-submit{
+  border: none; 
+  border-radius: 0px; 
+  background-color: white; 
+  color: rgb(246,174,57); 
+  font-weight: bold;
+  transition: all .51s;
+  padding: 5px 20px; 
+  font-size: 20px;
+}
+#contact-us .row .form-contact .btn-submit:hover{
+  background-color: rgb(255, 210, 0);
+}
+
+#contact-us .for-web-devlop{
+  text-align: center; 
+  color: white;
+  margin-top: 40px; 
+  padding-bottom: 60px;
+}
+#contact-us .for-web-devlop p{
+    font-family: 'OptimaLTStd-Medium';
+    margin: 0px 0px 5px;
+}
+#contact-us .for-web-devlop img{
+  cursor: pointer;
+  height: 24px;
+}
+/* end for contact */
+
 /* for footer */
 .footer{
   margin: 0 auto; 
@@ -258,6 +385,9 @@
   width: 95%; 
   height: 60px; 
   padding:10px 0px;
+  background-color: rgb(255,255,255);
+  position: relative;
+  z-index: 2;
 }
 .footer .wrapper-footer{
   display: table-cell; 

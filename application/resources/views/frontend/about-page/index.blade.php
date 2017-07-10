@@ -13,7 +13,7 @@
 @endsection
 
 @section('content')
-<div id="about" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/home-about.png') }}');">
+<div id="about" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/about-page.jpg') }}');">
 	<div class="setup-content nor-wd">
 		<h1 class="title">About</h1>
 		<div class="descrip">
@@ -26,7 +26,7 @@
 	</div>
 </div>
 
-<div id="director" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/director.png') }}');">
+<div id="director" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/director.jpg') }}');">
 	<div class="setup-content nor-wd">
 		<h1 class="title">Director’s Message</h1>
 		<div class="descrip">
@@ -39,7 +39,7 @@
 	</div>
 </div>
 
-<div id="milestones" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/sky.png') }}');">
+<div id="milestones" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/sky.jpg') }}');">
 	<div class="setup-content nor-wd">
 		<h1 class="title">Milestones</h1>
 

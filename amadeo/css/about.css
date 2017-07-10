@@ -89,7 +89,7 @@
 	float: right;
 	margin-bottom: 100px;
 }
-#milestones .mil-block.size-nd:before,
+/*#milestones .mil-block.size-nd:before,
 #milestones .mil-block.size-nd:after{
 	content: "";
 	position: absolute;
@@ -114,7 +114,7 @@
 #milestones .mil-block.size-nd:nth-child(even):after{
 	visibility: hidden;
 	opacity: 0;
-}
+}*/
 
 #milestones .mil-block h3{
 	font-family: 'PermanentMarker';

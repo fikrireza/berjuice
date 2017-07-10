@@ -127,6 +127,7 @@
 #wtfuar .for-recipe{
 	width: 24%;
 	text-align: center;
+	vertical-align: top;
 }
 #wtfuar .for-recipe .circle{
 	width: 180px;
@@ -140,7 +141,7 @@
 }
 #wtfuar .for-recipe .wrapper-title-name .title-name{
 	display: table-cell;
-	vertical-align: middle;
+	vertical-align: top;
 	width: 180px;
 }
 #wtfuar .for-recipe .wrapper-title-name .title-name h2{
@@ -149,6 +150,7 @@
 	width: 180px;
 	margin: 10px auto;
     font-family: 'LibreBaskerville';
+    font-size: 20px;
 }
 /* end for where to find us and recipe */
 
@@ -229,7 +231,10 @@
     font-family: 'LibreBaskerville';
     font-size: 16px;
 }
-#product .product-wrapper .product-content .product-name{
+#product .product-wrapper .product-content a{
+	text-decoration: none !important;
+}
+#product .product-wrapper .product-content a .product-name{
 	color: rgb(246,184,70);
 	font-family: 'PermanentMarker';
 	font-size: 60px;

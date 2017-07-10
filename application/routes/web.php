@@ -30,10 +30,26 @@ Route::get('/product', function () {
 Route::get('/premium-chilled', function () {
     return view('frontend.product-page.premium-chilled');
 })->name('frontend.product.view.premium-chilled');
+Route::get('/victtoria-coffe', function () {
+    return view('frontend.product-page.victtoria-coffe');
+})->name('frontend.product.view.victtoria-coffe');
+Route::get('/daily-juice', function () {
+    return view('frontend.product-page.daily-juice');
+})->name('frontend.product.view.daily-juice');
+Route::get('/sparkling-water', function () {
+    return view('frontend.product-page.sparkling-water');
+})->name('frontend.product.view.sparkling-water');
+Route::get('/private-label', function () {
+    return view('frontend.product-page.private-label');
+})->name('frontend.product.view.private-label');
+
 
 Route::get('/recipe', function () {
-    return view('frontend.recipe');
-})->name('recipe');
+    return view('frontend.recipe-page.index');
+})->name('frontend.recipe');
+Route::get('/recipe/view', function () {
+    return view('frontend.recipe-page.view');
+})->name('frontend.recipe.view');
 
 
 // end Frontend
