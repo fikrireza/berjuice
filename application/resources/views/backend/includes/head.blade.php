@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="{{ asset('backend/dist/css/AdminLTE.min.css') }}">
 
 <link rel="stylesheet" href="{{ asset('backend/dist/css/skins/_all-skins.min.css') }}">
-<link rel="stylesheet" href="{{ asset('backend/plugins/iCheck/flat/blue.css') }}">
+<link rel="stylesheet" href="{{ asset('backend/plugins/iCheck/all.css') }}">
 <link rel="stylesheet" href="{{ asset('backend/plugins/morris/morris.css') }}">
 <link rel="stylesheet" href="{{ asset('backend/plugins/jvectormap/jquery-jvectormap-1.2.2.css') }}">
 <link rel="stylesheet" href="{{ asset('backend/plugins/datepicker/datepicker3.css') }}">
