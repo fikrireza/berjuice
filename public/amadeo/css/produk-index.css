@@ -1,0 +1,125 @@
+#space-top{
+	background-color: black;
+	height: 60px;
+	width: 100%;
+}
+#product-index{
+	background-color: rgb(0,0,0);
+}
+#product-index .bg-display{
+	height: 650px;
+	width: 1300px;
+	margin: 0 auto;
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#product-index h1.page-name{
+	margin: 0 auto;
+	font-family: 'PermanentMarker';
+	font-size: 44px;
+    color: rgb(242,176,56);
+    text-align: center;
+    text-shadow: 
+    	3px 0px rgb(255,255,255), 
+    	-3px 0px rgb(255,255,255), 
+    	0px 3px rgb(255,255,255), 
+    	0px -3px rgb(255,255,255);
+}
+#product-index #outters{
+	width: 100%;
+	height: 100vh;
+	padding-top: 0px;
+    padding-left: 58px;
+    padding-right: 57px;
+    padding-bottom: 35px;
+    display: table;
+}
+#product-index #outters .column{
+	width: 100%;
+	display: block;
+}
+#product-index #outters .column .wrapper-display{
+	display: inline-grid;
+	text-align: center;
+	height: 280px;
+	width: 33%;
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+#product-index #outters .column .wrapper-display:first-child{
+	/*margin-bottom: 5px;*/
+}
+#product-index #outters .column .wrapper-display:last-child{
+	/*margin-top: 5px;*/
+}
+#product-index #outters .column .wrapper-display .vertical{
+	display: table;
+	width: 100%;
+	height: 280px;
+}
+#product-index #outters .column .wrapper-display .vertical .vertical-align{
+	width: 100%;
+	height: 280px;
+	vertical-align: bottom;
+	display: table-cell;
+	position: relative;
+}
+#product-index #outters .column .wrapper-display img{
+	height: 200px;
+	width: auto;
+}
+#product-index #outters .column .wrapper-display h1.title{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin: 0 auto;
+	font-family: 'PermanentMarker';
+	font-size: 24px;
+    color: rgb(242,176,56);
+    text-align: center;
+    text-shadow: 
+    	3px 0px rgb(255,255,255), 
+    	-3px 0px rgb(255,255,255), 
+    	0px 3px rgb(255,255,255), 
+    	0px -3px rgb(255,255,255);
+}
+@media (max-width: 480px) {
+	#product-index .bg-display{
+		width: 330px;
+		height: 270px;
+	}
+	#product-index h1.page-name{
+		font-size: 20px;
+	}
+	#product-index #outters{
+		padding: 5px 15px 0px 15px;
+		height: auto;
+	}
+	#product-index #outters .column .wrapper-display{
+		position: relative;
+		margin-left: 5px;
+	}
+	#product-index #outters .column .wrapper-display{
+		margin-bottom: 13px;
+	}
+	#product-index #outters .column .wrapper-display,
+	#product-index #outters .column .wrapper-display .vertical,
+	#product-index #outters .column .wrapper-display .vertical .vertical-align{
+		height: 106px;
+		width: 93px;
+	}
+	#product-index #outters .column .wrapper-display img{
+		width: auto;
+		height: 60px;
+	}
+	#product-index #outters .column .wrapper-display h1.title{
+		font-size: 10px;
+		text-shadow: 
+			1px 0px #FFF, 
+			-1px 0px #FFF, 
+			0px 1px #FFF, 
+			0px -1px #FFF;
+	}
+}

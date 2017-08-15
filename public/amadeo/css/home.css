@@ -1,0 +1,324 @@
+/* for owl slider */
+	.owl-slide-one-image-fluid{
+		height: 100vh;
+	}
+	.owl-slide-one-image-fluid .wrapper-image-background{
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100vh;
+		width: 100%;
+	}
+	.owl-slide-one-image-fluid .owl-pagination{
+		position: relative;
+		margin-top: -50px;
+	}
+	.owl-slide-one-image-fluid .owl-controls .owl-pagination .owl-page span{
+		background: rgb(255,255,255);
+	}
+	.owl-slide-one-image-fluid .owl-controls .owl-pagination .active span{
+		background: rgb(246,182,68);
+	}
+	
+	@media (max-width: 480px) {
+		.owl-slide-one-image-fluid,
+		.owl-slide-one-image-fluid .wrapper-image-background{
+			height: 30vh;
+		}
+	}
+/* end for owl slider */
+
+/* for about */
+	#about{
+		height: 102vh;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	#about h1.title{
+		margin: 0;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	#about .content{
+		width: 50%;
+	}
+	#about .content p{
+		font-family: 'LibreBaskerville';
+		color: rgb(0,0,0);
+		line-height: 2;
+		margin-bottom: 60px;
+	}
+	#about .content .for-btn{
+		text-align: center;
+	}
+	@media (max-width: 480px) {
+		#about h1.title{
+			padding-top: 100px;
+			padding-bottom: 10px;
+		}
+
+		#about .content{
+			width: 100%;
+			margin-top: 50px; 
+			text-align: center;
+		}
+	}
+/* end for about */
+
+/* for where to find us and recipe */
+	#wtfuar{
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+		padding-bottom: 60px;
+	}
+	#wtfuar:before{
+		content: "";
+	    background-image: url('../image/base/leaves-up.png');
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    position: absolute;
+	    top: 0px;
+	    width: 100%;
+	    height: 290px;
+	    z-index: 0;	
+	}
+	#wtfuar:after{
+	    content: "";
+	    background-image: url('../image/base/leaves-bottom.png');
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    position: absolute;
+	    bottom: 0px;
+	    height: 320px;
+	    width: 100%;
+	    /*z-index: ;*/
+	}
+	#wtfuar .setup-content{
+		z-index: 10;
+	}
+	#wtfuar h1.title{
+		margin: 0;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	#wtfuar .for-wrapper{
+		text-align: center;
+		margin-bottom: 30px;
+		display: inline-block;
+	}
+	#wtfuar .centered{
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	#wtfuar .circle{
+		border-radius: 100%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#wtfuar .for-wtfu{
+		width: 33%;
+	}
+	#wtfuar .for-wtfu .circle{
+		width: 250px;
+		height: 250px;
+	}
+	#wtfuar .for-wtfu .circle .vertical-midle{
+		width: 250px;
+		height: 250px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	#wtfuar .for-wtfu .circle .vertical-midle i{
+		font-size: 146px;
+		color: rgb(255,255,255);
+	}
+	#wtfuar .for-wtfu h2{
+		text-align: center;
+		color: rgb(255,255,255);
+	    font-family: 'LibreBaskerville';
+	}
+	#wtfuar .for-recipe{
+		width: 24%;
+		text-align: center;
+		vertical-align: top;
+	}
+	#wtfuar .for-recipe .circle{
+		width: 180px;
+		height: 180px;
+	}
+	#wtfuar .for-recipe .wrapper-title-name{
+		width: 180px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	#wtfuar .for-recipe .wrapper-title-name .title-name{
+		display: table-cell;
+		vertical-align: top;
+		width: 180px;
+	}
+	#wtfuar .for-recipe .wrapper-title-name .title-name h2{
+		color: rgb(87,87,87);
+		text-align: center;
+		width: 180px;
+		margin: 10px auto;
+	    font-family: 'LibreBaskerville';
+	    font-size: 20px;
+	}
+
+	@media (max-width: 480px) {
+		#wtfuar .for-wtfu,
+		#wtfuar .for-recipe{
+			width: 100%;
+		}
+	}
+/* end for where to find us and recipe */
+
+/* for product */
+	#product{
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	/*#product:before{
+		content: "";
+	    background-image: url('../image/base/gradien.png');
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    position: absolute;
+	    top: 0px;
+	    width: 100%;
+	    height: 290px;
+	    z-index: 1;	
+	}*/
+	#product h1.title{
+		margin: 0;
+		text-align: center;
+		color: rgb(242,176,56);
+		font-family: 'PermanentMarker';
+		font-size: 53px;
+		padding-top: 180px;
+		padding-bottom: 0px;
+		text-shadow: 
+			0px 0px 25px rgb(255,255,255),
+			0px 10px 25px rgb(255,255,255),
+			0px -10px 25px rgb(255,255,255),
+			0px 20px 25px rgb(255,255,255),
+			0px -20px 25px rgb(255,255,255),
+			10px 0px 25px rgb(255,255,255),
+			-10px 0px 25px rgb(255,255,255),
+			20px 0px 25px rgb(255,255,255),
+			-20px 0px 25px rgb(255,255,255);
+	}
+	#product .product-wrapper{
+		position: relative;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	#product .product-wrapper .product-content{
+		position: relative;
+		width: 80%;
+		height: 100vh;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#product .product-wrapper .product-content .product-show{
+		position: absolute;
+		width: 100%;
+		height: 80vh;
+		bottom: 10vh;
+	}
+	#product .product-wrapper .for-descrip{
+		position: relative;
+	}
+	#product .product-wrapper:nth-child(odd) .for-descrip{
+		float: right;
+	}
+	#product .product-wrapper:nth-child(even) .for-descrip{
+		float: left;
+	}
+	#product .product-wrapper .product-description{
+		width: 45vw;
+		height: 50vh;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	#product .product-wrapper #product-victtoria-coffe-3 .product-description{
+	    display: block;
+	    margin-top: 35px;
+	    margin-bottom: -35px;
+	    float: right;
+	    width: 40vw;
+	}
+	#product .product-wrapper #product-victtoria-coffe-3 .product-description p{
+		margin-left: 50px;
+	}
+	#product .product-wrapper .product-description p{
+		color: rgb(255,255,255);
+	    font-family: 'LibreBaskerville';
+	    font-size: 16px;
+	}
+	#product .product-wrapper .product-content a{
+		text-decoration: none !important;
+	}
+	#product .product-wrapper .product-content a .product-name{
+		color: rgb(246,184,70);
+		font-family: 'PermanentMarker';
+		font-size: 60px;
+		text-shadow: 
+			3px 0px rgb(255,255,255),
+			-3px 0px rgb(255,255,255),
+			0px 3px rgb(255,255,255),
+			0px -3px rgb(255,255,255);
+	}
+	#product .product-wrapper:nth-child(odd) .product-name{
+	}
+	#product .product-wrapper:nth-child(even) .product-name{
+		text-align: right;
+	}
+	#product .product-wrapper .product-img{
+		position: absolute;
+		bottom: 0;
+	    max-height: 95vh;
+		width: 100%;
+	}
+	#product .product-wrapper:nth-child(odd) .product-img{
+		float: left;
+	}
+	#product .product-wrapper:nth-child(even) .product-img{
+		float: right;
+	}
+	@media (max-width: 480px) {
+		#product h1.title{
+			padding-top: 80px;
+			padding-bottom: 120px;
+		}
+		#product .product-wrapper .product-description{
+			width: 100%;
+			height: auto;
+			text-align: justify;
+			display: block;
+			padding-top: 100px;
+		}
+		#product .product-wrapper .product-content{
+			height: 80vh;
+		}
+		#product .product-wrapper .product-content a .product-name{
+			font-size : 26px;
+		}
+	}
+/* end for product */
