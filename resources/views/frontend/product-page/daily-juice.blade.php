@@ -11,11 +11,14 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/public.css') }}" />
 <style type="text/css">
 #product-show{
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
+	/*height: 100vh;*/
+	/*background-size: cover;*/
+	/*background-position: center;*/
 	background-repeat: no-repeat;
 	text-align: center;
+    height: 125vh;
+    background-size: 100%;
+    background-position: center top;
 }
 #product-show  .setup-content{
 	height: 100vh;
@@ -31,8 +34,11 @@
 	position: absolute;
 	z-index: 1;
     width: 100%;
-    bottom: 16vh;
-	margin: 0 auto;
+    /*bottom: 16vh;*/
+	/*margin: 0 auto;*/
+	bottom: -10vh;
+    text-align: left;
+    padding-left: 4%;
 	font-size: 64px;
 	text-shadow: 
 		5px 0px rgb(255,255,255),
