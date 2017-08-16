@@ -83,7 +83,7 @@ Kopo - Bandung 40227'];
 		<div class="mil-block size-st">
 			<h3>1992</h3>
 			<p>
-				Joint-Venture company with National Foods Limited Australia
+				Joint-Venture company with National Foods Limited Australia. We are the pioneer in Indonesian Juice market with vast experience, technology and quality assurance of Berri Australia in making and delivering the finest juice beverage since 1992
 			</p>
 		</div>
 		<div class="root-wrapper">
@@ -92,10 +92,22 @@ Kopo - Bandung 40227'];
 		<div class="mil-block size-nd">
 			<h3>2011</h3>
 			<p>
-				For more than 22 years, PT. berri Indosari is the pioneer in Indonesian Juice Industry with vast experience in making and delivering the finest juice beverage since 1992. Providing consumers with fresh and healthy juice which delivers tastes, nutrition and consistent quality every day is the strong Foundation of our success.
+				Armed with decade of experience in F&B industry, combined with extensive knowledge, technology, quality assurance, and supply chain of local market, PT. Berri Indosari initiate the major product innovation under "Juice United" brand. This initiative is aimed primarily to better cater & serve Indonesian unique market demand so as to better fit the local palate and preferences.
 			</p>
 			<p>
-				PT. Berri Indosari employs more than 300 employees, two manufacturing facilities and an extensive distribution network in Java and outlet island. The company mainly produces freshly squeezed orange (365 days a year) and non – pasteurized fruit juice beverages. PT. Berri Indosari understands the importance of good quality juice to enrich our daily life. That’s why we serve fresh and healthy products to our consumer. We are proud and delighted to deliver the best for you.
+				Since its inception, PT. Berri Indosari have proven strong foundation of success by consistently provide consumers with high quality, rich, nutritious, fresh and healthy juice on daily basis. The good relationship between the company and Berri Australia remain strong, further proven by the grant of sole distributorship of Berri Brand for UHT Juices.
+			</p>
+			<p>
+				PT. Berri Indosari currently employs more than 300 employees, two manufacturing facilities and an extensive distribution network in Java and outer island. The company primary business focus is on production of freshly squeezed orange (365 days a year) and non–pasteurized chilled fruit juice.
+			</p>
+		</div>
+		<div class="root-wrapper">
+			<div class="root" style="background-image: url('{{ asset('amadeo/image/base/root.png') }}')"></div>
+		</div>
+		<div class="mil-block size-st">
+			<h3>2016</h3>
+			<p>
+				Obtained HACCP (Hazard Analysis and Critical Control Points) certification for food safety management and product quality from Tuv nord for both production facilities in Cikande and Bali
 			</p>
 		</div>
 		<div class="root-wrapper">
@@ -104,9 +116,10 @@ Kopo - Bandung 40227'];
 		<div class="mil-block size-st">
 			<h3>2017</h3>
 			<p>
-				Awarded distributorship of Vittoria Coffee in Indonesia.
+				Obtained ISO 22000:2005 certification from Tuv Nord for both production facilities located in Cikande and Bali; Obtained distributorship of Vittoria Coffee for Indonesia.
 			</p>
 		</div>
+
 	</div>
 </div>
 
