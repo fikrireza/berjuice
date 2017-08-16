@@ -102,18 +102,16 @@ Kopo - Bandung 40227'];
 			</p>
 		</div>
 		<div class="root-wrapper">
-			<div class="root" style="background-image: url('{{ asset('amadeo/image/base/root.png') }}')"></div>
+			<div class="root tree" style="background-image: url('{{ asset('amadeo/image/base/root-2.png') }}')"></div>
 		</div>
-		<div class="mil-block size-st">
+		<div class="mil-block size-st tree right">
 			<h3>2016</h3>
 			<p>
 				Obtained HACCP (Hazard Analysis and Critical Control Points) certification for food safety management and product quality from Tuv nord for both production facilities in Cikande and Bali
 			</p>
 		</div>
-		<div class="root-wrapper">
-			<div class="root" style="background-image: url('{{ asset('amadeo/image/base/root.png') }}')"></div>
-		</div>
-		<div class="mil-block size-st">
+		
+		<div class="mil-block size-st tree left">
 			<h3>2017</h3>
 			<p>
 				Obtained ISO 22000:2005 certification from Tuv Nord for both production facilities located in Cikande and Bali; Obtained distributorship of Vittoria Coffee for Indonesia.
@@ -128,9 +126,25 @@ Kopo - Bandung 40227'];
 		<h1 class="title">Our Valued Customer</h1>
 		<div class="descrip">
 			<div class="row">
+				@php
+					$arr = [
+						'Hypermart',
+						'Hotels',
+						'Supermarkets',
+						'Restaurants',
+						'Minimarket',
+						'Cafes',
+						'Speciality Stores',
+						'Caterings',
+						'Hospitals',
+						'Airlanes',
+						'Private Label',
+						'Institution'
+					];
+				@endphp
 				@for($a=0; $a<=11; $a++)
 				<div class="col-md-6 col-sm-6 text-center">
-					<label>Hypermart</label>
+					<label>{{ $arr[$a] }}</label>
 				</div>
 				@endfor
 			</div>
