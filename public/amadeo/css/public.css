@@ -327,10 +327,25 @@
     }
     
     /* click function for show navbar run in jquery navbar-static.js */
-
-    .dropdown .dropdown-content,
+    .navbar-statick{
+      height: auto;
+    }
+    .navbar-statick .wrapper-nav .list-item-nav{
+      /*display: block;*/
+      cursor: pointer;
+      transition: all .51s;
+      height: auto;
+      padding: 0px 20px;
+    }
+    .dropdown .dropdown-content{
+      position: relative;
+      background-color: rgba(245,183,69,0);
+      z-index: 1;
+      width: 100%;
+    }
     .dropdown:hover .dropdown-content{
-        display: none;
+        display: block;
+        position: relative;
     }
   }
 /* end for navbar */

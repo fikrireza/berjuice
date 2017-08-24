@@ -32,10 +32,11 @@
 			}
 		/* animate */
 	</style>
-	@yield("style")
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/font/1-font-family.css') }}" />
+	
 	<script src="{{ asset('amadeo/plugin/jquery/jquery-3.2.0.min.js') }}"></script>
 
+	@yield("style")
+	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/font/1-font-family.css') }}" />
 	<link rel="icon" type="image/png" href="{{ asset('amadeo/image/base/logo-juice-united.png') }}" />
 
 	<script>

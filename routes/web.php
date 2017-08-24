@@ -28,27 +28,27 @@ Route::get('/product', function () {
     return view('frontend.product-page.index');
 })->name('frontend.product.index');
 
-Route::get('/freshly-squeezed', function () {
+Route::get('/product/freshly-squeezed', function () {
     return view('frontend.product-page.freshly-squeezed');
 })->name('frontend.product.view.freshly-squeezed');
-Route::get('/premium-chilled', function () {
+Route::get('/product/premium-chilled', function () {
     return view('frontend.product-page.premium-chilled');
 })->name('frontend.product.view.premium-chilled');
 
-Route::get('/victtoria-coffe', function () {
+Route::get('/product/victtoria-coffe', function () {
     return view('frontend.product-page.victtoria-coffe');
 })->name('frontend.product.view.victtoria-coffe');
-Route::get('/espressotoria-machine', function () {
+Route::get('/product/espressotoria-machine', function () {
     return view('frontend.product-page.victtoria-coffe');
 })->name('frontend.product.view.espressotoria-machine');
 
-Route::get('/daily-juice', function () {
+Route::get('/product/daily-juice', function () {
     return view('frontend.product-page.daily-juice');
 })->name('frontend.product.view.daily-juice');
-Route::get('/sparkling-water', function () {
+Route::get('/product/sparkling-water', function () {
     return view('frontend.product-page.sparkling-water');
 })->name('frontend.product.view.sparkling-water');
-Route::get('/private-label', function () {
+Route::get('/product/private-label', function () {
     return view('frontend.product-page.private-label');
 })->name('frontend.product.view.private-label');
 

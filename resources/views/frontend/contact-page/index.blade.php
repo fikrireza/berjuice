@@ -11,50 +11,57 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/public.css') }}" />
 <link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/contact.css') }}" />
 <style type="text/css">
-#branches{
-	margin-top: -5px;
-}
-#branches h1.title{
-	margin: 0;
-	padding: 30px 0px;
-}
-#branches .branches-list-wrapper{
-	float: left;
-	margin: 0;
-	text-align: center;
-	padding: 20px 10%;
-	width: 50%;
-}
-#branches .branches-list-wrapper h3{
-	color: rgb(99,99,99);
-    font-family: 'PermanentMarker';
-}
-#branches .branches-list-wrapper p{
-	color: rgb(99,99,99);
-	font-family: 'LibreBaskerville';
-}
-iframe{
-	width: 100%;
-	height: 50vh;
-	pointer-events: none;
-}
-iframe.clicked{
-	pointer-events: auto;
-}
-@media (max-width: 480px) {
-	#branches .branches-list-wrapper{
-		padding: 10px 20px;
-		width: 100%;
+	#branches{
+		margin-top: -5px;
 	}
-}
+	#branches h1.title{
+		margin: 0;
+		padding: 30px 0px;
+	}
+	#branches .branches-list-wrapper{
+		float: left;
+		margin: 0;
+		text-align: center;
+		padding: 20px 10%;
+		width: 50%;
+	}
+	#branches .branches-list-wrapper h3{
+		color: rgb(99,99,99);
+	    font-family: 'PermanentMarker';
+	}
+	#branches .branches-list-wrapper p{
+		color: rgb(99,99,99);
+		font-family: 'LibreBaskerville';
+	}
+	iframe#maps{
+		width: 100%;
+		height: 50vh;
+		pointer-events: none;
+	}
+	iframe.clicked{
+		pointer-events: auto;
+	}
+	form button{
+		float: left;
+	}
+	form .g-recaptcha{
+		float: right;
+	}
+	@media (max-width: 480px) {
+		#branches .branches-list-wrapper{
+			padding: 10px 20px;
+			width: 100%;
+		}
+	}
 </style>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 @endsection
 
 @section('content')
 
 <div class="setup-wrapper">
 	<div class="wrapper-maps">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4096047806356!2d106.62833971476904!3d-6.209582895504822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x320687ba53b4daa!2sPT.+Berri+Indosari!5e0!3m2!1sen!2sus!4v1503296702902" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4096047806356!2d106.62833971476904!3d-6.209582895504822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x320687ba53b4daa!2sPT.+Berri+Indosari!5e0!3m2!1sen!2sus!4v1503296702902" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</div>
 </div>
 
@@ -65,10 +72,10 @@ iframe.clicked{
 		@php
 			$arrTitle = ['Head Office', 'Bali', 'Surabaya', 'Bandung'];
 			$arrAdr	= ['Jl. MH. Thamrin, Komp. Mahkota Mas Blok J No. 61 
-Cikokol - Tangerang 15117, Indonesia', 'Jl. Dharmawangsa No. 18 Kampial, Nusa Dua 
-Bali 80383, Indonesia', 'Ruko Rungkut Megah Raya
-Jl. Kalirungkut No. 6 ', 'Bizzpark Commercial Estate Jl. Kopo No. 455, Blok AA6 No. 16
-Kopo - Bandung 40227'];
+				Cikokol - Tangerang 15117, Indonesia', 'Jl. Dharmawangsa No. 18 Kampial, Nusa Dua 
+				Bali 80383, Indonesia', 'Ruko Rungkut Megah Raya
+				Jl. Kalirungkut No. 6 ', 'Bizzpark Commercial Estate Jl. Kopo No. 455, Blok AA6 No. 16
+				Kopo - Bandung 40227'];
 			$arrTel = ['(62-21) 554 3050, 554 3056', '(62-361) 774 707, 774 706, 774 705, 774 702', '(62-31) 870 9229, 872 0843', '(62-22) 8888 6781'];
 			$arrFax = ['(62-21) 554 3057, 554 3058', '(62-361) 774 704', '(62-31) 879 8589', '(62-22) 8888 6782']
 		@endphp
@@ -82,16 +89,95 @@ Kopo - Bandung 40227'];
 		@endfor
 		<div class="clearfix"></div>
 </div>
+
+<div id="contact-us" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/sakura.jpg') }}');">
+	<div class="setup-content lar-wd">
+		<h1 class="title">
+			Contact Us
+		</h1>
+		<div class="row">
+			<div class="col-md-6 description">
+				<p>Jl. MH Thamrin, Komplek Mahkota Mas</p>
+				<p>Blok. J/61, Kec. Tangerang, 15117</p>
+				<p>Phone: (021) 5543050</p>
+				<div>
+					<a href="#">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+						</span>
+						<label>www.juiceunited.com</label>
+					</a>
+				</div>
+				<br>
+				<div>
+					<a href="https://www.facebook.com/Juiceunited/">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+						</span>
+						<label>
+							<a href="https://www.facebook.com/Juiceunited/">
+								Facebook
+							</a>
+						</label>
+					</a>
+				</div>
+				<br>
+				<div>
+					<a href="https://instagram.com/Juiceunited/">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+						</span>
+						<label>
+							<a href="https://instagram.com/Juiceunited/">
+								Instagram
+							</a>
+						</label>
+					</a>
+				</div>
+				<br>
+				<div>
+					<a href="#">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+						</span>
+						<label>info@juiceunited.com</label>
+					</a>
+				</div>
+
+			</div>
+			<div class="col-md-6 form-contact">
+				<form>
+					<input type="text" class="form-control" placeholder="Email Address*">
+					<input type="text" class="form-control" placeholder="Your Name*">
+					<textarea class="form-control" placeholder="Message" rows="10"></textarea>
+					<button class="btn btn-orange">
+						Submit
+					</button>
+						<div class="g-recaptcha" data-sitekey="6LcoAS4UAAAAAHQ-NpZB7oZIeQ_IH-BUL6NuZqpw"></div>
+				</form>
+			</div>
+		</div>
+
+		<div class="for-web-devlop">
+			<p>© 2017 Juice United</p>
+			<p>Web Developer By <a href="http://amadeo.id/"><img src="{{ asset('amadeo/image/base/amadeo.png') }}"></a></p>
+		</div>
+	</div>
+</div>
 @endsection
 
 @section('script')
 <script type="text/javascript">
 $('.wrapper-maps')
 	.click(function(){
-			$(this).find('iframe').addClass('clicked')
+			$(this).find('iframe#maps').addClass('clicked')
 	})
 	.mouseleave(function(){
-			$(this).find('iframe').removeClass('clicked')
+			$(this).find('iframe#maps').removeClass('clicked')
 	});
 </script>
 @endsection

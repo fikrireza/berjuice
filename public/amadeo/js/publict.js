@@ -28,7 +28,6 @@ $(document).ready(function() {
                 $(".resposive-mobile").css({"display": "block"});
                 $("#bar-mobile-animate-show").css({"display": "none"});
                 $("#bar-mobile-animate-hide").css({"display": "block"});
-                $(".navbar-statick").css({"height": "45%"});
                 $(".navbar-statick").css({"background-color": "rgba(242,165,45,1)"});
         });
 
@@ -38,7 +37,6 @@ $(document).ready(function() {
                 $(".resposive-mobile").css({"display": "block"});
                 $("#bar-mobile-animate-show").css({"display": "block"});
                 $("#bar-mobile-animate-hide").css({"display": "none"});
-                $(".navbar-statick").css({"height": "60px"});
                 $(".navbar-statick").css({"background-color": "rgba(242,165,45,0)"});
         });
     }
