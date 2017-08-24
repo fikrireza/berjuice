@@ -35,12 +35,7 @@
 				<i title="about" class="fa fa-circle-o" aria-hidden="true"></i>
 			</a>
 		</div>
-		<div>
-			<a href="#product">
-				<i title="product" class="fa fa-circle-o" aria-hidden="true"></i>
-			</a>
-		</div>
-		@php ( $arrUrl = ['', 'premium-chilled', 'premium-chilled', 'victtoria-coffe'])
+		@php ( $arrUrl = ['', 'freshly-squeezed', 'premium-chilled', 'victtoria-coffe'])
 		@for($a=1; $a<=3; $a++)
 		<div>
 			<a href="#product-{{ $arrUrl[$a].'-'.$a }}">
@@ -51,11 +46,6 @@
 		<div>
 			<a href="#wtfu">
 				<i title="Where To Find Us" class="fa fa-circle-o" aria-hidden="true"></i>
-			</a>
-		</div>
-		<div>
-			<a href="#recipe">
-				<i title="Recipe" class="fa fa-circle-o" aria-hidden="true"></i>
 			</a>
 		</div>
 	</div>

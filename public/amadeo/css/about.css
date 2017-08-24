@@ -1,233 +1,259 @@
-#about{
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
-#about h1.title{
-	margin: 0;
-	padding-top: 60px;
-	padding-bottom: 60px;
-}
-#about .descrip{
-	width: 50%;
-}
-#about .descrip p{
-	color: rgb(13,13,13);
-	font-family: 'LibreBaskerville';
-	line-height: 2;
-	text-shadow: 
-		1px 1px 1px rgb(255,255,255), 
-		-1px -1px 1px rgb(255,255,255);
-}
-#about .descrip img.img{
-	width: 140px;
-	height: 140px;
-}
-#factory.title{
-	margin: 0;
-	padding: 35px 0px;
-}
-#factory.title h1.title{
-	margin: 0;
-	padding: 0;
-}
-#factory.content .factory-list{
-	position: relative;
-	float: left;
-	width: 50%;
-	height: 65vh;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	overflow: hidden;
-}
-#factory.content .factory-list .wrapper-content{
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	padding: 10px 30px;
-	background-color: rgb(99,99,99);
-	visibility: hidden;
-	opacity: 0;
-	transition: all 1.51s;
-}
-#factory.content .factory-list:hover .wrapper-content{
-	visibility: visible;
-	opacity: 1;
-}
-#factory.content .factory-list .wrapper-content h2{
-	color: rgb(255,255,255);
-    font-family: 'PermanentMarker';
-    font-size: 38px;
-    margin: 0;
-}
+/* about */
+	#about{
+		height: 100vh;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+	#about h1.title{
+		margin: 0;
+		padding-top: 60px;
+		padding-bottom: 25px;
+	}
+	#about .descrip{
+		width: 50%;
+	}
+	#about .descrip p{
+		color: rgb(13,13,13);
+		font-family: 'LibreBaskerville';
+		line-height: 2;
+		text-shadow: 
+			1px 1px 1px rgb(255,255,255), 
+			-1px -1px 1px rgb(255,255,255);
+	}
+	#about .descrip img.img{
+		width: 110px;
+		height: 110px;
+	}
+/* about */
 
-#branches h1.title{
-	margin: 0;
-	padding: 30px 0px;
-}
-#branches .branches-list-wrapper{
-	float: left;
-	margin: 0;
-	text-align: center;
-	padding: 20px 10%;
-	width: 50%;
-}
-#branches .branches-list-wrapper h3{
-	color: rgb(99,99,99);
-    font-family: 'PermanentMarker';
-}
-#branches .branches-list-wrapper p{
-	color: rgb(99,99,99);
-	font-family: 'LibreBaskerville';
-}
+/* factory */
+	/*#factory.title{
+		margin: 0;
+		padding: 35px 0px;
+	}
+	#factory.title h1.title{
+		margin: 0;
+		padding: 0;
+	}
+	#factory.content .factory-list{
+		position: relative;
+		float: left;
+		width: 50%;
+		height: 65vh;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		overflow: hidden;
+	}
+	#factory.content .factory-list .wrapper-content{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 10px 30px;
+		background-color: rgb(99,99,99);
+		visibility: hidden;
+		opacity: 0;
+		transition: all 1.51s;
+	}
+	#factory.content .factory-list:hover .wrapper-content{
+		visibility: visible;
+		opacity: 1;
+	}
+	#factory.content .factory-list .wrapper-content h2{
+		color: rgb(255,255,255);
+	    font-family: 'PermanentMarker';
+	    font-size: 38px;
+	    margin: 0;
+	}*/
+/* factory */
 
+/* branches */
+	#branches h1.title{
+		margin: 0;
+		padding: 30px 0px;
+	}
+	#branches .branches-list-wrapper{
+		float: left;
+		margin: 0;
+		text-align: center;
+		padding: 20px 10%;
+		width: 50%;
+	}
+	#branches .branches-list-wrapper h3{
+		color: rgb(99,99,99);
+	    font-family: 'PermanentMarker';
+	}
+	#branches .branches-list-wrapper p{
+		color: rgb(99,99,99);
+		font-family: 'LibreBaskerville';
+	}
+/* branches */
 
-#ovc{
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	z-index: 20;
-}
-#ovc h1.title{
-	margin: 0 auto;
-	padding-top: 60px;
-	padding-bottom: 60px;
-	text-align: center;
-}
-#ovc .descrip{
-	margin: 0 auto;
-	padding: 30px;
-	width: 80%;
-	border: 3px solid rgb(254,255,251);
-}
-#ovc .descrip .row .col-md-6.col-sm-6.text-center label{
-	color: rgb(99,99,99);
-	font-family: 'LibreBaskerville';
-	line-height: 2;
-	text-align: right;
-}
+/* ovc */
+	#ovc{
+		height: 100vh;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		z-index: 20;
+	}
+	#ovc h1.title{
+		margin: 0 auto;
+		padding-top: 60px;
+		padding-bottom: 60px;
+		text-align: center;
+	}
+	#ovc .descrip{
+		margin: 0 auto;
+		padding: 30px;
+		width: 80%;
+		border: 3px solid rgb(254,255,251);
+	}
+	#ovc .descrip .row .col-md-6.col-sm-6.text-center label{
+		color: rgb(99,99,99);
+		font-family: 'LibreBaskerville';
+		line-height: 2;
+		text-align: right;
+	}
+	@media (max-width: 480px) {
+		#ovc .descrip .row .col-md-6.col-sm-6.text-center label{
+			font-size: 13px;
+		}
+	}
 
-#milestones{
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	padding-top: 20px;
-	padding-bottom: 1px;
-}
-#milestones:before{
-	content: "";
-    background-image: url('../image/base/leaves-up.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 290px;
-    z-index: 0;	
-}
-#milestones h1.title{
-	margin: 0;
-	padding-top: 60px;
-	padding-bottom: 60px;
-}
-#milestones .mil-block{
-	background-color: rgba(255,255,255,.85);
-	position: relative;
-	border-radius: 5px;
-	text-align: center;
-	padding: 10px;
-}
-#milestones .mil-block.size-st{
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 140px;
-}
-#milestones .mil-block.size-nd{
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 140px;
-	padding-left: 5%;
-	padding-right: 5%;
-}
-#milestones .mil-block h3{
-	font-family: 'PermanentMarker';
-	color: rgb(242,176,56);
-	text-shadow: 
-		3px 0px rgb(255,255,255),
-		-3px 0px rgb(255,255,255),
-		0px 3px rgb(255,255,255),
-		0px -3px rgb(255,255,255);
-}
-#milestones .mil-block p{
-	font-family: 'LibreBaskerville';
-	color: rgb(99,99,99);
-}
-#milestones .root-wrapper{
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100px;
-	top: -140px;
-}
-#milestones .root-wrapper .root{
-	position: absolute;
-	width: 100px;
-	height: 140px;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-#milestones .root-wrapper .root.tree{
-	height: 120vh;
-	background-repeat: repeat-y;
-	background-size: cover;
-	z-index: 20;
-}
-#milestones .mil-block.size-st.tree.right{
-	margin-right: -70px;
-	position: relative;
-	z-index: 10;
-}
-#milestones .mil-block.size-st.tree.right:before{
-	content: "";
-	position: absolute;
-    background-image: url('../image/base/root-kanan.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    bottom: -135px;
-    left: -85px;
-    width: 145px;
-    height: 135px;
-}
-#milestones .mil-block.size-st.tree.left{
-	margin-left: -22px;
-	position: relative;
-	z-index: 1;
-}
-#milestones .mil-block.size-st.tree.left:before{
-	content: "";
-	position: absolute;
-    background-image: url(../image/base/root-kiri.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    bottom: -115px;
-    right: -50px;
-    width: 90px;
-    height: 115px;
-    z-index: -1;
-}
+/* ovc */
+
+/* milestones */
+	#milestones{
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		padding-top: 20px;
+		padding-bottom: 1px;
+	}
+	#milestones:before{
+		content: "";
+	    background-image: url('../image/base/leaves-up.png');
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    position: absolute;
+	    top: 0px;
+	    width: 100%;
+	    height: 290px;
+	    z-index: 0;	
+	}
+	#milestones h1.title{
+		margin: 0;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	#milestones .mil-block{
+		background-color: rgb(255,255,255);
+		position: relative;
+		border-radius: 5px;
+		text-align: center;
+		padding: 10px;
+	}
+	#milestones .mil-block h3{
+		margin-top: 10px;
+	}
+	#milestones .mil-block.size-st{
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 140px;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	#milestones .mil-block.size-nd{
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 140px;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	#milestones .mil-block h3{
+		font-family: 'PermanentMarker';
+		color: rgb(242,176,56);
+		text-shadow: 
+			3px 0px rgb(255,255,255),
+			-3px 0px rgb(255,255,255),
+			0px 3px rgb(255,255,255),
+			0px -3px rgb(255,255,255);
+	}
+	#milestones .mil-block p{
+		font-family: 'LibreBaskerville';
+		color: rgb(99,99,99);
+	}
+	#milestones .root-wrapper{
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100px;
+		top: -140px;
+	}
+	#milestones .root-wrapper .root{
+		position: absolute;
+		width: 100px;
+		height: 140px;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	#milestones .root-wrapper .root.tree{
+		height: 120vh;
+		background-repeat: repeat-y;
+		background-size: cover;
+		z-index: 20;
+	}
+	#milestones .mil-block.size-st.tree.right{
+		margin-right: -70px;
+		position: relative;
+		z-index: 10;
+	}
+	#milestones .mil-block.size-st.tree.right:before{
+		content: "";
+		position: absolute;
+	    background-image: url('../image/base/root-kanan.png');
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    bottom: -135px;
+	    left: -85px;
+	    width: 145px;
+	    height: 135px;
+	}
+	#milestones .mil-block.size-st.tree.left{
+		margin-left: -22px;
+		position: relative;
+		z-index: 1;
+	}
+	#milestones .mil-block.size-st.tree.left:before{
+		content: "";
+		position: absolute;
+	    background-image: url(../image/base/root-kiri.png);
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    bottom: -115px;
+	    right: -50px;
+	    width: 90px;
+	    height: 115px;
+	    z-index: -1;
+	}
+/* milestones */
+
 @media (max-width: 480px) {
+body{
+	overflow-x: hidden;
+}
+/* about */
 	#about{
 		height: auto;
 		padding-bottom: 40px;
@@ -240,34 +266,85 @@
 		width: 80px;
 		height: 80px;
 	}
+/* about */
+
+/* factory */
+	#factory.title.setup-wrapper{
+		display: none;
+	}
 	#factory.content .factory-list{
-		height: 25vh;
+		height: 50vh;
+		width: 100%;
 	}
 	#factory.content .factory-list .wrapper-content{
-		padding: 10px;
+		padding: 10px 20px;
+		visibility: visible;
+		opacity: 1;
+		background-color: rgba(0,0,0,0);
+		top: 0;
 	}
 	#factory.content .factory-list .wrapper-content h2{
-		font-size: 20px;
+		font-size: 26px;
+		color: rgb(246,184,70);
 	}
 	#factory.content .factory-list .wrapper-content .btn-orange{
+		display: none;
 		font-size: 12px;
 		padding: 5px 8px;
 		margin-top: 10px;
+	}
+/* factory */
+
+/* branches */
+	#branches.setup-wrapper{
+		padding-bottom: 50px;
 	}
 	#branches .branches-list-wrapper{
 		padding: 5px 20px;
 		width: 100%;
 	}
+/* branches */
+
+/* milestones */
 	#milestones .mil-block.size-st,
 	#milestones .mil-block.size-nd{
 		width: 100%;
 	}
+	#milestones .mil-block.size-st.tree.right{
+		margin-right: auto;
+		z-index: 1;
+	}
+	#milestones .mil-block.size-st.tree.right:before{
+		display: none;
+	}
+	#milestones .mil-block.size-st.tree.left{
+		margin-left: auto;
+		z-index: 1;
+	}
+	#milestones .mil-block.size-st.tree.left:before{
+		display: none;
+	}
+	#milestones .root-wrapper .root.tree{
+		z-index: 0;
+	}
+/* milestones */
+
+/* ovc */
 	#ovc{
 		height: auto;
 		padding-bottom: 60px;
+	}
+	#ovc .setup-wrapper .setup-content.nor-wd{
+		width: 90%;
+	}
+	#ovc h1.title{
+		font-size: 30px;
+		padding-top: 30px;
+	    padding-bottom: 30px;
 	}
 	#ovc .descrip{
 		width: 100%;
 		padding: 15px;
 	}
+/* ovc */
 }

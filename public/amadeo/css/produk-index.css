@@ -86,40 +86,73 @@
     	0px -3px rgb(255,255,255);
 }
 @media (max-width: 480px) {
+	#space-top{
+		display: none;
+	}
 	#product-index .bg-display{
-		width: 330px;
-		height: 270px;
+		width: 100%;
+		height: 100vh;
+	    background-size: 350% 200%;
+	    background-position: 91% 5%;
 	}
 	#product-index h1.page-name{
-		font-size: 20px;
+		font-size: 40px;
+	    padding-top: 10vh;
+	    padding-bottom: 5vh;
 	}
-	#product-index #outters{
-		padding: 5px 15px 0px 15px;
-		height: auto;
-	}
-	#product-index #outters .column .wrapper-display{
+	
+	#product-index #outters-owl{
+		width: 100%;
+		height: 70vh;
 		position: relative;
-		margin-left: 5px;
+		padding: 0;
 	}
-	#product-index #outters .column .wrapper-display{
-		margin-bottom: 13px;
+	#product-index #outters-owl .item{
+		overflow: hidden;
+		width: 100%;
 	}
-	#product-index #outters .column .wrapper-display,
-	#product-index #outters .column .wrapper-display .vertical,
-	#product-index #outters .column .wrapper-display .vertical .vertical-align{
-		height: 106px;
-		width: 93px;
+	#product-index #outters-owl .item .text-center{
+		position: relative;
+		width: 100vw;
+		height: 80vh;
+		padding-bottom: 10px;
+		vertical-align: bottom;
+		display: table-cell;
 	}
-	#product-index #outters .column .wrapper-display img{
-		width: auto;
-		height: 60px;
+	#product-index #outters-owl .item a{
+		text-align: center;
 	}
-	#product-index #outters .column .wrapper-display h1.title{
-		font-size: 10px;
+	#product-index #outters-owl .item a img{
+		max-height: 390px;
+		max-width: 100%;
+		text-align: center;
+	}
+	#product-index #outters-owl .item a h1.title{
+		font-family: 'PermanentMarker';
+		font-size: 26px;
+	    color: rgb(242,176,56);
+	    margin-top: 10px;
 		text-shadow: 
 			1px 0px #FFF, 
 			-1px 0px #FFF, 
 			0px 1px #FFF, 
 			0px -1px #FFF;
 	}
+	#product-index #outters-owl .owl-controls{
+		position: absolute;
+		top: 30vh;
+		width: 100vw;
+		padding: 0 10px;
+	}
+	#product-index #outters-owl .owl-controls .owl-prev{
+		float: left;
+	}
+	#product-index #outters-owl .owl-controls .owl-next{
+		float: right;
+	}
+	#product-index #outters-owl .owl-controls .owl-buttons div{
+		background-color: rgba(0,0,0,0);
+		font-size: 45px;
+	}
+
 }

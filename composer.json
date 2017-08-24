@@ -15,7 +15,10 @@
         "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
         "maatwebsite/excel": "~2.1.8",
+        "php-http/guzzle6-adapter": "^1.1",
+        "php-http/message": "^1.6",
         "spatie/laravel-analytics": "^3.0",
+        "vinkla/instagram": "^7.0",
         "yajra/laravel-datatables-oracle": "6.*"
     },
     "require-dev": {

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	@yield("meta-page")
 	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/plugin/bootstrap-3.3.7/css/bootstrap.css') }}" />
-	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css ">
+	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/plugin/font-awesome/css/font-awesome.min.css') }}">
 	<style type="text/css">
 		/* animate */
 			.animation-element{
@@ -22,6 +22,14 @@
 				visibility: visible;
 				opacity: 1;
 			}
+			@media (max-width: 480px) {
+				.animation-element,
+				.animation-element.in-view{
+					transform: translateY(0%) scale(1) skew(0deg,0deg);
+					visibility: visible;
+					opacity: 1;
+				}
+			}
 		/* animate */
 	</style>
 	@yield("style")
@@ -29,6 +37,16 @@
 	<script src="{{ asset('amadeo/plugin/jquery/jquery-3.2.0.min.js') }}"></script>
 
 	<link rel="icon" type="image/png" href="{{ asset('amadeo/image/base/logo-juice-united.png') }}" />
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+					  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-83016466-8', 'auto');
+		ga('send', 'pageview');
+	</script>
+	
 </head>
 <body>
 	@include('frontend.include.navbar')

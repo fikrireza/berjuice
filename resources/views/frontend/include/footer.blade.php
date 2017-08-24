@@ -20,22 +20,30 @@
 				</div>
 				<br>
 				<div>
-					<a href="#">
+					<a href="https://www.facebook.com/Juiceunited/">
 						<span class="fa-stack fa-lg">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
 						</span>
-						<label>juiceunited</label>
+						<label>
+							<a href="https://www.facebook.com/Juiceunited/">
+								Facebook
+							</a>
+						</label>
 					</a>
 				</div>
 				<br>
 				<div>
-					<a href="#">
+					<a href="https://instagram.com/Juiceunited/">
 						<span class="fa-stack fa-lg">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
 						</span>
-						<label>juiceunited</label>
+						<label>
+							<a href="https://instagram.com/Juiceunited/">
+								Instagram
+							</a>
+						</label>
 					</a>
 				</div>
 				<br>
@@ -71,28 +79,55 @@
 @endif
 <div class="footer">
 	<div class="float-left">
-		<div class="wrapper-footer">
+		<div class="wrapper-footer resposive-mobile-out">
 			<label><b>Connect With Us</b></label>
 		</div>
 	</div>
-	<div class="float-left border-gradian-right">
+	<div class="float-left border-gradian-right resposive-mobile-out">
 		<div class="wrapper-footer">
+			@php
+				$arrIcon = [
+					'logofb',
+					'logoinstag',
+					'logotwit'
+				];
+				$arrUrl = [
+					'https://www.facebook.com/Juiceunited/',
+					'https://www.instagram.com/Juiceunited/',
+					'https://twitter.com/Juiceunited/'
+
+				];
+			@endphp
 			<label>
-				<img class="logo-contact-us-footer" src="{{ asset('amadeo/image/base/logofb-red.png') }}">
-				<img class="logo-contact-us-footer" src="{{ asset('amadeo/image/base/logoinstag-red.png') }}">
-				<img class="logo-contact-us-footer" src="{{ asset('amadeo/image/base/logotwit-red.png') }}">
+				@for($a=0; $a<=2; $a++)
+				<a href="{{ $arrUrl[$a] }}">
+					<img class="logo-contact-us-footer" src="{{ asset('amadeo/image/base/'.$arrIcon[$a].'-red.png') }}">
+				</a>
+				@endfor
 			</label>
 		</div>
 	</div>
-	<div class="float-left">
+	<div class="float-left resposive-mobile-out">
 		<div class="wrapper-footer">
 			<label>Online Purchase Through</label>
 		</div>
 	</div>
-	<div class="float-left border-gradian-right">
+	<div class="float-left border-gradian-right resposive-mobile-out">
 		<div class="wrapper-footer">
 			<label>
-				<img class="logo-contact-us-footer" src="{{ asset('amadeo/image/base/logohappyfresh.png') }}">
+				<a href="https://www.happyfresh.id/">
+					<img class="logo-contact-us-footer" src="{{ asset('amadeo/image/base/logohappyfresh.png') }}">
+				</a>
+			</label>
+		</div>
+	</div>
+	<div class="float-left resposive-mobile-in">
+		<div class="wrapper-footer">
+			<label>
+				Online Purchase Through
+				<a href="https://www.happyfresh.id/">
+					<img class="logo-contact-us-footer" src="{{ asset('amadeo/image/base/logohappyfresh.png') }}">
+				</a>
 			</label>
 		</div>
 	</div>
@@ -102,18 +137,24 @@
 		</div>
 	</div>
 
-	<div class="float-right border-gradian-right">
+	{{--
+	<div class="float-right border-gradian-right resposive-mobile-out">
 		<div class="wrapper-footer">
 			<label>Careers</label>
 		</div>
 	</div>
-	<div class="float-right border-gradian-right">
+	<div class="float-right border-gradian-right resposive-mobile-out">
 		<div class="wrapper-footer">
 			<label>F.A.Q</label>
 		</div>
 	</div>
-	<div class="float-right border-gradian-right resposive-mobile">
+	--}}
+
+	<div class="float-left resposive-mobile-in">
 		<div class="wrapper-footer">
+			<label>
+				Copyright © 2017, PT. Berri Indosari
+			</label>
 		</div>
 	</div>
 </div>

@@ -1,3 +1,8 @@
+@media (max-width: 480px) {
+	body{
+		overflow-x: hidden;
+	}
+}
 /* for owl slider */
 	.owl-slide-one-image-fluid{
 		height: 100vh;
@@ -22,7 +27,7 @@
 	@media (max-width: 480px) {
 		.owl-slide-one-image-fluid,
 		.owl-slide-one-image-fluid .wrapper-image-background{
-			height: 30vh;
+			height: 35vh;
 		}
 	}
 /* end for owl slider */
@@ -54,17 +59,206 @@
 	}
 	@media (max-width: 480px) {
 		#about h1.title{
-			padding-top: 100px;
+			padding-top: 45px;
 			padding-bottom: 10px;
+			font-size: 28px;
 		}
 
 		#about .content{
 			width: 100%;
-			margin-top: 50px; 
+			margin-top: 20px; 
 			text-align: center;
+		}
+
+		#about .content p{
+			margin-bottom: 20px;
+			line-height: 1.8;
 		}
 	}
 /* end for about */
+
+/* for product */
+	#product{
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	/*#product:before{
+		content: "";
+	    background-image: url('../image/base/gradien.png');
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    position: absolute;
+	    top: 0px;
+	    width: 100%;
+	    height: 290px;
+	    z-index: 1;	
+	}*/
+	#product h1.title{
+		margin: 0;
+		text-align: center;
+		color: rgb(242,176,56);
+		font-family: 'PermanentMarker';
+		font-size: 53px;
+		padding-top: 180px;
+		padding-bottom: 0px;
+		text-shadow: 
+			0px 0px 25px rgb(255,255,255),
+			0px 10px 25px rgb(255,255,255),
+			0px -10px 25px rgb(255,255,255),
+			0px 20px 25px rgb(255,255,255),
+			0px -20px 25px rgb(255,255,255),
+			10px 0px 25px rgb(255,255,255),
+			-10px 0px 25px rgb(255,255,255),
+			20px 0px 25px rgb(255,255,255),
+			-20px 0px 25px rgb(255,255,255);
+	}
+	#product .product-wrapper{
+		position: relative;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	#product .product-wrapper .product-content{
+		position: relative;
+		width: 80%;
+		height: 100vh;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#product .product-wrapper .product-content .product-show{
+		position: absolute;
+		width: 100%;
+		height: 80vh;
+		bottom: 10vh;
+	}
+	#product .product-wrapper .for-descrip{
+		position: relative;
+	}
+	#product .product-wrapper:nth-child(odd) .for-descrip{
+		float: right;
+	}
+	#product .product-wrapper:nth-child(even) .for-descrip{
+		float: left;
+	}
+	#product .product-wrapper .product-description{
+		width: 45vw;
+		height: 50vh;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	#product .product-wrapper#product-victtoria-coffe-3 .product-description{
+	    display: block;
+	    margin-top: 35px;
+	    margin-bottom: -35px;
+	    float: right;
+	    width: 40vw;
+	}
+	#product .product-wrapper#product-victtoria-coffe-3 .product-description p{
+		margin-left: 50px;
+	}
+	#product .product-wrapper .product-description p{
+		color: rgb(255,255,255);
+	    font-family: 'LibreBaskerville';
+	    font-size: 16px;
+	}
+	#product .product-wrapper .product-content a{
+		text-decoration: none !important;
+	}
+	#product .product-wrapper .product-content a .product-name{
+		color: rgb(246,184,70);
+		font-family: 'PermanentMarker';
+		font-size: 60px;
+		text-shadow: 
+			3px 0px rgb(255,255,255),
+			-3px 0px rgb(255,255,255),
+			0px 3px rgb(255,255,255),
+			0px -3px rgb(255,255,255);
+	}
+	#product .product-wrapper:nth-child(odd) .product-name{
+	}
+	#product .product-wrapper:nth-child(even) .product-name{
+		text-align: right;
+	}
+	#product .product-wrapper .product-img{
+		position: absolute;
+		bottom: 0;
+	    max-height: 95vh;
+		width: 100%;
+	}
+	#product .product-wrapper:nth-child(odd) .product-img{
+		float: left;
+	}
+	#product .product-wrapper:nth-child(even) .product-img{
+		float: right;
+	}
+	@media (max-width: 480px) {
+		#product h1.title{
+			/*padding-top: 80px;*/
+			/*padding-bottom: 120px;*/
+			visibility: hidden;
+			opacity: 0;
+		}
+		#product .product-wrapper{
+			height: 100vh;
+			position: relative;
+			overflow: hidden;
+		}
+		#product .product-wrapper:nth-child(odd) .product-img,
+		#product .product-wrapper:nth-child(even) .product-img{
+			float: none;
+			position: absolute;
+			height: auto;
+			max-height: 100vh;
+		}
+		#product .product-wrapper .product-img.freshly-squeezed{
+		    width: 285%;
+		    left: -60%;
+		    bottom: 0%;
+		}
+		#product .product-wrapper .product-img.premium-chilled{
+	        width: 285%;
+		    right: -60%;
+		    bottom: 0%;
+		}
+		#product .product-wrapper .product-img.victtoria-coffe{
+	        width: 270%;
+		    left: -65%;
+		    bottom: 0%;
+		}
+		#product .product-wrapper .product-content,
+		#product .product-wrapper .product-content .product-show,
+		#product .product-wrapper .for-descrip,
+		#product .product-wrapper .product-description{
+			height: 0vh;
+			width: 100%;
+			position: absolute;
+			top: 10px;
+		}
+		#product .product-wrapper .product-content a .product-name{
+			text-align: center;
+		    font-size: 37px;
+		    text-align: center;
+		    width: 80%;
+		    margin: 0 auto;
+		}
+		#product .product-wrapper .product-description{
+			/*width: 100%;*/
+			/*height: auto;*/
+			/*text-align: justify;*/
+			/*display: block;*/
+			/*padding-top: 100px;*/
+		}
+		#product .product-wrapper .product-description p{
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+/* end for product */
 
 /* for where to find us and recipe */
 	#wtfuar{
@@ -146,8 +340,14 @@
 		color: rgb(255,255,255);
 	    font-family: 'LibreBaskerville';
 	}
+	#wtfuar .for-wtfu h2 a{
+		color: rgb(255,255,255);
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
 	#wtfuar .for-recipe{
-		width: 24%;
+		width: 33%;
 		text-align: center;
 		vertical-align: top;
 	}
@@ -174,151 +374,49 @@
 	    font-family: 'LibreBaskerville';
 	    font-size: 20px;
 	}
+	#wtfuar .for-recipe .wrapper-title-name .title-name h2 a{
+		text-decoration: none;
+		color: rgb(87,87,87);
+	}
 
 	@media (max-width: 480px) {
+		.setup-wrapper .setup-content.nor-wd{
+			width: 90%;
+		}
+		#wtfuar h1.title{
+			font-size: 32px;
+			padding-top: 70px;
+			padding-bottom: 35px;
+		}
+		#wtfuar h1.title#recipe{
+			padding-top: 10px;
+		}
 		#wtfuar .for-wtfu,
 		#wtfuar .for-recipe{
-			width: 100%;
+			width: 32%;
+		}
+		#wtfuar .for-wtfu .circle,
+		#wtfuar .for-wtfu .circle .vertical-midle,
+		#wtfuar .for-recipe .circle{
+			width: 80px;
+			height: 80px;
+		}
+		#wtfuar .for-wtfu .circle .vertical-midle i{
+			font-size: 30px;
+		}
+		#wtfuar .for-wtfu h2{
+			font-size: 10px;
+		}
+		#wtfuar .for-recipe .wrapper-title-name .title-name h2{
+			font-size: 12px;
+		}
+		#wtfuar .for-recipe .wrapper-title-name,
+		#wtfuar .for-recipe .wrapper-title-name .title-name,
+		#wtfuar .for-recipe .wrapper-title-name .title-name h2{
+			width: 80px;
+		}
+		#wtfuar .for-wrapper{
+			margin-bottom: 10px;
 		}
 	}
 /* end for where to find us and recipe */
-
-/* for product */
-	#product{
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-attachment: fixed;
-	}
-	/*#product:before{
-		content: "";
-	    background-image: url('../image/base/gradien.png');
-	    background-size: cover;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    position: absolute;
-	    top: 0px;
-	    width: 100%;
-	    height: 290px;
-	    z-index: 1;	
-	}*/
-	#product h1.title{
-		margin: 0;
-		text-align: center;
-		color: rgb(242,176,56);
-		font-family: 'PermanentMarker';
-		font-size: 53px;
-		padding-top: 180px;
-		padding-bottom: 0px;
-		text-shadow: 
-			0px 0px 25px rgb(255,255,255),
-			0px 10px 25px rgb(255,255,255),
-			0px -10px 25px rgb(255,255,255),
-			0px 20px 25px rgb(255,255,255),
-			0px -20px 25px rgb(255,255,255),
-			10px 0px 25px rgb(255,255,255),
-			-10px 0px 25px rgb(255,255,255),
-			20px 0px 25px rgb(255,255,255),
-			-20px 0px 25px rgb(255,255,255);
-	}
-	#product .product-wrapper{
-		position: relative;
-		width: 100%;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-attachment: fixed;
-	}
-	#product .product-wrapper .product-content{
-		position: relative;
-		width: 80%;
-		height: 100vh;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	#product .product-wrapper .product-content .product-show{
-		position: absolute;
-		width: 100%;
-		height: 80vh;
-		bottom: 10vh;
-	}
-	#product .product-wrapper .for-descrip{
-		position: relative;
-	}
-	#product .product-wrapper:nth-child(odd) .for-descrip{
-		float: right;
-	}
-	#product .product-wrapper:nth-child(even) .for-descrip{
-		float: left;
-	}
-	#product .product-wrapper .product-description{
-		width: 45vw;
-		height: 50vh;
-		display: table-cell;
-		vertical-align: middle;
-	}
-	#product .product-wrapper #product-victtoria-coffe-3 .product-description{
-	    display: block;
-	    margin-top: 35px;
-	    margin-bottom: -35px;
-	    float: right;
-	    width: 40vw;
-	}
-	#product .product-wrapper #product-victtoria-coffe-3 .product-description p{
-		margin-left: 50px;
-	}
-	#product .product-wrapper .product-description p{
-		color: rgb(255,255,255);
-	    font-family: 'LibreBaskerville';
-	    font-size: 16px;
-	}
-	#product .product-wrapper .product-content a{
-		text-decoration: none !important;
-	}
-	#product .product-wrapper .product-content a .product-name{
-		color: rgb(246,184,70);
-		font-family: 'PermanentMarker';
-		font-size: 60px;
-		text-shadow: 
-			3px 0px rgb(255,255,255),
-			-3px 0px rgb(255,255,255),
-			0px 3px rgb(255,255,255),
-			0px -3px rgb(255,255,255);
-	}
-	#product .product-wrapper:nth-child(odd) .product-name{
-	}
-	#product .product-wrapper:nth-child(even) .product-name{
-		text-align: right;
-	}
-	#product .product-wrapper .product-img{
-		position: absolute;
-		bottom: 0;
-	    max-height: 95vh;
-		width: 100%;
-	}
-	#product .product-wrapper:nth-child(odd) .product-img{
-		float: left;
-	}
-	#product .product-wrapper:nth-child(even) .product-img{
-		float: right;
-	}
-	@media (max-width: 480px) {
-		#product h1.title{
-			padding-top: 80px;
-			padding-bottom: 120px;
-		}
-		#product .product-wrapper .product-description{
-			width: 100%;
-			height: auto;
-			text-align: justify;
-			display: block;
-			padding-top: 100px;
-		}
-		#product .product-wrapper .product-content{
-			height: 80vh;
-		}
-		#product .product-wrapper .product-content a .product-name{
-			font-size : 26px;
-		}
-	}
-/* end for product */

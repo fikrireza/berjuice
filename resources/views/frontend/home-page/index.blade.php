@@ -39,33 +39,23 @@
 </div>
 
 <div id="product" class="setup-wrapper">
-	@php 
-		$arr = ['', 'FRESHLY SQUEEZED', 'PREMIUM CHILLED', 'VITTORIA COFFEE'];
-		$arrUrl = ['', 'premium-chilled', 'premium-chilled', 'victtoria-coffe'];
-		$arrDesc = [
-			"",
-			"For more than 22 years, PT Berri Indosari has been the pioneer in Indonesia's juice industry with vast experience in making and delivering the finest juice beverage since 1992. We provide consumers with fresh and healthy juice that delivers taste, nutrition, and consistent quality every day.",
-			"For more than 22 years, PT Berri Indosari has been the pioneer in Indonesia's juice industry with vast experience in making and delivering the finest juice beverage since 1992. We provide consumers with fresh and healthy juice that delivers taste, nutrition, and consistent quality every day.",
-			"Vittoria is Australia's No.1 pure coffee company, sourcing only premium 100% Arabica coffee beans to provide the highest quality coffee blends available."
-		];
-	@endphp
 	@for($a=1; $a<=3; $a++)
-	<div class="product-wrapper" style="background-image: url('{{ asset('amadeo/image/base/home-produk-bg-'.$a.'.jpg') }}');">
+	<div @if($a!=1) id="product-{{ $productUrl[$a].'-'.$a }}" @endif class="product-wrapper" style="background-image: url('{{ asset('amadeo/image/base/home-produk-bg-'.$a.'.jpg') }}');">
 		@if($a==1)
 			<h1 class="title">Product</h1>
 		@endif
-		<img class="product-img" src="{{ asset('amadeo/image/base/home-produk-'.$a.'.png') }}">
-		<div id="product-{{ $arrUrl[$a].'-'.$a }}" class="product-content">
+		<img @if($a==1) id="product-{{ $productUrl[$a].'-'.$a }}" @endif class="product-img {{ $productUrl[$a] }}" src="{{ asset('amadeo/image/base/home-produk-'.$a.'.png') }}">
+		<div class="product-content">
 			<div class="product-show">
 				<div class="for-descrip">
 					<div class="product-description animation-element">
 						<p>
-							{{ $arrDesc[$a] }}
+							{{ $productDesc[$a] }}
 						</p>
 					</div>
-					<a href="{{ route('frontend.product.view.'.$arrUrl[$a]) }}">
+					<a href="{{ route('frontend.product.view.'.$productUrl[$a]) }}">
 						<h1 class="product-name">
-							{{ $arr[$a] }}
+							{{ $productName[$a] }}
 						</h1>
 					</a>
 				</div>
@@ -82,23 +72,36 @@
 		<div class="for-wrapper centered for-wtfu">
 			<div class="circle animation-element animation-element" style="background-image: url('{{ asset('amadeo/image/base/pic-sos-'.$a.'.jpg') }}');">
 				<div class="vertical-midle">
-					<i class="fa fa-{{ $a == 0 ? 'facebook' : ''}}" aria-hidden="true"></i>
-					<i class="fa fa-{{ $a == 1 ? 'instagram' : ''}}" aria-hidden="true"></i>
-					<i class="fa fa-{{ $a == 2 ? 'twitter' : ''}}" aria-hidden="true"></i>
+					<i class="fa fa-{{ $sosmedIcon[$a] }}" aria-hidden="true"></i>
 				</div>
 			</div>
-			<h2>juiceunited</h2>
+			<h2>
+				<a href="{{ $sosmedUrl[$a] }}">
+					{{ $sosmedIcon[$a] }}
+				</a>
+			</h2>
 		</div>
 		@endfor
 		<h1 id="recipe" class="title">Recipe</h1>
-		@php ($arr = ['Chocolate<br>Orange Cake', 'Vanila-Orange<br>Freezer Pops', 'Orange-Glazed<br>Ham Steak', 'Orange Chicken'])
-		@for($a=0; $a<=3; $a++)
+		@php
+			$arr = [
+				'Chocolate<br>Orange Cake', 
+				'Vanila-Orange<br>Freezer Pops', 
+				'Orange-Glazed<br>Ham Steak', 
+				'Orange Chicken'
+			];
+		@endphp
+		@for($a=0; $a<=2; $a++)
 		<div class="for-wrapper centered for-recipe">
 			<div class="circle animation-element" style="background-image: url('{{ asset('amadeo/image/base/pic-'.$a.'.jpg') }}');">
 			</div>
 			<div class="wrapper-title-name">
 				<div class="title-name">
-					<h2>{!! $arr[$a] !!}</h2>
+					<h2>
+						<a href="{{ $a == 0 ? route('frontend.recipe.view') : '#' }}">
+							{!! $arr[$a] !!}
+						</a>
+					</h2>
 				</div>
 			</div>
 		</div>

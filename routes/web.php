@@ -16,6 +16,7 @@
 
 Route::get('/', 'Frontend\HomeController@index')
 	->name('frontend.home');
+    
 Route::get('/about-us', 'Frontend\AboutController@index')
 	->name('frontend.about');
 
