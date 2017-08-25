@@ -43,7 +43,7 @@ class HomeController extends Controller
 		// $feedInstagram = new Instagram();
 		// $feedInstagram->get('Juiceunited');
 
-	 //    dd($feedInstagram);
+		//    dd($feedInstagram);
 
     	return view('frontend.home-page.index', compact(
     			'productName',

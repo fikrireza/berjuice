@@ -229,16 +229,6 @@
 	<img id="show-product" src="{{ asset('amadeo/image/base/victtoria-coffe-product.png') }}">
 </div>
 
-@php
-	$arrTitle = ['','','Beans', 'Ground', 'Capsule', 'Capino Capsule Machine'];
-	$arrClass = ['','','Beans', 'Ground', 'Capsule', 'CapinoCapsuleMachine'];
-	$arrDesc = ['','',
-		'Using only the highest grade of 100% Arabica coffee beans, we roast locally in Australia for freshness.',
-		'Our ground coffee products are roasted, ground and packed into air-tight vacuum sealed packs to lock in flavour, aroma and freshness.',
-		'Our range of Espressotoria and Nespresso** Compatible capsules are packed in Australia using the most sophisticated packing technology available.',
-		'A compact and affordable automatic capsule machine. The Capino is available in matte black and will deliver seamless espressos for everyday use.'
-	];
-@endphp
 @for($i=2; $i<=5; $i++)
 <div id="product-decription" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/victtoria-coffe-product-bg'.$i.'.jpg') }}');">
 	<div class="wrapper-prod-descr {{ $arrClass[$i] }} animation-element">
@@ -258,26 +248,21 @@
 				<td>
 					<p>AvaiLABLE</p>
 				</td>
-				@php ( $arr = ['beans', 'capsules'] )
 				@for($a=0; $a<=1; $a++)
 				<td>
-					<p>{!! $arr[$a] !!}</p>
+					<p>{!! $arrPackaging[$a] !!}</p>
 				</td>
 				@endfor
 			</tr>
-			@php
-				$arrName = ['Espresso', 'Mountain Grown', 'Organic', 'Oro', 'Italian', 'Nero', 'Cinque Stelle'];
-				$arrAvail = [1,1, 0,1, 0,1, 1,0, 0,1, 1,0, 1,0 ]
-			@endphp
 			@for($r=0; $r<=6; $r++)
 			<tr>
 				<td>
-					<p>{{ $arrName[$r] }}</p>
+					<p>{{ $arrPackagingName[$r] }}</p>
 				</td>
 				@for($a=0; $a<=1; $a++)
 				@php ( $que =  ($r*2)+$a )
 				<td>
-					<img src="{{ asset('amadeo/image/base/coffe.png') }}" style="opacity: {{ $arrAvail[$que] }}">
+					<img src="{{ asset('amadeo/image/base/coffe.png') }}" style="opacity: {{ $arrPackagingAvail[$que] }}">
 				</td>
 				@endfor
 			</tr>

@@ -36,63 +36,37 @@
 </div>
 
 {{--
-<div id="factory" class="title setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/about-bg-other.jpg') }}');">
-		<div class="setup-content nor-wd">
-			<h1 class="title">Our Factory</h1>
-		</div>
-</div>
-<div id="factory" class="content setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/about-bg-other.jpg') }}');">
-	@php($arrFac = ['', 'Cikande', 'Bali'])
-	@for($i=1; $i<=2; $i++)
-	<div class="factory-list" style="background-image: url('{{ asset('amadeo/image/base/factory-bg-'.$i.'.jpg') }}');">
-		<div class="wrapper-content">
-			<h2>{!! $arrFac[$i] !!} Factory</h2>
-			<div class="for-btn text-right">
-				<a href="" class="btn btn-orange">More</a>
+	<div id="factory" class="title setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/about-bg-other.jpg') }}');">
+			<div class="setup-content nor-wd">
+				<h1 class="title">Our Factory</h1>
+			</div>
+	</div>
+	<div id="factory" class="content setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/about-bg-other.jpg') }}');">
+		@php($arrFac = ['', 'Cikande', 'Bali'])
+		@for($i=1; $i<=2; $i++)
+		<div class="factory-list" style="background-image: url('{{ asset('amadeo/image/base/factory-bg-'.$i.'.jpg') }}');">
+			<div class="wrapper-content">
+				<h2>{!! $arrFac[$i] !!} Factory</h2>
+				<div class="for-btn text-right">
+					<a href="" class="btn btn-orange">More</a>
+				</div>
 			</div>
 		</div>
+		@endfor
+		<div class="clearfix"></div>
 	</div>
-	@endfor
-	<div class="clearfix"></div>
-</div>
 --}}
 
 <div id="branches" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/about-bg-other.jpg') }}');">
 		<div class="setup-content nor-wd">
 			<h1 class="title">Branches</h1>
 		</div>
-		@php
-			$arrTitle = [
-				'Head Office', 
-				'Bali', 
-				'Surabaya', 
-				'Bandung'
-			];
-			$arrAdr	= [
-				'Jl. MH. Thamrin, Komp. Mahkota Mas Blok J No. 61 Cikokol - Tangerang 15117, Indonesia', 
-				'Jl. Dharmawangsa No. 18 Kampial, Nusa Dua Bali 80383, Indonesia', 
-				'Ruko Rungkut Megah Raya Jl. Kalirungkut No. 6 ', 
-				'Bizzpark Commercial Estate Jl. Kopo No. 455, Blok AA6 No. 16 Kopo - Bandung 40227'
-			];
-			$arrTel = [
-				'(62-21) 554 3050, 554 3056', 
-				'(62-361) 774 707, 774 706, 774 705, 774 702', 
-				'(62-31) 870 9229, 872 0843', 
-				'(62-22) 8888 6781'
-			];
-			$arrFax = [
-				'(62-21) 554 3057, 554 3058', 
-				'(62-361) 774 704', 
-				'(62-31) 879 8589', 
-				'(62-22) 8888 6782'
-			]
-		@endphp
 		@for($i=0; $i<=3; $i++)
 		<div class="branches-list-wrapper animation-element">
-			<h3>{{ $arrTitle[$i] }}</h3>
-			<p>{{ $arrAdr[$i] }}</p>
-			<p>Tel : {{ $arrTel[$i] }}</p>
-			<p>Fax : {{ $arrFax[$i] }}</p>
+			<h3>{{ $branchesTitle[$i] }}</h3>
+			<p>{{ $branchesAdr[$i] }}</p>
+			<p>Tel : {{ $branchesTel[$i] }}</p>
+			<p>Fax : {{ $branchesFax[$i] }}</p>
 		</div>
 		@endfor
 		<div class="clearfix"></div>
@@ -103,25 +77,13 @@
 		<h1 class="title">Milestones</h1>
 
 		<div class="mil-block size-st">
-			<h3>1992</h3>
-			<p>
-				Joint-Venture company with National Foods Limited Australia. We are the pioneer in Indonesian Juice market with vast experience, technology and quality assurance of Berri Australia in making and delivering the finest juice beverage since 1992
-			</p>
+			{!! $milestonesContent[0] !!}
 		</div>
 		<div class="root-wrapper">
 			<div class="root" style="background-image: url('{{ asset('amadeo/image/base/root.png') }}')"></div>
 		</div>
 		<div class="mil-block size-nd">
-			<h3>2011</h3>
-			<p>
-				Armed with decade of experience in F&B industry, combined with extensive knowledge, technology, quality assurance, and necessary supply chain, PT. Berri Indosari initiate the major product innovation under "Juice United" brand. This initiative is aimed primarily to better cater & serve Indonesian unique market demand so as to better fit the local palate and preferences.
-			</p>
-			<p>
-				Since its inception, PT. Berri Indosari have proven strong foundation of success by consistently provide consumers with high quality, rich, nutritious, fresh and healthy juice on daily basis. The good relationship between the company and Berri Australia remain strong, further proven by the grant of sole distributorship of Berri Brand for UHT Juices.
-			</p>
-			<p>
-				PT. Berri Indosari currently employs more than 300 employees, two manufacturing facilities and an extensive distribution network in Java and outer island. The company primary business focus is on production of freshly squeezed orange (365 days a year) and non–pasteurized chilled fruit juice.
-			</p>
+			{!! $milestonesContent[1] !!}
 		</div>
 		<div class="root-wrapper hidden-in-mobile">
 			<div class="root tree" style="background-image: url('{{ asset('amadeo/image/base/root-2.png') }}')"></div>
@@ -130,19 +92,13 @@
 			<div class="root" style="background-image: url('{{ asset('amadeo/image/base/root.png') }}')"></div>
 		</div>
 		<div class="mil-block size-st tree right">
-			<h3>2016</h3>
-			<p>
-				Obtained HACCP (Hazard Analysis and Critical Control Points) certification for food safety management and product quality from Tuv nord for both production facilities in Cikande and Bali
-			</p>
+			{!! $milestonesContent[2] !!}
 		</div>
 		<div class="root-wrapper hidden-in-dekstop">
 			<div class="root" style="background-image: url('{{ asset('amadeo/image/base/root.png') }}')"></div>
 		</div>
 		<div class="mil-block size-st tree left">
-			<h3>2017</h3>
-			<p>
-				Obtained ISO 22000:2005 certification from Tuv Nord for both production facilities located in Cikande and Bali; Obtained distributorship of Vittoria Coffee for Indonesia.
-			</p>
+			{!! $milestonesContent[3] !!}
 		</div>
 
 	</div>
@@ -153,25 +109,9 @@
 		<h1 class="title">Our Valued Customer</h1>
 		<div class="descrip">
 			<div class="row">
-				@php
-					$arr = [
-						'Hypermart',
-						'Hotels',
-						'Supermarkets',
-						'Restaurants',
-						'Minimarket',
-						'Cafes',
-						'Speciality Stores',
-						'Caterings',
-						'Hospitals',
-						'Airlanes',
-						'Private Label',
-						'Institution'
-					];
-				@endphp
 				@for($a=0; $a<=11; $a++)
 				<div class="col-md-6 col-sm-6 col-xs-6 text-center">
-					<label>{{ $arr[$a] }}</label>
+					<label>{{ $ovcArr[$a] }}</label>
 				</div>
 				@endfor
 			</div>

@@ -46,6 +46,13 @@
 	}
 	form .g-recaptcha{
 		float: right;
+		visibility: hidden;
+		opacity: 0;
+		transition: all 2.51s;
+	}
+	form .g-recaptcha.active{
+		visibility: visible;
+		opacity: 1;
 	}
 	@media (max-width: 480px) {
 		#branches .branches-list-wrapper{
@@ -69,22 +76,12 @@
 		<div class="setup-content nor-wd">
 			<h1 class="title">Branches</h1>
 		</div>
-		@php
-			$arrTitle = ['Head Office', 'Bali', 'Surabaya', 'Bandung'];
-			$arrAdr	= ['Jl. MH. Thamrin, Komp. Mahkota Mas Blok J No. 61 
-				Cikokol - Tangerang 15117, Indonesia', 'Jl. Dharmawangsa No. 18 Kampial, Nusa Dua 
-				Bali 80383, Indonesia', 'Ruko Rungkut Megah Raya
-				Jl. Kalirungkut No. 6 ', 'Bizzpark Commercial Estate Jl. Kopo No. 455, Blok AA6 No. 16
-				Kopo - Bandung 40227'];
-			$arrTel = ['(62-21) 554 3050, 554 3056', '(62-361) 774 707, 774 706, 774 705, 774 702', '(62-31) 870 9229, 872 0843', '(62-22) 8888 6781'];
-			$arrFax = ['(62-21) 554 3057, 554 3058', '(62-361) 774 704', '(62-31) 879 8589', '(62-22) 8888 6782']
-		@endphp
 		@for($i=0; $i<=3; $i++)
 		<div class="branches-list-wrapper">
-			<h3>{{ $arrTitle[$i] }}</h3>
-			<p>{{ $arrAdr[$i] }}</p>
-			<p>Tel : {{ $arrTel[$i] }}</p>
-			<p>Fax : {{ $arrFax[$i] }}</p>
+			<h3>{{ $branchesTitle[$i] }}</h3>
+			<p>{{ $branchesAdr[$i] }}</p>
+			<p>Tel : {{ $branchesTel[$i] }}</p>
+			<p>Fax : {{ $branchesFax[$i] }}</p>
 		</div>
 		@endfor
 		<div class="clearfix"></div>
@@ -150,14 +147,56 @@
 
 			</div>
 			<div class="col-md-6 form-contact">
-				<form>
-					<input type="text" class="form-control" placeholder="Email Address*">
-					<input type="text" class="form-control" placeholder="Your Name*">
-					<textarea class="form-control" placeholder="Message" rows="10"></textarea>
-					<button class="btn btn-orange">
+				<form id="contact-form" method="post" action="{{ route('frontend.contact.store') }}">
+					{{ csrf_field() }}
+					@if(Session::has('alert'))
+						<script>
+						  window.setTimeout(function() {
+						    $(".alert.alert-dismissible").fadeTo(700, 0).slideUp(700, function(){
+						        $(this).remove();
+						    });
+						  }, 5000);
+						</script>
+						<div class="alert {{ Session::get('alert') }} alert-dismissible fade in" role="alert">
+					      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+					      </button>
+					      <strong>{{ Session::get('info') }}</strong>
+					    </div>
+					@endif
+					@if($errors->has('email'))
+						<code><span style="color:red; font-size:12px;">{{ $errors->first('email')}}</span></code>
+					@endif
+					<input 
+						name="email" 
+						type="text" 
+						class="form-control" 
+						placeholder="Email Address*"
+						value="{{ old('email') }}" 
+						{{ Session::has('autofocus') ? 'autofocus' : ''}}
+					>
+					@if($errors->has('name'))
+						<code><span style="color:red; font-size:12px;">{{ $errors->first('name')}}</span></code>
+					@endif
+					<input 
+						name="name" 
+						type="text" 
+						class="form-control" 
+						placeholder="Your Name*"
+						value="{{ old('name') }}" 
+					>
+					@if($errors->has('message'))
+						<code><span style="color:red; font-size:12px;">{{ $errors->first('message')}}</span></code>
+					@endif
+					<textarea 
+						name="message" 
+						class="form-control" 
+						placeholder="Message" 
+						rows="10"
+					>{{ old('message') }}</textarea>
+					<button class="btn btn-orange" type="button">
 						Submit
 					</button>
-						<div class="g-recaptcha" data-sitekey="6LcoAS4UAAAAAHQ-NpZB7oZIeQ_IH-BUL6NuZqpw"></div>
+						<div class="g-recaptcha" data-sitekey="6LcoAS4UAAAAAHQ-NpZB7oZIeQ_IH-BUL6NuZqpw" data-callback="submitThisForm"></div>
 				</form>
 			</div>
 		</div>
@@ -174,10 +213,20 @@
 <script type="text/javascript">
 $('.wrapper-maps')
 	.click(function(){
-			$(this).find('iframe#maps').addClass('clicked')
+		$(this).find('iframe#maps').addClass('clicked')
 	})
 	.mouseleave(function(){
-			$(this).find('iframe#maps').removeClass('clicked')
+		$(this).find('iframe#maps').removeClass('clicked')
 	});
+$('button.btn.btn-orange')
+	.click(function(){
+		$(this).hide();
+		$("div.g-recaptcha").addClass('active');
+	});
+</script>
+<script type="text/javascript">
+function submitThisForm(){
+	$("form#contact-form").submit();
+}
 </script>
 @endsection

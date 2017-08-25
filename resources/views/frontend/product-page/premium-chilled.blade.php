@@ -246,48 +246,9 @@
 @endsection
 
 @section('content')
-@php
-	$arrName = [
-		'orange', 
-		'orange unsweet', 
-		'orange ace', 
-		'apple', 
-		'mango', 
-		'pink guava', 
-		'lemon', 
-		'soursop', 
-		'pineapple', 
-		'green veggie', 
-		'banana mix', 
-		'orange mandarin', 
-		'mangosteen'
-	];
-	$arrAvail = [
-		1,1,1,1,1, 
-		0,0,1,1,0, 
-		0,1,1,0,0, 
-		1,1,1,1,1, 
-		1,1,1,1,1, 
-		1,1,1,1,1, 
-		0,0,1,0,0, 
-		0,1,1,0,1, 
-		0,0,0,0,1, 
-		1,1,1,1,0, 
-		1,1,1,1,0, 
-		1,0,1,0,0, 
-		1,0,1,0,0
-	];
-	$arr = [
-		'<p>275ml</p>', 
-		'<p>500ml</p>', 
-		'<p>1l</p>', 
-		'<p>2l</p>', 
-		'<p>5l</p>'
-	];
-@endphp
 <div class="product-show dekstop setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/product-bg-2.jpg') }}');">
 	<div class="setup-content nor-wd">
-		<p>Premium Chilled Juice is our top of the line product. Within it we ensure that every sip retains the savory taste of the fresh fruit. We produce Premium Chilled Juice without heating process, and kept under 4 degree Celsius from raw material to finished goods. Products are delivered with refrigerated trucks, stored in extra cool chillers. With the shelf life of 8 weeks (the shortest shelf life in the industry, to ensure freshness of the juice), Premium Chilled Juice retains vitamins and nutrients highly beneficial for healthy, just like consuming fresh fruits.</p>
+		{!! $productDescript[0] !!}
 		<p>
 			<a href="#product-decription">
 				<i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -307,7 +268,7 @@
 				</td>
 				@for($a=0; $a<=4; $a++)
 				<td>
-					{!! $arr[$a] !!}
+					{!! $arrSize[$a] !!}
 				</td>
 				@endfor
 			</tr>
@@ -344,13 +305,7 @@
 <div class="mobile product-decription setup-wrapper">
 	<div class="setup-content nor-wd">
 		<div class="text-center">
-			<p>
-				Premium Chilled Juice is our top of the line product. Within it we ensure that every sip retains the savory taste of the fresh fruit. We produce Premium Chilled Juice without heating process, and kept under 4 degree Celsius from raw material to finished goods. Products are delivered with refrigerated trucks, stored in extra cool chillers. 
-			</p>
-			<p>
-				With the shelf life of 8 weeks (the shortest shelf life in the industry, to ensure freshness of the juice), Premium Chilled Juice retains vitamins and nutrients highly beneficial for healthy, just like consuming fresh fruits.
-			</p>
-
+			{!! $productDescript[1] !!}
 			<h1 class="title">variants</h1>
 		</div>
 
@@ -369,7 +324,7 @@
 			@for($b=0; $b<=4; $b++)
 				@php ( $que =  ($a*5)+$b )
 				<div class="list {{ $arrAvail[$que] == 0 ? 'hide' : ''}}">
-					{!! $arr[$b] !!}
+					{!! $arrSize[$b] !!}
 				</div>
 			@endfor
 		</div>

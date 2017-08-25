@@ -20,27 +20,21 @@ Route::get('/', 'Frontend\HomeController@index')
 Route::get('/about-us', 'Frontend\AboutController@index')
 	->name('frontend.about');
 
-Route::get('/contact-us', function () {
-    return view('frontend.contact-page.index');
-})->name('frontend.contact');
+Route::get('/contact-us', 'Frontend\ContactController@index')
+    ->name('frontend.contact');
+Route::post('/contact-us/form-store', 'Frontend\ContactController@store')
+    ->name('frontend.contact.store');
 
-Route::get('/product', function () {
-    return view('frontend.product-page.index');
-})->name('frontend.product.index');
-
-Route::get('/product/freshly-squeezed', function () {
-    return view('frontend.product-page.freshly-squeezed');
-})->name('frontend.product.view.freshly-squeezed');
-Route::get('/product/premium-chilled', function () {
-    return view('frontend.product-page.premium-chilled');
-})->name('frontend.product.view.premium-chilled');
-
-Route::get('/product/victtoria-coffe', function () {
-    return view('frontend.product-page.victtoria-coffe');
-})->name('frontend.product.view.victtoria-coffe');
-Route::get('/product/espressotoria-machine', function () {
-    return view('frontend.product-page.victtoria-coffe');
-})->name('frontend.product.view.espressotoria-machine');
+Route::get('/product', 'Frontend\ProductController@index')
+    ->name('frontend.product.index');
+Route::get('/product/freshly-squeezed', 'Frontend\ProductController@freshlySqueezed')
+    ->name('frontend.product.view.freshly-squeezed');
+Route::get('/product/premium-chilled', 'Frontend\ProductController@premiumChilled')
+    ->name('frontend.product.view.premium-chilled');
+Route::get('/product/victtoria-coffe', 'Frontend\ProductController@coffy')
+    ->name('frontend.product.view.victtoria-coffe');
+Route::get('/product/espressotoria-machine', 'Frontend\ProductController@coffy')
+    ->name('frontend.product.view.espressotoria-machine');
 
 Route::get('/product/daily-juice', function () {
     return view('frontend.product-page.daily-juice');

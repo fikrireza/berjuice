@@ -6,23 +6,10 @@
 	</div>
 	<div class="float-left border-gradian-right resposive-mobile-out">
 		<div class="wrapper-footer">
-			@php
-				$arrIcon = [
-					'logofb',
-					'logoinstag',
-					'logotwit'
-				];
-				$arrUrl = [
-					'https://www.facebook.com/Juiceunited/',
-					'https://www.instagram.com/Juiceunited/',
-					'https://twitter.com/Juiceunited/'
-
-				];
-			@endphp
 			<label>
 				@for($a=0; $a<=2; $a++)
-				<a href="{{ $arrUrl[$a] }}">
-					<img class="logo-contact-us-footer" src="{{ asset('amadeo/image/base/'.$arrIcon[$a].'-red.png') }}">
+				<a href="{{ $ftSosmedArrUrl[$a] }}">
+					<img class="logo-contact-us-footer" src="{{ asset('amadeo/image/base/'.$ftSosmedArrIcon[$a].'-red.png') }}">
 				</a>
 				@endfor
 			</label>

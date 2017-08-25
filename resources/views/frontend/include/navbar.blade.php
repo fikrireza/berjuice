@@ -34,31 +34,13 @@
 				</a>
 			</div>
 			<div class="dropdown-content">
+				@for($a=0; $a<=4; $a++)
 				<div>
-					<a href="{{ route('frontend.product.view.freshly-squeezed') }}">
-						Freshly Squeezed
+					<a href="{{ route($navProdDropDownUrl[$a]) }}">
+						{{ $navProdDropDownName[$a] }}
 					</a>
 				</div>
-				<div>
-					<a href="{{ route('frontend.product.view.premium-chilled') }}">
-						Premium Chilled
-					</a>
-				</div>
-				<div>
-					<a href="{{ route('frontend.product.view.daily-juice') }}">
-						Daily Juice
-					</a>
-				</div>
-				<div>
-					<a href="{{ route('frontend.product.view.victtoria-coffe') }}">
-						Vittoria Coffee
-					</a>
-				</div>
-				<div>
-					<a href="{{ route('frontend.product.view.espressotoria-machine') }}">
-						Espressotoria Machine
-					</a>
-				</div>
+				@endfor
 			</div>
 		</div>
 		<div class="list-item-nav">
