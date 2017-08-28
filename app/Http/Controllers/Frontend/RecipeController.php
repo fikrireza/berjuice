@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App;
+use Excel;
+use PDF;
 
 class RecipeController extends Controller
 {
@@ -62,5 +65,12 @@ class RecipeController extends Controller
 	    	'arrName',
 	    	'arrCate'
 	    ));
+	}
+	function print(){
+		// $pdf = PDF::loadView('frontend.recipe-page.print');
+		// $pdf = new Dompdf();
+		$pdf = PDF::loadView('frontend.recipe-page.print');
+ 
+	    return $pdf->download('recipe.pdf');
 	}
 }
