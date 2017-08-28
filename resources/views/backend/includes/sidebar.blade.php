@@ -23,8 +23,12 @@
         <i class="fa fa-angle-left pull-right"></i>
       </a>
       <ul class="treeview-menu">
-        <li class="{{ Route::is('recipe*') ? 'active' : '' }}"><a href="{{ route('recipe.index') }}"><i class="fa fa-circle-o"></i> Recipe List</a></li>
-        <li class=""><a href=""><i class="fa fa-circle-o"></i> Recipe Categories</a></li>
+        <li class="{{ Route::is('recipe.*') ? 'active' : '' }}">
+          <a href="{{ route('recipe.index') }}"><i class="fa fa-circle-o"></i> Recipe List</a>
+        </li>
+        <li class="{{ Route::is('recipeCategory*') ? 'active' : ''}}">
+          <a href="{{ route('recipeCategory.index') }}"><i class="fa fa-circle-o"></i> Recipe Categories</a>
+        </li>
       </ul>
     </li>
     <li class="header">SETTING NAVIGATION</li>

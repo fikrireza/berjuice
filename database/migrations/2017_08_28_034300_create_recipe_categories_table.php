@@ -16,7 +16,7 @@ class CreateRecipeCategoriesTable extends Migration
         Schema::create('amd_recipe_categories', function(Blueprint $table){
           $table->increments('id');
           $table->string('category_name');
-          $table->string('description');
+          $table->string('description')->nullable();
           $table->string('active', 1)->default('Y');
           $table->timestamps();
         });

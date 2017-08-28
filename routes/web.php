@@ -68,6 +68,12 @@ Route::group(['middleware' => ['isAdministrator']], function () {
 
   Route::get('admin/dashboard', 'Backend\DashboardController@index')->name('admin.dashboard');
 
+	// Recipe Category
+	Route::get('admin/recipe-categories', 'Backend\RecipeCategoriesController@index')->name('recipeCategory.index');
+	Route::get('admin/recipe-categories/add', 'Backend\RecipeCategoriesController@add')->name('recipeCategory.add');
+	Route::post('admin/recipe-categories/add', 'Backend\RecipeCategoriesController@store')->name('recipeCategory.store');
+	Route::post('admin/recipe-categories/update', 'Backend\RecipeCategoriesController@update')->name('recipeCategory.update');
+
 	// Recipe Controller
 	Route::get('admin/recipe', 'Backend\RecipeController@index')->name('recipe.index');
 	Route::get('admin/recipe/add', 'Backend\RecipeController@add')->name('recipe.add');

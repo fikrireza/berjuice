@@ -65,13 +65,6 @@
               </tr>
               @endforeach
             </tbody>
-            <tfoot>
-            <tr>
-              <th>Menu Name</th>
-              <th>Category</th>
-              <th></th>
-            </tr>
-            </tfoot>
           </table>
         </div>
       </div>
