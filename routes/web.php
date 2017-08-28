@@ -16,7 +16,7 @@
 
 Route::get('/', 'Frontend\HomeController@index')
 	->name('frontend.home');
-    
+
 Route::get('/about-us', 'Frontend\AboutController@index')
 	->name('frontend.about');
 
@@ -58,14 +58,12 @@ Route::get('/recipe/view', function () {
 // end Frontend
 
 // Auth::routes();
-Route::post('login-process', 'Auth\LoginController@loginProcess')->name('login');
+Route::post('login-process', 'Auth\LoginController@login')->name('login');
 Route::get('admin/logout-process', 'Auth\LoginController@logoutProcess')->name('logout');
 // END Auth::routes()
 
 
-Route::get('admin/login', function(){
-  return view('backend.auth.login');
-})->name('login.pages');
+Route::get('admin/login', 'Auth\LoginController@showLoginForm')->name('login.pages');
 
 // START BACKEND ROUTE
 Route::group(['middleware' => ['isAdministrator']], function () {
