@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Vinkla\Instagram\Instagram;
 
 class HomeController extends Controller
 {
@@ -40,17 +39,21 @@ class HomeController extends Controller
 
 		];
 
-		// $feedInstagram = new Instagram();
-		// $feedInstagram->get('Juiceunited');
+		$itemsIg = [];
 
-		//    dd($feedInstagram);
+    	$client = new \GuzzleHttp\Client;
+
+	    $response = $client->get('https://www.instagram.com/Juiceunited/media');
+
+	    $itemsIg = json_decode((string) $response->getBody(), true)['items'];
 
     	return view('frontend.home-page.index', compact(
     			'productName',
     			'productUrl',
     			'productDesc',
     			'sosmedIcon',
-    			'sosmedUrl'
+    			'sosmedUrl',
+    			'itemsIg'
     		));
     }
 }

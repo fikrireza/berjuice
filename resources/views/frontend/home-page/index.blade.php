@@ -68,9 +68,10 @@
 <div id="wtfuar" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/wtfuar-bg.jpg') }}');">
 	<div class="setup-content nor-wd">
 		<h1 id="wtfu" class="title">Where To Find Us</h1>
-		@for($a=0; $a<=2; $a++)
+		@php($a=0)
+		@foreach($itemsIg  as $key => $item)
 		<div class="for-wrapper centered for-wtfu">
-			<div class="circle animation-element animation-element" style="background-image: url('{{ asset('amadeo/image/base/pic-sos-'.$a.'.jpg') }}');">
+			<div class="circle animation-element animation-element" style="background-image: url('{{ $item['images']['standard_resolution']['url'] }}');">
 				<div class="vertical-midle">
 					<i class="fa fa-{{ $sosmedIcon[$a] }}" aria-hidden="true"></i>
 				</div>
@@ -81,7 +82,11 @@
 				</a>
 			</h2>
 		</div>
-		@endfor
+		@php($a++)
+		@if($a == 3)
+			@break
+		@endif
+		@endforeach
 		<h1 id="recipe" class="title">Recipe</h1>
 		@php
 			$arr = [
