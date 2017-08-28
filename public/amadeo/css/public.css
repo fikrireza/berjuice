@@ -536,3 +536,25 @@
     }
   }
 /* end for footer */
+
+/* animate */
+  .animation-element{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50%) scale(0) skew(-90deg,-45deg);
+    transition: all 2s;
+  }
+  .animation-element.in-view{
+    transform: translateY(0%) scale(1) skew(0deg,0deg);
+    visibility: visible;
+    opacity: 1;
+  }
+  @media (max-width: 480px) {
+    .animation-element,
+    .animation-element.in-view{
+      transform: translateY(0%) scale(1) skew(0deg,0deg);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+/* animate */

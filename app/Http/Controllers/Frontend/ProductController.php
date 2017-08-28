@@ -150,4 +150,23 @@ class ProductController extends Controller
     		'arrPackagingAvail'
     	));
     }
+    function dailyJuice() {
+    	$arrName = [
+			'',
+			'100% orange', 
+			'mangosteen', 
+			'pink guava', 
+			'orange', 
+			'soursop', 
+			'apple', 
+			'mandarin orange', 
+			'banana mix', 
+			'green veggies', 
+			'coconut water', 
+			'mango'
+		];
+	    return view('frontend.product-page.daily-juice', compact(
+	    	'arrName'
+	    ));
+	}
 }
