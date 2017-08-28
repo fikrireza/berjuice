@@ -36,9 +36,9 @@ Route::get('/product/victtoria-coffe', 'Frontend\ProductController@coffy')
 Route::get('/product/espressotoria-machine', 'Frontend\ProductController@coffy')
     ->name('frontend.product.view.espressotoria-machine');
 
-Route::get('/product/daily-juice', function () {
-    return view('frontend.product-page.daily-juice');
-})->name('frontend.product.view.daily-juice');
+Route::get('/product/daily-juice', 'Frontend\ProductController@dailyJuice')
+    ->name('frontend.product.view.daily-juice');
+
 Route::get('/product/sparkling-water', function () {
     return view('frontend.product-page.sparkling-water');
 })->name('frontend.product.view.sparkling-water');
@@ -47,12 +47,10 @@ Route::get('/product/private-label', function () {
 })->name('frontend.product.view.private-label');
 
 
-Route::get('/recipe', function () {
-    return view('frontend.recipe-page.index');
-})->name('frontend.recipe');
-Route::get('/recipe/view', function () {
-    return view('frontend.recipe-page.view');
-})->name('frontend.recipe.view');
+Route::get('/recipe', 'Frontend\RecipeController@index')
+    ->name('frontend.recipe');
+Route::get('/recipe/view', 'Frontend\RecipeController@view')
+    ->name('frontend.recipe.view');
 
 
 // end Frontend

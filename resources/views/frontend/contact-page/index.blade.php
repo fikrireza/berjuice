@@ -10,58 +10,7 @@
 @section('style')
 <link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/public.css') }}" />
 <link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/contact.css') }}" />
-<style type="text/css">
-	#branches{
-		margin-top: -5px;
-	}
-	#branches h1.title{
-		margin: 0;
-		padding: 30px 0px;
-	}
-	#branches .branches-list-wrapper{
-		float: left;
-		margin: 0;
-		text-align: center;
-		padding: 20px 10%;
-		width: 50%;
-	}
-	#branches .branches-list-wrapper h3{
-		color: rgb(99,99,99);
-	    font-family: 'PermanentMarker';
-	}
-	#branches .branches-list-wrapper p{
-		color: rgb(99,99,99);
-		font-family: 'LibreBaskerville';
-	}
-	iframe#maps{
-		width: 100%;
-		height: 50vh;
-		pointer-events: none;
-	}
-	iframe.clicked{
-		pointer-events: auto;
-	}
-	form button{
-		float: left;
-	}
-	form .g-recaptcha{
-		float: right;
-		visibility: hidden;
-		opacity: 0;
-		transition: all 2.51s;
-	}
-	form .g-recaptcha.active{
-		visibility: visible;
-		opacity: 1;
-	}
-	@media (max-width: 480px) {
-		#branches .branches-list-wrapper{
-			padding: 10px 20px;
-			width: 100%;
-		}
-	}
-</style>
-	<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 @endsection
 
 @section('content')
