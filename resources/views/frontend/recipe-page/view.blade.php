@@ -31,7 +31,7 @@
 					<i class="fa fa-circle fa-stack-2x"></i>
 					<i class="fa fa-flag fa-stack-1x fa-inverse"></i>
 				</span>
-				<a href=""><label>Print Recipe</label></a>
+				<a href="{{ route('frontend.recipe.print') }}"><label>Print Recipe</label></a>
 			</label>
 		</div>
 		<div class="display-img hidden-mobile" style="background-image: url('{{ asset('amadeo/image/base/recip-1.png') }}');">

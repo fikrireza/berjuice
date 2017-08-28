@@ -51,6 +51,12 @@ Route::get('/recipe', 'Frontend\RecipeController@index')
     ->name('frontend.recipe');
 Route::get('/recipe/view', 'Frontend\RecipeController@view')
     ->name('frontend.recipe.view');
+Route::get('/recipe/view/print', 'Frontend\RecipeController@print')
+    ->name('frontend.recipe.print');
+
+Route::get('/recipe/view/print/test', function(){
+    return view('frontend.recipe-page.print');
+});
 
 
 // end Frontend
