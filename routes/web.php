@@ -85,7 +85,8 @@ Route::group(['middleware' => ['isAdministrator']], function () {
 	Route::get('admin/recipe/add', 'Backend\RecipeController@add')->name('recipe.add');
 	Route::post('admin/recipe/add', 'Backend\RecipeController@store')->name('recipe.store');
 	Route::get('admin/recipe/edit/{id}', 'Backend\RecipeController@see')->name('recipe.see');
-	Route::post('admin/recipe/edit', 'Backend\RecipeController@edit')->name('recipe.edit');
+	Route::post('admin/recipe/edit', 'Backend\RecipeController@update')->name('recipe.update');
+	Route::post('admin/recipe/image', 'Backend\RecipeController@uploadImage')->name('recipe.uploadImage');
 	Route::get('admin/recipe/publish', 'Backend\RecipeController@publish')->name('recipe.publish');
 });
 // END BACKEND ROUTE

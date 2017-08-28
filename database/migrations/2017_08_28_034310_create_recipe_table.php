@@ -21,6 +21,7 @@ class CreateRecipeTable extends Migration
           $table->text('directions');
           $table->string('recipe_image');
           $table->string('recipe_image_thumb');
+          $table->string('slug');
           $table->date('post_time');
           $table->string('active', 1)->default('Y');
           $table->string('show_homepage', 1)->default('N');

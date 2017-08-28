@@ -9,7 +9,7 @@ class Recipe extends Model
     protected $table = 'amd_recipe';
 
     protected $fillable = ['recipe_category_id','recipe_name','ingredients','directions','post_time',
-                            'recipe_image','recipe_image_thumb','active','show_homepage'];
+                            'recipe_image','recipe_image_thumb','slug','active','show_homepage'];
 
     public function recipe_category()
     {

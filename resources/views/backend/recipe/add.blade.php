@@ -6,7 +6,6 @@
 
 @section('headscript')
 <link rel="stylesheet" href="{{ asset('backend/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
-<link rel="stylesheet" href="{{ asset('backend/plugins/select2/select2.min.css') }}">
 <link rel="stylesheet" href="{{ asset('backend/plugins/datepicker/datepicker3.css') }}">
 @endsection
 
@@ -24,8 +23,15 @@
 @section('content')
   <div class="row">
     @if(Session::has('message'))
+    <script>
+      window.setTimeout(function() {
+        $(".alert-success").fadeTo(500, 0).slideUp(700, function(){
+            $(this).remove();
+        });
+      }, 5000);
+    </script>
     <div class="col-md-12">
-      <div class="alert alert-success panjang">
+      <div class="alert alert-success">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <h4><i class="icon fa fa-check"></i> Succeed!</h4>
         <p>{{ Session::get('message') }}</p>
@@ -46,9 +52,9 @@
             <label class="col-sm-3 control-label">Category Recipe</label>
           </div>
           <div class="col-sm-9 {{ $errors->has('recipe_category_id') ? 'has-error' : '' }}">
-            <select name="recipe_category_id" class="form-control select2" style="width: 100%;">
-              <option value=""></option>
-              @foreach ($getRecipeCategory as $key => $value)
+            <select name="recipe_category_id" class="form-control" style="width: 100%;">
+              <option value="">-- Choose --</option>
+              @foreach ($getRecipeCategory as $key)
               <option value="{{ $key->id }}" {{ old('recipe_category_id') == $key->id ? 'selected=""' : '' }}>{{ $key->category_name }}</option>
               @endforeach
             </select>
@@ -60,14 +66,14 @@
           </div>
         </div>
         <div class="form-group">
-          <div class="{{ $errors->has('name') ? 'has-error' : '' }}">
+          <div class="{{ $errors->has('recipe_name') ? 'has-error' : '' }}">
             <label class="col-sm-3 control-label">Name</label>
           </div>
-          <div class="col-sm-9 {{ $errors->has('name') ? 'has-error' : '' }}">
-            <input type="text" name="name" class="form-control" placeholder="Name" value="{{ old('name') }}">
-            @if($errors->has('name'))
+          <div class="col-sm-9 {{ $errors->has('recipe_name') ? 'has-error' : '' }}">
+            <input type="text" name="recipe_name" class="form-control" placeholder="Name" value="{{ old('recipe_name') }}">
+            @if($errors->has('recipe_name'))
             <span class="help-block">
-              <i>* {{$errors->first('name')}}</i>
+              <i>* {{$errors->first('recipe_name')}}</i>
             </span>
             @endif
           </div>
@@ -116,7 +122,7 @@
               <div class="input-group-addon">
                 <i class="fa fa-calendar"></i>
               </div>
-              <input type="text" class="form-control" value="{{ date('Y-m-d') }}" id="datepicker1">
+              <input type="text" class="form-control" name="post_time" value="{{ date('Y-m-d') }}" id="datepicker1">
             </div>
             @if($errors->has('post_time'))
               <span class="help-block">
@@ -146,7 +152,6 @@
 @section('script')
 <script src="{{ asset('backend/plugins/iCheck/icheck.min.js') }}"></script>
 <script src="{{ asset('backend/plugins/datepicker/bootstrap-datepicker.js') }}"></script>
-<script src="{{ asset('backend/plugins/select2/select2.full.min.js')}}"></script>
 <script src="{{ asset('backend/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
 <script>
   $(".select2").select2({

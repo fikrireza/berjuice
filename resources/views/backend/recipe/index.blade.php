@@ -18,18 +18,32 @@
 
   <div class="row">
     <div class="col-md-12">
-      @if(Session::has('message'))
-        <div class="alert alert-success">
+      @if(Session::has('gagal'))
+        <script>
+          window.setTimeout(function() {
+            $(".alert-danger").fadeTo(500, 0).slideUp(700, function(){
+                $(this).remove();
+            });
+          }, 5000);
+        </script>
+        <div class="alert alert-danger">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-          <h4><i class="icon fa fa-check"></i> Succeed!</h4>
-          <p>{{ Session::get('message') }}</p>
+          <h4><i class="icon fa fa-check"></i> Failed!</h4>
+          <p>{{ Session::get('gagal') }}</p>
         </div>
       @endif
-      @if(Session::has('success'))
+      @if(Session::has('berhasil'))
+        <script>
+          window.setTimeout(function() {
+            $(".alert-success").fadeTo(500, 0).slideUp(700, function(){
+                $(this).remove();
+            });
+          }, 5000);
+        </script>
         <div class="alert alert-success">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
           <h4><i class="icon fa fa-check"></i> Succeed!</h4>
-          <p>{{ Session::get('success') }}</p>
+          <p>{{ Session::get('berhasil') }}</p>
         </div>
       @endif
       <br />
@@ -56,8 +70,8 @@
             <tbody>
               @foreach ($getRecipe as $key)
               <tr>
-                <td>{{ $key->name }}</td>
-                <td>{{ $key->category->category_name }}</td>
+                <td>{{ $key->recipe_name }}</td>
+                <td>{{ $key->recipe_category->category_name }}</td>
                 <td><span data-toggle="tooltip" title="See Recipe">
                       <a href="{{ route('recipe.see', ['id' => $key->id]) }}" class="btn btn-success btn-flat btn-xs edit"><i class="fa fa-file-text-o"> See Recipe</i></a>
                     </span>
