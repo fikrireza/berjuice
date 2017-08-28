@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHomeSliderTables extends Migration
+class CreateRecipeCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateHomeSliderTables extends Migration
      */
     public function up()
     {
-        Schema::create('amd_home_slider', function(Blueprint $table){
+        Schema::create('amd_recipe_categories', function(Blueprint $table){
           $table->increments('id');
-          $table->string('img_slider');
-          $table->string('img_alt')->nullable();
-          $table->integer('position')->unsigned();
-          $table->date('publish_date');
-          $table->integer('flag_publish')->unsigned();
-          $table->integer('actor_id')->unsigned();
+          $table->string('category_name');
+          $table->string('description');
+          $table->string('active', 1)->default('Y');
           $table->timestamps();
         });
     }

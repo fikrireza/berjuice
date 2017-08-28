@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRecipeTables extends Migration
+class CreateRecipeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,15 +15,15 @@ class CreateRecipeTables extends Migration
     {
         Schema::create('amd_recipe', function(Blueprint $table){
           $table->increments('id');
-          $table->integer('category_id')->unsigned();
-          $table->string('name')->unique();
-          $table->string('recipe_img');
+          $table->integer('recipe_category_id');
+          $table->string('recipe_name');
           $table->text('ingredients');
           $table->text('directions');
-          $table->date('publish_date');
-          $table->integer('show_homepage')->unsigned();
-          $table->integer('flag_publish')->unsigned();
-          $table->integer('actor_id')->unsigned();
+          $table->string('recipe_image');
+          $table->string('recipe_image_thumb');
+          $table->date('post_time');
+          $table->string('active', 1)->default('Y');
+          $table->string('show_homepage', 1)->default('N');
           $table->timestamps();
         });
     }

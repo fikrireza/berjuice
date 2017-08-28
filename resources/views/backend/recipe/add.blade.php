@@ -16,6 +16,7 @@
   </h1>
   <ol class="breadcrumb">
     <li><a href="{{ route('admin.dashboard') }}"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+    <li><a href="{{ route('recipe.index') }}">Recipe List</a></li>
     <li class="active">New Recipe</li>
   </ol>
 @stop
@@ -41,19 +42,19 @@
         {{ csrf_field() }}
       <div class="box-body">
         <div class="form-group">
-          <div class="{{ $errors->has('category_id') ? 'has-error' : '' }}">
+          <div class="{{ $errors->has('recipe_category_id') ? 'has-error' : '' }}">
             <label class="col-sm-3 control-label">Category Recipe</label>
           </div>
-          <div class="col-sm-9 {{ $errors->has('category_id') ? 'has-error' : '' }}">
-            <select name="category_id" class="form-control select2" style="width: 100%;">
+          <div class="col-sm-9 {{ $errors->has('recipe_category_id') ? 'has-error' : '' }}">
+            <select name="recipe_category_id" class="form-control select2" style="width: 100%;">
               <option value=""></option>
               @foreach ($getRecipeCategory as $key => $value)
-              <option value="{{ $key->id }}" {{ old('category_id') == $key->id ? 'selected=""' : '' }}>{{ $key->category_name }}</option>
+              <option value="{{ $key->id }}" {{ old('recipe_category_id') == $key->id ? 'selected=""' : '' }}>{{ $key->category_name }}</option>
               @endforeach
             </select>
-            @if($errors->has('category_id'))
+            @if($errors->has('recipe_category_id'))
               <span class="help-block">
-                <i>* {{$errors->first('category_id')}}</i>
+                <i>* {{$errors->first('recipe_category_id')}}</i>
               </span>
             @endif
           </div>
@@ -97,18 +98,18 @@
             @endif
           </div>
         </div>
-        <div class="form-group {{ $errors->has('recipe_img') ? 'has-error' : '' }}">
+        <div class="form-group {{ $errors->has('recipe_image') ? 'has-error' : '' }}">
           <label class="col-sm-3 control-label">Recipe Image</label>
           <div class="col-sm-9">
-            <input type="file" name="recipe_img" class="form-control" accept=".png,.jpg,.jpeg,.bmp">
-            @if($errors->has('recipe_img'))
+            <input type="file" name="recipe_image" class="form-control" accept=".png,.jpg,.jpeg,.bmp">
+            @if($errors->has('recipe_image'))
               <span class="help-block">
-                <i>* {{$errors->first('recipe_img')}}</i>
+                <i>* {{$errors->first('recipe_image')}}</i>
               </span>
             @endif
           </div>
         </div>
-        <div class="form-group {{ $errors->has('publish_date') ? 'has-error' : '' }}">
+        <div class="form-group {{ $errors->has('post_time') ? 'has-error' : '' }}">
           <label class="col-sm-3 control-label">Pubilsh Date</label>
           <div class="col-sm-9">
             <div class="input-group">
@@ -117,9 +118,9 @@
               </div>
               <input type="text" class="form-control" value="{{ date('Y-m-d') }}" id="datepicker1">
             </div>
-            @if($errors->has('publish_date'))
+            @if($errors->has('post_time'))
               <span class="help-block">
-                <i>* {{$errors->first('publish_date')}}</i>
+                <i>* {{$errors->first('post_time')}}</i>
               </span>
             @endif
           </div>
@@ -128,7 +129,7 @@
           <label class="col-sm-3 control-label">Show Homepage</label>
           <div class="col-sm-9">
             <label>
-              <input type="checkbox" class="minimal-red" name="show_homepage" {{ old('show_homepage') == 'on' ? 'checked' : '' }}>
+              <input type="checkbox" class="minimal-red" name="show_homepage" value="Y" {{ old('show_homepage') == 'Y' ? 'checked' : '' }}>
             </label>
           </div>
         </div>

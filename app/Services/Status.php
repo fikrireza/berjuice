@@ -32,7 +32,7 @@ class Status  {
 	{
 		if(!session()->has('status'))
 		{
-			session()->put('status', auth()->check() ?  auth()->user()->role->slug : 'campaign1');
+			session()->put('status', auth()->check() ?  auth()->user()->role->slug : 'visitor');
 		}
 	}
 

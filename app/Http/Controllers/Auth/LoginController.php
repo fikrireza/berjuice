@@ -47,7 +47,7 @@ class LoginController extends Controller
       return view('backend.auth.login');
     }
 
-    public function loginProcess(Request $request)
+    public function login(Request $request)
     {
         $message = [
           'email.required' => 'wajib di isi',
@@ -81,7 +81,7 @@ class LoginController extends Controller
         }
         else
         {
-            return redirect()->route('login.pages')->with('filedLogin', 'Periksa Kembali Email atau Password Anda.')->withInput();
+            return redirect()->route('login.pages')->with('failedLogin', 'Periksa Kembali Email atau Password Anda.')->withInput();
         }
     }
 

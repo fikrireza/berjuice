@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAccessLogTables extends Migration
+class CreateLogAccess extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateAccessLogTables extends Migration
      */
     public function up()
     {
-        Schema::create('amd_access_log', function(Blueprint $table){
+        Schema::create('amd_log_access', function(Blueprint $table){
           $table->increments('id');
-          $table->integer('actor_id')->unsigned();
+          $table->integer('actor')->unsigned();
           $table->string('action');
           $table->timestamps();
         });

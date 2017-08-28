@@ -8,17 +8,11 @@ class Recipe extends Model
 {
     protected $table = 'amd_recipe';
 
-    /**
-    * The attributes that are mass assignable.
-    *
-    * @var array
-    */
-    protected $fillable = [
-      'category_id','name','recipe_img','ingredients','directions','publish_date','show_homepage','flag_publish','actor_id'
-    ];
+    protected $fillable = ['recipe_category_id','recipe_name','ingredients','directions','post_time',
+                            'recipe_image','recipe_image_thumb','active','show_homepage'];
 
-    public function category()
+    public function recipe_category()
     {
-        return $this->belongsTo('App\Models\RecipeCategory', 'category_id');
+      return $this->belongsTo('App\Models\RecipeCategories', 'recipe_category_id');
     }
 }
