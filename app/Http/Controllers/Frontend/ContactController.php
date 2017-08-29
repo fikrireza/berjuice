@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Validator;
+use App\Models\Inbox;
 
 class ContactController extends Controller
 {
@@ -47,10 +48,17 @@ class ContactController extends Controller
           	->with('info', 'infalid input...')
           	->with('alert', 'alert-danger');
         }
+
+        $save = new Inbox;
+        $save->name = $request->name;
+        $save->email = $request->email;
+        $save->messages = $request->message;
+        $save->save();
+
         return redirect()
         	->route('frontend.contact')
         	->with('autofocus', true)
-          	->with('info', 'thank you to ask me.')
+          	->with('info', 'Data has been Submited')
         	->with('alert', 'alert-success');
 	}
 }

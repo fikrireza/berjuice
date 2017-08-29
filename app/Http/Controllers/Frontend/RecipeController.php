@@ -35,6 +35,10 @@ class RecipeController extends Controller
 		->where('active', 'Y')
         ->first();
 
+        if($get == null){
+        	return view('errors.404');
+        }
+
 	    return view('frontend.recipe-page.view', compact(
 	    	'call',
 	    	'get'
@@ -45,6 +49,10 @@ class RecipeController extends Controller
 		$get = Recipe::where('slug', $slug)
 		->where('active', 'Y')
         ->first();
+        
+        if($get == null){
+        	return view('errors.404');
+        }
 
 		$pdf = PDF::loadView('frontend.recipe-page.print', compact('get'));
 	    return $pdf->download('Recipe '.$get->recipe_name.'.pdf');
