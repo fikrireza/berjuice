@@ -1,4 +1,3 @@
-<script src="{{asset('backend/plugins/jQuery/jQuery-2.1.4.min.js')}}"></script>
 <script src="{{asset('backend/bootstrap/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('backend/plugins/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('backend/plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
