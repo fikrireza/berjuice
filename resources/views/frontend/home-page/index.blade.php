@@ -88,29 +88,21 @@
 		@endif
 		@endforeach
 		<h1 id="recipe" class="title">Recipe</h1>
-		@php
-			$arr = [
-				'Chocolate<br>Orange Cake', 
-				'Vanila-Orange<br>Freezer Pops', 
-				'Orange-Glazed<br>Ham Steak', 
-				'Orange Chicken'
-			];
-		@endphp
-		@for($a=0; $a<=2; $a++)
+		@foreach($recipe as $list)
 		<div class="for-wrapper centered for-recipe">
-			<div class="circle animation-element" style="background-image: url('{{ asset('amadeo/image/base/pic-'.$a.'.jpg') }}');">
+			<div class="circle animation-element" style="background-image: url('{{ asset('amadeo/image/recipe/'.$list->recipe_image_thumb) }}');">
 			</div>
 			<div class="wrapper-title-name">
 				<div class="title-name">
 					<h2>
-						<a href="{{ $a == 0 ? route('frontend.recipe.view') : '#' }}">
-							{!! $arr[$a] !!}
+						<a href="{{ route('frontend.recipe.view', ['slug' => $list->slug]) }}">
+							<p>{{ $list->recipe_name }}</p>
 						</a>
 					</h2>
 				</div>
 			</div>
 		</div>
-		@endfor
+		@endforeach
 		<div class="centered">
 			<a href="{{ route('frontend.recipe') }}" class="btn btn-orange">More</a>
 		</div>
