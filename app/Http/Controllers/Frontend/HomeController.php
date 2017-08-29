@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Recipe;
 
 class HomeController extends Controller
 {
@@ -40,12 +41,14 @@ class HomeController extends Controller
 		];
 
 		$itemsIg = [];
-
     	$client = new \GuzzleHttp\Client;
-
 	    $response = $client->get('https://www.instagram.com/Juiceunited/media');
-
 	    $itemsIg = json_decode((string) $response->getBody(), true)['items'];
+
+	    $recipe = Recipe::orderBy('post_time', 'desc')
+		->where('active', 'Y')
+		->where('show_homepage', 'Y')
+        ->paginate(3);
 
     	return view('frontend.home-page.index', compact(
     			'productName',
@@ -53,7 +56,8 @@ class HomeController extends Controller
     			'productDesc',
     			'sosmedIcon',
     			'sosmedUrl',
-    			'itemsIg'
+    			'itemsIg',
+    			'recipe'
     		));
     }
 }

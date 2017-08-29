@@ -7,70 +7,46 @@ use App\Http\Controllers\Controller;
 use App;
 use Excel;
 use PDF;
-
+use App\Models\Recipe;
+use App\Models\RecipeCategories;
 class RecipeController extends Controller
 {
-    function index() {
-		$arrName = [
-			'', 
-			'Chocolate Orange Cake', 
-			'Jiggly Orange Wedges', 
-			'Orange Glazed Ham Steak', 
-			'Orange Chicken', 
-			'Honey Orange BBQ Chicken', 
-			'Citrus Chicken and Rice', 
-			'Slow Cooker Orange Beef', 
-			'Crispy Orange Beef'
-		];
-		$arrCate = [
-			'', 
-			'Dessert', 
-			'Dessert', 
-			'Entree', 
-			'Entree', 
-			'Entree', 
-			'Entree', 
-			'Entree', 
-			'Entree'
-		];
+    function index(Request $request) {
+
+		$call = Recipe::orderBy('post_time', 'desc')
+		->where('active', 'Y')
+        ->paginate(4);
+
+        if ($request->ajax()) {
+    		$view = view('frontend.recipe-page.ajax-list-recipe',compact('call'))->render();
+            return response()->json(['html'=>$view]);
+        }
+
 	    return view('frontend.recipe-page.index', compact(
-	    	'arrName',
-	    	'arrCate'
+	    	'call'
     	));
 	}
-	function view() {
-		$arrName = [
-			'', 
-			'Chocolate Orange Cake', 
-			'Jiggly Orange Wedges', 
-			'Orange Glazed Ham Steak', 
-			'Orange Chicken', 
-			'Honey Orange BBQ Chicken', 
-			'Citrus Chicken and Rice', 
-			'Slow Cooker Orange Beef', 
-			'Crispy Orange Beef'
-		];
-		$arrCate = [
-			'', 
-			'Dessert', 
-			'Dessert', 
-			'Entree', 
-			'Entree', 
-			'Entree', 
-			'Entree', 
-			'Entree', 
-			'Entree'
-		];
+	function view($slug) {
+		$call = Recipe::orderBy('post_time', 'desc')
+		->where('active', 'Y')
+        ->paginate(4);
+
+        $get = Recipe::where('slug', $slug)
+		->where('active', 'Y')
+        ->first();
+
 	    return view('frontend.recipe-page.view', compact(
-	    	'arrName',
-	    	'arrCate'
+	    	'call',
+	    	'get'
 	    ));
 	}
-	function print(){
-		// $pdf = PDF::loadView('frontend.recipe-page.print');
-		// $pdf = new Dompdf();
-		$pdf = PDF::loadView('frontend.recipe-page.print');
- 
-	    return $pdf->download('recipe.pdf');
+	function print($slug){
+		
+		$get = Recipe::where('slug', $slug)
+		->where('active', 'Y')
+        ->first();
+
+		$pdf = PDF::loadView('frontend.recipe-page.print', compact('get'));
+	    return $pdf->download('Recipe '.$get->recipe_name.'.pdf');
 	}
 }

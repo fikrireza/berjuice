@@ -49,9 +49,9 @@ Route::get('/product/private-label', function () {
 
 Route::get('/recipe', 'Frontend\RecipeController@index')
     ->name('frontend.recipe');
-Route::get('/recipe/view', 'Frontend\RecipeController@view')
+Route::get('/recipe/{slug}', 'Frontend\RecipeController@view')
     ->name('frontend.recipe.view');
-Route::get('/recipe/view/print', 'Frontend\RecipeController@print')
+Route::get('/recipe/{slug}/print', 'Frontend\RecipeController@print')
     ->name('frontend.recipe.print');
 
 Route::get('/recipe/view/print/test', function(){

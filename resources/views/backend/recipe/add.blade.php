@@ -154,10 +154,6 @@
 <script src="{{ asset('backend/plugins/datepicker/bootstrap-datepicker.js') }}"></script>
 <script src="{{ asset('backend/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
 <script>
-  $(".select2").select2({
-    placeholder: "Choose Category",
-    allowClear: true
-  });
   $('#datepicker1').datepicker({
     autoclose: true,
     minDate: +2,

@@ -18,27 +18,59 @@
 	<div class="setup-content nor-wd">
 		<h1 class="title">Recipe</h1>
 		<div class="wrapper-recipe">
-			@for($a=1; $a<=8; $a++)
-			<div class="recipe-show animation-element">
-				<div class="recipe-img" style="background-image: url('{{ asset('amadeo/image/base/recip-'.$a.'.png') }}');">
-					<div class="descrip-wrapper">
-						<a href="{{ $a == 1 ? route('frontend.recipe.view') : '#' }}">
-							<p>{{ $arrName[$a] }}</p>
-						</a>
-						<p>{{ $arrCate[$a] }}</p>
-					</div>
-				</div>
-			</div>
-			@endfor
+			@include('frontend.recipe-page.ajax-list-recipe')
+			<div id="appendAjax"></div>
 			<div class="clearfix"></div>
 		</div>
 		<div class="centered">
-			<a href="{{ route('frontend.recipe') }}" class="btn btn-orange">Load More</a>
+			<label id="loadMoreData" class="btn btn-orange">Load More</label>
+			<div class="ajax-load text-center" style="display:none;">
+				<p>
+					<img src="http://demo.itsolutionstuff.com/plugin/loader.gif">Loading More post
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
 @endsection
 
 @section('script')
+<script type="text/javascript">
+	var page = 1;
+	$("label#loadMoreData").click(function(){
+	    page++;
+	        loadMoreData(page);
+	    
+	});
 
+	function loadMoreData(page){
+	  $.ajax(
+	        {
+	            url: '?page=' + page,
+	            type: "get",
+	            beforeSend: function()
+	            {
+	                $('.ajax-load').show();
+	            }
+	        })
+	        .done(function(data)
+	        {
+	            if(!data.html){
+	                $('.ajax-load').hide();
+		            $('label#loadMoreData').hide();
+	                return;
+	            }
+	            $('.ajax-load').hide();
+	            $("#appendAjax").append(data.html);
+	            window.setTimeout(function() {
+				    $('.recipe-show.animation-element').addClass('in-view');
+			    }, 50);
+	        })
+	        .fail(function(jqXHR, ajaxOptions, thrownError)
+	        {
+	              alert('server not responding...');
+	        });
+
+	}
+</script>
 @endsection

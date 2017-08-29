@@ -59,16 +59,17 @@
 		padding-bottom: 20px;
 		width: 80%;
 		margin: 0 auto;
-		text-align: center;
+		/*text-align: center;*/
 	}
-	#recipe .setup-content .description-wrapper p{
+	#recipe .setup-content .description-wrapper{
 		font-family: 'LibreBaskerville';
 	}
-	#recipe .setup-content .description-wrapper p.bold{
+	/*#recipe .setup-content .description-wrapper p.bold{
 		font-weight: bold;
-	}
-	#recipe .setup-content .description-wrapper p.color{
+	}*/
+	#recipe .setup-content .description-wrapper h2.title{
 		color: rgb(246,184,70);
+		text-align: center;
 	}
 	#recipe .setup-content .wrapper-recipe{
 		position: relative;

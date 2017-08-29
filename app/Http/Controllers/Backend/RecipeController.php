@@ -74,7 +74,7 @@ class RecipeController extends Controller
           $save->directions = $request->directions;
           $save->post_time = $request->post_time;
           $save->show_homepage = $request->show_homepage or 'N';
-          $save->slug = str_slug($request->name,'-');
+          $save->slug = str_slug($request->recipe_name,'-');
 
           $salt = str_random(4);
           $img_url = str_slug($request->recipe_name,'-').'-large-'.$salt. '.' . $image->getClientOriginalExtension();
@@ -144,7 +144,7 @@ class RecipeController extends Controller
           $save->directions = $request->directions;
           $save->post_time = $request->post_time;
           $save->show_homepage = $request->show_homepage or 'N';
-          $save->slug = str_slug($request->name,'-');
+          $save->slug = str_slug($request->recipe_name,'-');
           $save->save();
 
           $log = new LogAccess;
