@@ -1,7 +1,7 @@
 <section class="sidebar">
   <div class="user-panel">
     <div class="pull-left image">
-      <img src="{{ asset('backend/dist/img/avatar.png') }}" class="img-circle" alt="User Image">
+      <img src="{{ asset('backend/images/profile/').'/'.Auth::user()->avatar }}" class="img-circle" alt="User Image">
     </div>
     <div class="pull-left info">
       <p>Halo, {{ Auth::user()->name }}</p>
@@ -19,7 +19,7 @@
     <li class="treeview {{ Route::is('recipe*') ? 'active' : '' }}">
       <a href="#">
         <i class="fa fa-edit"></i>
-        <span>Recipe</span>
+        <span>Manage Recipe</span>
         <i class="fa fa-angle-left pull-right"></i>
       </a>
       <ul class="treeview-menu">
@@ -32,5 +32,10 @@
       </ul>
     </li>
     <li class="header">SETTING NAVIGATION</li>
+    <li class="{{ Route::is('user*') ? 'active' : ''}}">
+      <a href="{{ route('user.index')}}">
+        <i class="fa fa-users"></i> <span>Manage User</span>
+      </a>
+    </li>
   </ul>
 </section>

@@ -69,6 +69,11 @@ Route::get('admin/logout-process', 'Auth\LoginController@logoutProcess')->name('
 
 Route::get('admin/login', 'Auth\LoginController@showLoginForm')->name('login.pages');
 
+//-- Start User Verify Account
+Route::get('admin/verify/{confirmation_code}', 'Backend\UsersController@verify')->name('user.verify');
+Route::post('admin/confirm', 'Backend\UsersController@confirm')->name('user.confirm');
+//-- End User Verify Account
+
 // START BACKEND ROUTE
 Route::group(['middleware' => ['isAdministrator']], function () {
 
@@ -88,5 +93,15 @@ Route::group(['middleware' => ['isAdministrator']], function () {
 	Route::post('admin/recipe/edit', 'Backend\RecipeController@update')->name('recipe.update');
 	Route::post('admin/recipe/image', 'Backend\RecipeController@uploadImage')->name('recipe.uploadImage');
 	Route::get('admin/recipe/publish', 'Backend\RecipeController@publish')->name('recipe.publish');
+
+	// Manage User
+	Route::get('admin/users', 'Backend\UsersController@index')->name('user.index');
+	Route::get('admin/users/add', 'Backend\UsersController@add')->name('user.add');
+	Route::post('admin/users/add', 'Backend\UsersController@store')->name('user.store');
+	Route::get('admin/users/edit', 'Backend\UsersController@edit')->name('user.edit');
+	Route::post('admin/users/edit', 'Backend\UsersController@update')->name('user.update');
+	Route::post('admin/users/cp', 'Backend\UsersController@changePassword')->name('user.changePassword');
+
+
 });
 // END BACKEND ROUTE
