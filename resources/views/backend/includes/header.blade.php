@@ -8,6 +8,38 @@
   </a>
   <div class="navbar-custom-menu">
     <ul class="nav navbar-nav">
+      <li class="dropdown messages-menu {{ Route::is('inbox*') ? 'active' : '' }}">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fa fa-envelope-o"></i>
+          <span class="label label-success">{{ $notifInbox->count() }}</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="header">You have {{ $notifInbox->count() }} messages</li>
+          <li>
+            <ul class="menu">
+              @foreach ($notifInbox as $key)
+              <li>
+                <a>
+                  <div class="pull-left">
+                    <img src="{{ asset('backend/images/profile/user.png') }}" class="img-circle" alt="User Image">
+                  </div>
+                  <h4>
+                    @php
+                    Carbon\Carbon::setLocale('id');
+                    @endphp
+                    {{ $key->name }}
+                    <small><i class="fa fa-clock-o"></i> {{ $key->created_at->diffForHumans() }}</small>
+                  </h4>
+                  <p>{{ str_limit($key->messages, 37) }}</p>
+                </a>
+              </li>
+              @endforeach
+            </ul>
+          </li>
+          <li class="footer"><a href="{{ route('inbox.index') }}">See All Messages</a></li>
+        </ul>
+      </li>
+
       <li class="dropdown user user-menu">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <img src="{{ asset('backend/images/profile/').'/'.Auth::user()->avatar }}" class="user-image" alt="User Image">

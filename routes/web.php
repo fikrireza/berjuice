@@ -102,6 +102,8 @@ Route::group(['middleware' => ['isAdministrator']], function () {
 	Route::post('admin/users/edit', 'Backend\UsersController@update')->name('user.update');
 	Route::post('admin/users/cp', 'Backend\UsersController@changePassword')->name('user.changePassword');
 
+	// Inbox
+	Route::get('admin/inbox', 'Backend\InboxController@index')->name('inbox.index');
 
 });
 // END BACKEND ROUTE
