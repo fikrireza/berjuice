@@ -9,16 +9,11 @@
     </p>
 
     <p>
-      Password anda telah di reset pada akun CMS Gofress.co.id.
-      <br>Silahkan login dengan
-      <br><br>
-      Email : {{ $data[0]['email'] }}
-      Password : 12345678
-      <br><br>
-      <br><br>
-
-      <a href="{{ URL::to('admin/login') }}">
-        {{ URL::to('admin/login/') }}
+      Your account has been reset as CMS juiceunited.com Admin
+      <br>Please click the following link to activate your account :<br><br>
+      Password : Ju1c3Un1t3D <br><br>
+      <a href="{{ URL::to('admin/verify/' . $data[0]['confirmation_code']) }}">
+        {{ URL::to('admin/verify/' . $data[0]['confirmation_code']) }}
       </a>
     </p>
 

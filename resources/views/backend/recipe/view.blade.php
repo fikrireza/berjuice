@@ -261,13 +261,6 @@
           </div>
 
           <div class="form-group">
-            <label class="col-sm-3 control-label">Ingredients</label>
-            <div class="col-sm-9">
-              {!! $getRecipe->ingredients !!}
-            </div>
-          </div>
-
-          <div class="form-group">
             <label class="col-sm-3 control-label">Publish Date</label>
             <div class="col-sm-9">
               {!! $getRecipe->post_time !!}

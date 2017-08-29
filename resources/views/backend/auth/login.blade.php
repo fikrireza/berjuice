@@ -61,9 +61,9 @@
             @endif
           </div>
           <div class="row">
-            <div class="col-sm-8">
+            {{-- <div class="col-sm-8">
               <a href="#">Forgot Password</a>
-            </div>
+            </div> --}}
             <div class="col-sm-4 pull-right">
               <button type="submit" class="btn btn-success btn-block btn-flat">Login</button>
             </div>

@@ -50,6 +50,59 @@
     </div>
   </div>
 
+  <div class="modal modal-danger fade modal-form-reset" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Reset Password User</h4>
+        </div>
+        <div class="modal-body">
+          <p>Sure?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="reset" class="btn btn-default pull-left btn-flat" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" id="setReset">Yes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-warning fade modal-form-active" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Activated User</h4>
+        </div>
+        <div class="modal-body">
+          <p>Sure?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="reset" class="btn btn-default pull-left btn-flat" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" id="setActive">Yes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-danger fade modal-form-deactive" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Deactivated User</h4>
+        </div>
+        <div class="modal-body">
+          <p>Sure?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="reset" class="btn btn-default pull-left btn-flat" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" id="setDeactive">Yes</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="modal fade modal-form-create" role="dialog">
     <div class="modal-dialog">
@@ -90,7 +143,7 @@
           </div>
           <div class="modal-footer">
             <button type="reset" class="btn btn-default pull-left btn-flat" data-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-primary bg-orange">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </div>
     </form>
@@ -109,6 +162,7 @@
           <table id="userTable" class="table table-bordered table-striped">
             <thead>
               <tr>
+                <th>No</th>
                 <th>Name</th>
                 <th>Avatar</th>
                 <th>Email</th>
@@ -117,17 +171,31 @@
               </tr>
             </thead>
             <tbody>
+              @php
+                $i = 1;
+              @endphp
               @foreach ($getUsers as $key)
               <tr>
+                <td>{{ $i++ }}</td>
                 <td>{{ $key->name }}</td>
                 <td style="text-align:center;">
-                  <img src="{{ asset('backend/images/profile/').'/'.$key->avatar }}" class="img-circle" alt="User Image" width="20%">
+                  <img src="{{ asset('backend/images/profile/').'/'.$key->avatar }}" class="img-circle" alt="User Image" width="50%">
                 </td>
                 <td>{{ $key->email }}</td>
-                <td>{{ $key->active }}</td>
-                <td><span data-toggle="tooltip" title="Edit">
-                  <a href="{{ route('recipe.see', ['id' => $key->id]) }}" class="btn btn-warning btn-flat btn-xs edit"><i class="fa fa-pencil"></i></a>
+                <td>@if ($key->active == "Y")
+                    <span data-toggle="tooltip" title="Deactive">
+                      <a data-toggle="modal" data-target=".modal-form-deactive" data-value="{{ $key->id }}" class="btn btn-success btn-flat btn-xs status"><i class="fa fa-check"></i> Active</a>
                     </span>
+                    @else
+                    <span data-toggle="tooltip" title="Active">
+                      <a data-toggle="modal" data-target=".modal-form-active" data-value="{{ $key->id }}" class="btn btn-danger btn-flat btn-xs status"><i class="fa fa-times"></i> Deactive</a>
+                    </span>
+                    @endif
+                </td>
+                <td>
+                  <span data-toggle="tooltip" title="Reset">
+                    <a data-toggle="modal" data-target=".modal-form-reset" data-value="{{ $key->id }}" class="btn btn-danger btn-flat btn-xs reset"><i class="fa fa-recycle"></i></a>
+                  </span>
                 </td>
               </tr>
               @endforeach
@@ -144,6 +212,21 @@
 <script>
   $(function () {
     $("#userTable").DataTable();
+  });
+
+  $(function(){
+    $('#userTable').on('click', 'a.reset', function(){
+      var a = $(this).data('value');
+      $('#setReset').attr('href', "{{ url('/') }}/admin/users/reset/"+a);
+    });
+  });
+
+  $(function(){
+    $('#userTable').on('click', 'a.status', function(){
+      var a = $(this).data('value');
+      $('#setActive').attr('href', "{{ url('/') }}/admin/users/status/"+a);
+      $('#setDeactive').attr('href', "{{ url('/') }}/admin/users/status/"+a);
+    });
   });
 
   @if($errors->has('email'))

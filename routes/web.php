@@ -75,7 +75,7 @@ Route::group(['middleware' => ['isAdministrator']], function () {
   Route::get('admin/dashboard', 'Backend\DashboardController@index')->name('admin.dashboard');
   Route::get('admin/dashboard/get-ga', 'Backend\DashboardController@getGA')->name('analytics.getGA');
   Route::get('admin/dashboard/get-ga/{start}/{end}', 'Backend\DashboardController@getGAP')->name('analytics.getGA.period');
-  
+
 	// Recipe Category
 	Route::get('admin/recipe-categories', 'Backend\RecipeCategoriesController@index')->name('recipeCategory.index');
 	Route::get('admin/recipe-categories/add', 'Backend\RecipeCategoriesController@add')->name('recipeCategory.add');
@@ -95,6 +95,8 @@ Route::group(['middleware' => ['isAdministrator']], function () {
 	Route::get('admin/users', 'Backend\UsersController@index')->name('user.index');
 	Route::get('admin/users/add', 'Backend\UsersController@add')->name('user.add');
 	Route::post('admin/users/add', 'Backend\UsersController@store')->name('user.store');
+	Route::get('admin/users/reset/{id}', 'Backend\UsersController@reset')->name('user.reset');
+	Route::get('admin/users/status/{id}', 'Backend\UsersController@status')->name('user.status');
 	Route::get('admin/users/edit', 'Backend\UsersController@edit')->name('user.edit');
 	Route::post('admin/users/edit', 'Backend\UsersController@update')->name('user.update');
 	Route::post('admin/users/cp', 'Backend\UsersController@changePassword')->name('user.changePassword');

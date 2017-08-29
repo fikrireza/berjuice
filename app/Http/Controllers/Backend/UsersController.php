@@ -207,5 +207,65 @@ class UsersController extends Controller
         }
     }
 
+    public function reset($id)
+    {
+        $getUser = User::find($id);
+
+        if(!$getUser){
+          abort(404);
+        }
+
+        $confirmation_code = str_random(30).time();
+
+        $getUser->password = Hash::make('Ju1c3Un1t3D');
+        $getUser->confirmed = 0;
+        $getUser->confirmation_code = $confirmation_code;
+        $getUser->update();
+
+        $data = array([
+                  'name' => $getUser->name,
+                  'email' => $getUser->email,
+                  'confirmation_code' => $confirmation_code
+                ]);
+
+        try {
+          Mail::send('backend.email.reset', ['data' => $data], function($message) use ($data) {
+            $message->from('administrator@juiceunited.com', 'Administrator')
+                    ->to($data[0]['email'], $data[0]['name'])
+                    ->subject('Activation Account Juiceunited');
+          });
+        } catch (\Exception $e) {
+
+        }
+
+        if(Auth::user()->id == $id){
+          session()->flush();
+          Auth::logout();
+        }
+
+        return redirect()->route('user.index')->with('berhasil', 'Account has been reset, please check email');
+
+    }
+
+    public function status($id)
+    {
+        $getUser = User::find($id);
+
+        if(!$getUser){
+          abort(404);
+        }
+
+        if($getUser->active == "Y"){
+          $getUser->active = "N";
+          $getUser->update();
+        }else{
+          $getUser->active = "Y";
+          $getUser->update();
+        }
+
+        return redirect()->route('user.index')->with('berhasil', 'Success');
+
+    }
+
 
 }
