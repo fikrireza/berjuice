@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "amadeo-developer",
+  "private_key_id": "0541e39e644d9c24a5e6c3407d570a9af3b9ecd9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDQQ92NfKDRGZTn\neTuhfeU3p2mDZZzoow1qQMNw55Cf1LaidqPTEzop0cklpU6M9JpQJW3pqpLjatlf\nFeU85FZX0RcDw8iwgQUbPiV3iXaCXonizQKsJPgX2duQ8L6zILEl4PB+qwDYS1GR\nBeNG5/NqGPwY+32kRSZvz/s46yQwcRCyb0waszMJ3JjUeCbJVunPYgiachfllhN6\nLKKWW0grNr5/u6lRez9MIsQptdthK+80qa3AB+DGDNTCwqH399JMtd1RcWDnGXBn\nVIF487qbJoM5hEmTTUOQQvadd79oPONxY+SJJ4J8dqkzHpzZjfJA0zAy9tVQV4r6\nVlMCPrFpAgMBAAECggEATyJaXtaKLKmxwLp6BATYQetk1j6X/nVmNYdiO9ZhR7oF\no3m9Cgj2QsmpypojXL/cmrN+LhlYMv14lv602gxRGpEiU5Xi/d4oWI+moOMkmqjd\nb8ZCS7LIahenrE0tyNaVOTVdbGQBsC3+UkKQd3LPNPNFZyC4PuDfmADJDnmaiKTe\nC3tYpTaBgwcY/U9tdj5ndAu0U55l3tCtwSw754YYArHSL9xZO6ZAsDkIA5z6S8ha\n4h37b1xjfU7DJrWK+fQWK3IaUt1nTlv8kK+IiWMsAaxho6cDdnq0wMfkHoMla/OV\n08noqG8uYhC6wHu+tq39VmJhK+o2frlRobFp65kAGQKBgQDt/Fg+1pLk1h5OBgX7\nSvDltysmqQnPdHKOVCV/xHLI9FUldGey74zQw7BbICQIEhB6YTg89Ij3Ca6rC6ma\n4R7e/1v3JY7OJ3KBaWuUaqIbnTjLWyq8x+8juPmDUJAO/xUczRq9tUtu4yVjcYQn\n6jHl3xZEsxJQVSGImF21sJooSwKBgQDgB5k4O2WLznSfmBmbguHQgOBhXS22Cbve\nR79TzDvFqt2EjHFqHkBM8+EA2ac63WvHnl4JN6V0lauRokiGob5yT003MNfMN8uA\nWS1mmcjL6HrabjnlUCAu5YdeogNNe4FxZ2iVkDzORrwTji0abEIJ/i+8H/vZ/V8r\nAAJ80qFkmwKBgQDU6kPlDEHlm68HLRpi5Xw6eLKRZwBQ6ySmM6BM++uZ4AbheJBi\nJTE9gSYhkNLLqaW2Z45R8pErOy1a+Bcoaqoc5idYKPDnfaFTKIbIBNK9k97BCPJm\nbRWFRzNsCUKpOAuiddmryiwPrAbCPkf3Ee7MctdQZUlIN7HFrFOCftqcmwKBgDvI\nq1G/QAUEDkk8nLDMR5iNm9M/u2AVzuWtfdhN6zF/vGeP1wA7nGsstcG1U5Q43HdD\nwtJw4B1xh3xwsywCY8E7el6dESl1RkA1DBGSPmxz2L0LpzWToVMCe5J8Z6c4qz1p\nHBa1jBR7+dq6GT0w4JqsE27/lgUBQXFHKmLHDry7AoGAcjk20t64pAHSn1NXMAAj\nZZGAic2kAIidkeYtOGvzOYgy27jh+RkMwBrQK7mbACqO9XDCNlGHlTWJf6LwBqlC\n7LyaZat2abtPvkO6bUhuO2IWSW6SmJBySDbKIHrRTN+YopeMzPemkQ+O0b8zhnOF\nEb3QLAkas2SnyyFrCDnDgxo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "juice-united@amadeo-developer.iam.gserviceaccount.com",
+  "client_id": "118177427424796321255",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/juice-united%40amadeo-developer.iam.gserviceaccount.com"
+}
