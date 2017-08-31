@@ -1,7 +1,7 @@
 @extends('frontend.layout.main')
 
 @section('title-page')
-	<title>Berri Juice - Contact</title>
+	<title>Juice United - Contact</title>
 @endsection
 @section('meta-page')
 

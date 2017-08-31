@@ -1,7 +1,7 @@
 @extends('frontend.layout.main')
 
 @section('title-page')
-	<title>Berri Juice - Recipe {{ $get->recipe_name }}</title>
+	<title>Juice United - Recipe {{ $get->recipe_name }}</title>
 @endsection
 @section('meta-page')
 
