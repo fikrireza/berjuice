@@ -104,5 +104,9 @@ Route::group(['middleware' => ['isAdministrator']], function () {
 	// Inbox
 	Route::get('admin/inbox', 'Backend\InboxController@index')->name('inbox.index');
 
+	// General Config
+	Route::get('admin/general-config', 'Backend\GeneralConfigController@index')->name('config.index');
+	Route::post('admin/general-config', 'Backend\GeneralConfigController@store')->name('config.store');
+
 });
 // END BACKEND ROUTE

@@ -37,5 +37,10 @@
         <i class="fa fa-users"></i> <span>Manage User</span>
       </a>
     </li>
+    <li class="{{ Route::is('config*') ? 'active' : ''}}">
+      <a href="{{ route('config.index')}}">
+        <i class="fa fa-gear"></i> <span>General Configuration</span>
+      </a>
+    </li>
   </ul>
 </section>
