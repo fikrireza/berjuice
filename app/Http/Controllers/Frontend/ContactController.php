@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
+use Mail;
 use Validator;
 use App\Models\Inbox;
+use App\Models\GeneralConfig;
 
 class ContactController extends Controller
 {
@@ -49,16 +52,33 @@ class ContactController extends Controller
           	->with('alert', 'alert-danger');
         }
 
-        $save = new Inbox;
-        $save->name = $request->name;
-        $save->email = $request->email;
-        $save->messages = $request->message;
-        $save->save();
+        DB::transaction(function() use($request){
+          $save = new Inbox;
+          $save->name = $request->name;
+          $save->email = $request->email;
+          $save->messages = $request->message;
+          $save->save();
+
+          $getSendTo = GeneralConfig::first();
+
+          try {
+            Mail::send('frontend.contact-page.mail', ['request' => $request], function($message) use ($request, $getSendTo) {
+              $message->from('administrator@juiceunited.com', 'Administrator')
+                      ->to($getSendTo->email_to);
+              if ($getSendTo->email_cc != null) {
+                      $message->cc($getSendTo->email_cc);
+              }
+                      $message->subject('New Inbox From : '.$request->email);
+            });
+          } catch (\Exception $e) {
+            // dd($e);
+          }
+        });
 
         return redirect()
         	->route('frontend.contact')
         	->with('autofocus', true)
-          	->with('info', 'Data has been Submited')
+        	->with('info', 'Data has been Submited')
         	->with('alert', 'alert-success');
 	}
 }
