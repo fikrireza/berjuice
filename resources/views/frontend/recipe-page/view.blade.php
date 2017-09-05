@@ -25,7 +25,7 @@
 						<i class="fa fa-circle fa-stack-2x"></i>
 						<i class="fa fa-user fa-stack-1x fa-inverse"></i>
 					</span>
-					<label>Serves 12</label>
+					<label>Serves {{ $get->serves }}</label>
 				</label>
 				<label class="tool">
 					<span class="fa-stack fa-lg">
