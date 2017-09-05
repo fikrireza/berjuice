@@ -22,19 +22,22 @@ window.onload = function () {
           echoAvgSessionDuration = value.toHHMMSS(); 
         });
       });
-        console.log(echoAvgSessionDuration);
           $("#wrapper-avgSessionDuration").text(echoAvgSessionDuration);
     // for avgSessionDuration
 
     // for MostVisitedPages
       var captionVarMVP = new Array();
       json.MostVisitedPages.map(function(item) {
-        captionVarMVP.push(item.pageTitle + ' : ' + item.url);
+        if (item.url.indexOf("/berjuice/public/") < 0){
+          captionVarMVP.push(item.pageTitle + ' : ' + item.url);
+        }
       });
 
       var captionValMVP = new Array();
       json.MostVisitedPages.map(function(item) {
-        captionValMVP.push(item.pageViews);
+        if (item.url.indexOf("/berjuice/public/") < 0){
+          captionValMVP.push(item.pageViews);
+        }
       });
 
       var cMVP = document.getElementById("chartMostVisitedPages");
