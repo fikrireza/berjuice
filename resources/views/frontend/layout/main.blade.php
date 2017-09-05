@@ -23,7 +23,7 @@
 					  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 		ga('create', 'UA-83016466-8', 'auto');
 		ga('send', 'pageview');
-	</script>--}
+	</script>--}}
 	
 </head>
 <body>
