@@ -19,6 +19,7 @@ class CreateRecipeTable extends Migration
           $table->string('recipe_name');
           $table->text('ingredients');
           $table->text('directions');
+          $table->integer('serves')->default(1);
           $table->string('recipe_image');
           $table->string('recipe_image_thumb');
           $table->string('slug');
