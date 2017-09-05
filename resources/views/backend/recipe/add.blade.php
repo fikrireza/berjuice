@@ -104,6 +104,19 @@
             @endif
           </div>
         </div>
+        <div class="form-group">
+          <div class="{{ $errors->has('serves') ? 'has-error' : '' }}">
+            <label class="col-sm-3 control-label">Serves</label>
+          </div>
+          <div class="col-sm-9 {{ $errors->has('serves') ? 'has-error' : '' }}">
+            <input type="text" name="serves" class="form-control" placeholder="Serves" value="{{ old('serves') }}" onkeypress="return isNumber(event)">
+            @if($errors->has('serves'))
+            <span class="help-block">
+              <i>* {{$errors->first('serves')}}</i>
+            </span>
+            @endif
+          </div>
+        </div>
         <div class="form-group {{ $errors->has('recipe_image') ? 'has-error' : '' }}">
           <label class="col-sm-3 control-label">Recipe Image</label>
           <div class="col-sm-9">
@@ -179,5 +192,14 @@
         }
     });
   });
+
+  function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
+    }
+    return true;
+  }
 </script>
 @endsection

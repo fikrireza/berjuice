@@ -167,6 +167,19 @@
                 @endif
               </div>
             </div>
+            <div class="form-group">
+              <div class="{{ $errors->has('serves') ? 'has-error' : '' }}">
+                <label class="col-sm-3 control-label">Serves</label>
+              </div>
+              <div class="col-sm-9 {{ $errors->has('serves') ? 'has-error' : '' }}">
+                <input type="text" name="serves" class="form-control" placeholder="Serves" value="{{ old('serves', $getRecipe->serves) }}" onkeypress="return isNumber(event)">
+                @if($errors->has('serves'))
+                <span class="help-block">
+                  <i>* {{$errors->first('serves')}}</i>
+                </span>
+                @endif
+              </div>
+            </div>
             <div class="form-group {{ $errors->has('post_time') ? 'has-error' : '' }}">
               <label class="col-sm-3 control-label">Pubilsh Date</label>
               <div class="col-sm-9">
@@ -190,7 +203,15 @@
                     <input type="checkbox" class="minimal-red" name="show_homepage" value="Y" {{ old('show_homepage', $getRecipe->show_homepage) == 'Y' ? 'checked' : '' }}>
                   </label>
                 </div>
-              </div>
+            </div>
+            <div class="form-group {{ $errors->has('active') ? 'has-error' : ''}}">
+                <label class="col-sm-3 control-label">Flag Active</label>
+                <div class="col-sm-9">
+                  <label>
+                    <input type="checkbox" class="minimal-red" name="active" value="Y" {{ old('active', $getRecipe->active) == 'Y' ? 'checked' : '' }}>
+                  </label>
+                </div>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="reset" class="btn btn-default pull-left btn-flat" data-dismiss="modal">Cancel</button>
@@ -261,6 +282,13 @@
           </div>
 
           <div class="form-group">
+            <label class="col-sm-3 control-label">Serves</label>
+            <div class="col-sm-9">
+              {!! $getRecipe->serves !!}
+            </div>
+          </div>
+
+          <div class="form-group">
             <label class="col-sm-3 control-label">Publish Date</label>
             <div class="col-sm-9">
               {!! $getRecipe->post_time !!}
@@ -271,6 +299,13 @@
             <label class="col-sm-3 control-label">Show Homepage</label>
             <div class="col-sm-9">
               {!! $getRecipe->show_homepage == "Y" ? 'Yes' : "No" !!}
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Flag Active</label>
+            <div class="col-sm-9">
+              {!! $getRecipe->active == "Y" ? 'Yes' : "No" !!}
             </div>
           </div>
 
@@ -319,5 +354,14 @@ $(function () {
       }
   });
 });
+
+function isNumber(evt) {
+  evt = (evt) ? evt : window.event;
+  var charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    return false;
+  }
+  return true;
+}
 </script>
 @endsection

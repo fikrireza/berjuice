@@ -45,6 +45,7 @@ class RecipeController extends Controller
           'ingredients.required' => 'This field is required.',
           'directions.required' => 'This field is required.',
           'post_time.required' => 'This field is required.',
+          'serves.required' => 'This field is required.',
         ];
 
         $validator = Validator::make($request->all(), [
@@ -53,6 +54,7 @@ class RecipeController extends Controller
           'recipe_name' => 'required|unique:amd_recipe',
           'ingredients' => 'required',
           'directions'  => 'required',
+          'serves'  => 'required',
           'post_time'  => 'required',
         ], $message);
 
@@ -72,6 +74,7 @@ class RecipeController extends Controller
           $save->recipe_name = $request->recipe_name;
           $save->ingredients = $request->ingredients;
           $save->directions = $request->directions;
+          $save->serves = $request->serves;
           $save->post_time = $request->post_time;
           $save->show_homepage = $request->show_homepage or 'N';
           $save->slug = str_slug($request->recipe_name,'-');
@@ -120,6 +123,7 @@ class RecipeController extends Controller
           'ingredients.required' => 'This field is required.',
           'directions.required' => 'This field is required.',
           'post_time.required' => 'This field is required.',
+          'serves.required' => 'This field is required.',
         ];
 
         $validator = Validator::make($request->all(), [
@@ -128,6 +132,7 @@ class RecipeController extends Controller
           'ingredients' => 'required',
           'directions'  => 'required',
           'post_time'  => 'required',
+          'serves'  => 'required',
         ], $message);
 
 
@@ -143,7 +148,10 @@ class RecipeController extends Controller
           $save->ingredients = $request->ingredients;
           $save->directions = $request->directions;
           $save->post_time = $request->post_time;
-          $save->show_homepage = $request->show_homepage or 'N';
+          $save->serves = $request->serves;
+
+          $save->show_homepage = $request->show_homepage == null ? 'N' : $request->show_homepage;
+          $save->active = $request->active == null ? 'N' : $request->active;
           $save->slug = str_slug($request->recipe_name,'-');
           $save->save();
 
