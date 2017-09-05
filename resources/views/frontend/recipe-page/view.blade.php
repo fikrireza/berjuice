@@ -11,8 +11,7 @@
 @endsection
 
 @section('style')
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/public.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/recipe-view.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset(mix('amadeo/css/mix/recipe-view.css')) }}">
 @endsection
 
 @section('content')

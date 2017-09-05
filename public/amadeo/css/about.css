@@ -217,35 +217,10 @@
 		position: relative;
 		z-index: 10;
 	}
-	#milestones .mil-block.size-st.tree.right:before{
-		content: "";
-		position: absolute;
-	    background-image: url('../image/base/root-kanan.png');
-	    background-size: cover;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    bottom: -135px;
-	    left: -85px;
-	    width: 145px;
-	    height: 135px;
-	}
 	#milestones .mil-block.size-st.tree.left{
 		margin-left: -22px;
 		position: relative;
 		z-index: 1;
-	}
-	#milestones .mil-block.size-st.tree.left:before{
-		content: "";
-		position: absolute;
-	    background-image: url(../image/base/root-kiri.png);
-	    background-size: cover;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    bottom: -115px;
-	    right: -50px;
-	    width: 90px;
-	    height: 115px;
-	    z-index: -1;
 	}
 /* milestones */
 

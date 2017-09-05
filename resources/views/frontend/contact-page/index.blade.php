@@ -11,8 +11,7 @@
 @endsection
 
 @section('style')
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/public.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/contact.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset(mix('amadeo/css/mix/contact.css')) }}">
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 @endsection
 

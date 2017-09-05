@@ -11,8 +11,20 @@
 @endsection
 
 @section('style')
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/public.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/produk-freshly-squeezed.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset(mix('amadeo/css/mix/produk-freshly-squeezed.css')) }}">
+	<style type="text/css">
+		#product-decription:after{
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 340px;
+			background-image: url("{{ asset('amadeo/image/base/premium-chilled-footer.png') }}");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	</style>
 @endsection
 
 @section('content')

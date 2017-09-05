@@ -11,8 +11,7 @@
 @endsection
 
 @section('style')
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/public.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/produk-victtoria-coffe.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset(mix('amadeo/css/mix/produk-victtoria-coffe.css')) }}">
 @endsection
 
 @section('content')
@@ -30,46 +29,46 @@
 			<p>{{ $arrDesc[$i] }}</p>
 		</div>
 	</div>
-@endfor
+	@endfor
 
-<div id="product-table" class="setup-wrapper">
-	<div class="setup-content nor-wd">
+	<div id="product-table" class="setup-wrapper">
+		<div class="setup-content nor-wd">
 
-		<h1 class="title">variants</h1>
+			<h1 class="title">variants</h1>
 
-		<table class="table-description">
-			<tr>
-				<td>
-					<p>AvaiLABLE</p>
-				</td>
-				@for($a=0; $a<=1; $a++)
-				<td>
-					<p>{!! $arrPackaging[$a] !!}</p>
-				</td>
+			<table class="table-description">
+				<tr>
+					<td>
+						<p>AvaiLABLE</p>
+					</td>
+					@for($a=0; $a<=1; $a++)
+					<td>
+						<p>{!! $arrPackaging[$a] !!}</p>
+					</td>
+					@endfor
+				</tr>
+				@for($r=0; $r<=6; $r++)
+				<tr>
+					<td>
+						<p>{{ $arrPackagingName[$r] }}</p>
+					</td>
+					@for($a=0; $a<=1; $a++)
+					@php ( $que =  ($r*2)+$a )
+					<td>
+						<img src="{{ asset('amadeo/image/base/coffe.png') }}" style="opacity: {{ $arrPackagingAvail[$que] }}">
+					</td>
+					@endfor
+				</tr>
 				@endfor
-			</tr>
-			@for($r=0; $r<=6; $r++)
-			<tr>
-				<td>
-					<p>{{ $arrPackagingName[$r] }}</p>
-				</td>
-				@for($a=0; $a<=1; $a++)
-				@php ( $que =  ($r*2)+$a )
-				<td>
-					<img src="{{ asset('amadeo/image/base/coffe.png') }}" style="opacity: {{ $arrPackagingAvail[$que] }}">
-				</td>
-				@endfor
-			</tr>
-			@endfor
-		</table>
+			</table>
 
-		<p id="back-link">
-			<a href="{{ route('frontend.product.index') }}">
-				<i class="fa fa-chevron-left" aria-hidden="true"></i> Back to Products
-			</a>
-		</p>
+			<p id="back-link">
+				<a href="{{ route('frontend.product.index') }}">
+					<i class="fa fa-chevron-left" aria-hidden="true"></i> Back to Products
+				</a>
+			</p>
+		</div>
 	</div>
-</div>
 @endsection
 
 @section('script')

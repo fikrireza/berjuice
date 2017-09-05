@@ -12,8 +12,34 @@
 @endsection
 
 @section('style')
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/public.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/about.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset(mix('amadeo/css/mix/about.css')) }}">
+	<style type="text/css">
+		#milestones .mil-block.size-st.tree.right:before{
+			content: "";
+			position: absolute;
+		    background-image: url('{{ asset('amadeo/image/base/root-kanan.png') }}');
+		    background-size: cover;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    bottom: -135px;
+		    left: -85px;
+		    width: 145px;
+		    height: 135px;
+		}
+		#milestones .mil-block.size-st.tree.left:before{
+			content: "";
+			position: absolute;
+		    background-image: url('{{ asset('amadeo/image/base/root-kiri.png') }}');
+		    background-size: cover;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    bottom: -115px;
+		    right: -50px;
+		    width: 90px;
+		    height: 115px;
+		    z-index: -1;
+		}
+	</style>
 @endsection
 
 @section('content')

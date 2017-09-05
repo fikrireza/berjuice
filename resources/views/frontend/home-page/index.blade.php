@@ -11,12 +11,7 @@
 @endsection
 
 @section('style')
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/public.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('amadeo/css/home.css') }}" />
-	<!-- Important Owl stylesheet -->
-	<link rel="stylesheet" href="{{ asset('amadeo/plugin/owl-carousel/owl.carousel.css') }}">
-	<!-- Default Theme -->
-	<link rel="stylesheet" href="{{ asset('amadeo/plugin/owl-carousel/owl.theme.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset(mix('amadeo/css/mix/home.css')) }}">
 @endsection
 
 @section('content')
