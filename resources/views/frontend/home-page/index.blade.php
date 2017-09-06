@@ -12,6 +12,32 @@
 
 @section('style')
 	<link rel="stylesheet" type="text/css" href="{{ asset(mix('amadeo/css/mix/home.css')) }}">
+	<style type="text/css">
+		#wtfuar:before{
+			content: "";
+		    background-image: url("{{ asset('amadeo/image/base/leaves-up.png') }}");
+		    background-size: cover;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    position: absolute;
+		    top: 0px;
+		    width: 100%;
+		    height: 290px;
+		    z-index: 0;	
+		}
+		#wtfuar:after{
+		    content: "";
+		    background-image: url("{{ asset('amadeo/image/base/leaves-bottom.png') }}");
+		    background-size: cover;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    position: absolute;
+		    bottom: 0px;
+		    height: 320px;
+		    width: 100%;
+		    /*z-index: ;*/
+		}
+	</style>
 @endsection
 
 @section('content')
@@ -69,11 +95,13 @@
 			@php($a=0)
 			@foreach($itemsIg  as $key => $item)
 			<div class="for-wrapper centered for-wtfu">
-				<div class="circle animation-element animation-element" style="background-image: url('{{ $item['images']['standard_resolution']['url'] }}');">
-					<div class="vertical-midle">
-						<i class="fa fa-{{ $sosmedIcon[$a] }}" aria-hidden="true"></i>
+				<a href="{{ $sosmedUrl[$a] }}">
+					<div class="circle animation-element {{ $sosmedIcon[$a] }}" style="background-image: url('{{ $item['images']['standard_resolution']['url'] }}');">
+						<div class="vertical-midle">
+							<i class="fa fa-{{ $sosmedIcon[$a] }}" aria-hidden="true"></i>
+						</div>
 					</div>
-				</div>
+				</a>
 				<h2>
 					<a href="{{ $sosmedUrl[$a] }}">
 						{{ $sosmedIcon[$a] }}
@@ -88,8 +116,10 @@
 			<h1 id="recipe" class="title">Recipe</h1>
 			@foreach($recipe as $list)
 			<div class="for-wrapper centered for-recipe">
-				<div class="circle animation-element" style="background-image: url('{{ asset('amadeo/image/recipe/'.$list->recipe_image_thumb) }}');">
-				</div>
+				<a href="{{ route('frontend.recipe.view', ['slug' => $list->slug]) }}">
+					<div class="circle animation-element" style="background-image: url('{{ asset('amadeo/image/recipe/'.$list->recipe_image_thumb) }}');">
+					</div>
+				</a>
 				<div class="wrapper-title-name">
 					<div class="title-name">
 						<h2>
@@ -107,7 +137,33 @@
 		</div>
 	</div>
 
-	@include('frontend.include.scroll-to')
+	<div id="scroll-wrapper">
+		<div class="conten-wrapper">
+			<div>
+				<a href="#banner-slider">
+					<i title="banner-slider" class="fa fa-circle-o" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div>
+				<a href="#about">
+					<i title="about" class="fa fa-circle-o" aria-hidden="true"></i>
+				</a>
+			</div>
+			@php ( $arrUrl = ['', 'freshly-squeezed', 'premium-chilled', 'victtoria-coffe'])
+			@for($a=1; $a<=3; $a++)
+			<div>
+				<a href="#product-{{ $arrUrl[$a].'-'.$a }}">
+					<i title="product-{{ $arrUrl[$a].'-'.$a }}" class="fa fa-circle-o" aria-hidden="true"></i>
+				</a>
+			</div>
+			@endfor
+			<div>
+				<a href="#wtfu">
+					<i title="Where To Find Us" class="fa fa-circle-o" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</div>
 @endsection
 
 @section('script')

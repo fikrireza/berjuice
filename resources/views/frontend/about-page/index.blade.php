@@ -14,6 +14,18 @@
 @section('style')
 	<link rel="stylesheet" type="text/css" href="{{ asset(mix('amadeo/css/mix/about.css')) }}">
 	<style type="text/css">
+		#milestones:before{
+			content: "";
+		    background-image: url('{{ asset('amadeo/image/base/leaves-up.png') }}');
+		    background-size: cover;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    position: absolute;
+		    top: 0px;
+		    width: 100%;
+		    height: 290px;
+		    z-index: 0;	
+		}
 		#milestones .mil-block.size-st.tree.right:before{
 			content: "";
 			position: absolute;
@@ -145,6 +157,31 @@
 					</div>
 					@endfor
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="scroll-wrapper">
+		<div class="conten-wrapper">
+			<div>
+				<a href="#about">
+					<i title="about" class="fa fa-circle-o" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div>
+				<a href="#branches">
+					<i title="branches" class="fa fa-circle-o" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div>
+				<a href="#milestones">
+					<i title="milestones" class="fa fa-circle-o" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div>
+				<a href="#ovc">
+					<i title="Our Valued Customer" class="fa fa-circle-o" aria-hidden="true"></i>
+				</a>
 			</div>
 		</div>
 	</div>

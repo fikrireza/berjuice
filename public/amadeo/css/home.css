@@ -1,8 +1,3 @@
-@media (max-width: 480px) {
-	body{
-		overflow-x: hidden;
-	}
-}
 /* for owl slider */
 	.owl-slide-one-image-fluid{
 		height: 100vh;
@@ -268,30 +263,6 @@
 		background-attachment: fixed;
 		padding-bottom: 60px;
 	}
-	#wtfuar:before{
-		content: "";
-	    background-image: url('../image/base/leaves-up.png');
-	    background-size: cover;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    position: absolute;
-	    top: 0px;
-	    width: 100%;
-	    height: 290px;
-	    z-index: 0;	
-	}
-	#wtfuar:after{
-	    content: "";
-	    background-image: url('../image/base/leaves-bottom.png');
-	    background-size: cover;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    position: absolute;
-	    bottom: 0px;
-	    height: 320px;
-	    width: 100%;
-	    /*z-index: ;*/
-	}
 	#wtfuar .setup-content{
 		z-index: 10;
 	}
@@ -345,7 +316,30 @@
 		text-decoration: none;
 		text-transform: uppercase;
 	}
-
+	#wtfuar .for-wtfu .circle.animation-element{
+		background-size: 100%;
+		opacity: 0;
+	    visibility: hidden;
+	    transform: rotate(0deg) translateY(50%) scale(0) skew(-90deg,-45deg);
+	}
+	#wtfuar .for-wtfu .circle.animation-element.in-view{
+		transform: rotate(0deg) translateY(0%) scale(1) skew(0deg,0deg);
+	    visibility: visible;
+	    opacity: 1;
+	}
+	#wtfuar .for-wtfu .circle.animation-element.in-view:hover{
+		background-size: 0%;
+		transform: rotate(360deg) translateY(0%) scale(1) skew(0deg,0deg);
+	}
+	#wtfuar .for-wtfu .circle.animation-element.in-view.facebook:hover{
+		background-color: rgb(59,89,152);
+	}
+	#wtfuar .for-wtfu .circle.animation-element.in-view.instagram:hover{
+		background-color: rgb(211,58,108);
+	}
+	#wtfuar .for-wtfu .circle.animation-element.in-view.twitter:hover{
+		background-color: rgb(30,161,243);
+	}
 	#wtfuar .for-recipe{
 		width: 33%;
 		text-align: center;
@@ -420,29 +414,3 @@
 		}
 	}
 /* end for where to find us and recipe */
-
-/* scroll fix */
-	#scroll-wrapper{
-		position: fixed; 
-		right: 0;
-		top: 0;
-		height: 100vh;
-		display: table;
-	}
-	#scroll-wrapper .conten-wrapper{
-		display: table-cell;
-		height: 100vh;
-		vertical-align: middle;
-	}
-	#scroll-wrapper .conten-wrapper div{
-		padding-right: 10px;
-	}
-	#scroll-wrapper .conten-wrapper div i{
-		color: rgb(255,255,255);
-		font-size: 16px;
-		padding-bottom: 10px;
-	}
-	#scroll-wrapper .conten-wrapper div i:hover{
-		color: rgb(246,184,70);
-	}
-/* scroll fix */

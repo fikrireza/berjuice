@@ -23,7 +23,7 @@
 	</div>
 
 	@for($i=2; $i<=5; $i++)
-	<div id="product-decription" class="setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/victtoria-coffe-product-bg'.$i.'.jpg') }}');">
+	<div  id="{{ Str::slug($arrTitle[$i], '-') }}" class="product-decription setup-wrapper" style="background-image: url('{{ asset('amadeo/image/base/victtoria-coffe-product-bg'.$i.'.jpg') }}');">
 		<div class="wrapper-prod-descr {{ $arrClass[$i] }} animation-element">
 			<h3>{{ $arrTitle[$i] }}</h3>
 			<p>{{ $arrDesc[$i] }}</p>
@@ -67,6 +67,28 @@
 					<i class="fa fa-chevron-left" aria-hidden="true"></i> Back to Products
 				</a>
 			</p>
+		</div>
+	</div>
+
+	<div id="scroll-wrapper">
+		<div class="conten-wrapper">
+			<div>
+				<a href="#product-show">
+					<i title="Vittoria Coffee" class="fa fa-circle-o" aria-hidden="true"></i>
+				</a>
+			</div>
+			@for($i=2; $i<=5; $i++)
+			<div>
+				<a href="#{{ Str::slug($arrTitle[$i], '-') }}">
+					<i title="{{ $arrTitle[$i] }}" class="fa fa-circle-o" aria-hidden="true"></i>
+				</a>
+			</div>
+			@endfor
+			<div>
+				<a href="#product-table">
+					<i title="variants" class="fa fa-circle-o" aria-hidden="true"></i>
+				</a>
+			</div>
 		</div>
 	</div>
 @endsection

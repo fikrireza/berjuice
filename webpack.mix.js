@@ -23,6 +23,7 @@ const { mix } = require('laravel-mix');
 		mix.combine([
 			'public/amadeo/plugin/bootstrap-3.3.7/css/bootstrap.css',
 			'public/amadeo/css/public.css',
+			'public/amadeo/css/scroll-fix.css',
 			'public/amadeo/css/home.css',
 			'public/amadeo/plugin/owl-carousel/owl.carousel.css',
 			'public/amadeo/plugin/owl-carousel/owl.theme.css'
@@ -33,6 +34,7 @@ const { mix } = require('laravel-mix');
 		mix.combine([
 			'public/amadeo/plugin/bootstrap-3.3.7/css/bootstrap.css',
 			'public/amadeo/css/public.css',
+			'public/amadeo/css/scroll-fix.css',
 			'public/amadeo/css/about.css'
 		], 'public/amadeo/css/mix/about.css', 'public/amadeo/css/mix').version();
 	// about
@@ -83,6 +85,7 @@ const { mix } = require('laravel-mix');
 		mix.combine([
 			'public/amadeo/plugin/bootstrap-3.3.7/css/bootstrap.css',
 			'public/amadeo/css/public.css',
+			'public/amadeo/css/scroll-fix.css',
 			'public/amadeo/css/produk-victtoria-coffe.css'
 		], 'public/amadeo/css/mix/produk-victtoria-coffe.css', 'public/amadeo/css/mix').version();
 	// product victtoria coffee

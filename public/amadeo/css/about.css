@@ -135,18 +135,6 @@
 		padding-top: 20px;
 		padding-bottom: 1px;
 	}
-	#milestones:before{
-		content: "";
-	    background-image: url('../image/base/leaves-up.png');
-	    background-size: cover;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    position: absolute;
-	    top: 0px;
-	    width: 100%;
-	    height: 290px;
-	    z-index: 0;	
-	}
 	#milestones h1.title{
 		margin: 0;
 		padding-top: 60px;
