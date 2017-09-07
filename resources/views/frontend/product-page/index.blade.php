@@ -27,7 +27,7 @@
 					<div class="wrapper-display">
 						<div class="vertical">
 							<div class="vertical-align">
-								<a href="{{ $que != 5 ? route('frontend.product.view.'.$productUrl[$que]) : '' }}">
+								<a href="{{ $que < 4 ? route('frontend.product.view.'.$productUrl[$que]) : '#' }}">
 									<img class="product-img" src="{{ asset('amadeo/image/base/prod-idx-'.$productUrl[$que].'.png') }}">
 									<h1 class="title">{{ $productName[$que] }}</h1>
 								</a>

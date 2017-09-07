@@ -55,7 +55,7 @@
 								<i class="fa fa-circle fa-stack-2x"></i>
 								<i class="fa fa-globe fa-stack-1x fa-inverse"></i>
 							</span>
-							<label>www.juiceunited.com</label>
+							www.juiceunited.com
 						</a>
 					</div>
 					<br>
@@ -67,7 +67,7 @@
 							</span>
 							<label>
 								<a href="https://www.facebook.com/Juiceunited/">
-									Facebook
+									facebook.com/juiceunited
 								</a>
 							</label>
 						</a>
@@ -81,7 +81,7 @@
 							</span>
 							<label>
 								<a href="https://instagram.com/Juiceunited/">
-									Instagram
+									@juiceunited
 								</a>
 							</label>
 						</a>
@@ -93,7 +93,7 @@
 								<i class="fa fa-circle fa-stack-2x"></i>
 								<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
 							</span>
-							<label>info@juiceunited.com</label>
+							info@juiceunited.com
 						</a>
 					</div>
 

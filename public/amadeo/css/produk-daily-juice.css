@@ -81,10 +81,10 @@
 	    -moz-border-radius: 20px;
 	}
 	.product-decription .table-description tr:first-child td:first-child{
-		border-top-left-radius: 20px;
+		border-top-left-radius: 15px;
 	}
 	.product-decription .table-description tr:first-child td:last-child{
-		border-top-right-radius: 20px;
+		border-top-right-radius: 15px;
 	}
 	.product-decription .table-description tr:last-child td:first-child{
 		border-bottom-left-radius: 20px;

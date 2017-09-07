@@ -31,7 +31,7 @@
 	    ->name('frontend.product.view.freshly-squeezed');
 	Route::get('/product/premium-chilled', 'Frontend\ProductController@premiumChilled')
 	    ->name('frontend.product.view.premium-chilled');
-	Route::get('/product/victtoria-coffe', 'Frontend\ProductController@coffy')
+	Route::get('/product/vittoria-coffee', 'Frontend\ProductController@coffy')
 	    ->name('frontend.product.view.victtoria-coffe');
 	Route::get('/product/espressotoria-machine', 'Frontend\ProductController@coffy')
 	    ->name('frontend.product.view.espressotoria-machine');

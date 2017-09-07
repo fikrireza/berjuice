@@ -116,7 +116,7 @@ class ProductController extends Controller
 			'',
 			'Using only the highest grade of 100% Arabica coffee beans, we roast locally in Australia for freshness.',
 			'Our ground coffee products are roasted, ground and packed into air-tight vacuum sealed packs to lock in flavour, aroma and freshness.',
-			'Our range of Espressotoria and Nespresso** Compatible capsules are packed in Australia using the most sophisticated packing technology available.',
+			'Our range of Espressotoria compatible capsules are packed in Australia using the most sophisticated packing technology available.',
 			'A compact and affordable automatic capsule machine. The Capino is available in matte black and will deliver seamless espressos for everyday use.'
 		];
 		$arrPackaging = [

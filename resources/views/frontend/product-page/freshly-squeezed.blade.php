@@ -78,14 +78,15 @@
 						<td>5 liter</td>
 					</tr>
 				</table>
+				<p id="back-link">
+					<a href="{{ route('frontend.product.index') }}">
+						<i class="fa fa-chevron-left" aria-hidden="true"></i> Back to Products
+					</a>
+				</p>
 			</div>
 		</div>
 		<div class="clearfix"></div>
-		<p id="back-link">
-			<a href="{{ route('frontend.product.index') }}">
-				<i class="fa fa-chevron-left" aria-hidden="true"></i> Back to Products
-			</a>
-		</p>
+		
 	</div>
 @endsection
 
